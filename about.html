@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Cambridge Hospital</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23b33939'/%3E%3Cpath d='M30 50 h40 M50 30 v40' stroke='white' stroke-width='12' stroke-linecap='round'/%3E%3C/svg%3E">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+    <header class="main-header py-4">
+        <div class="container-fluid px-lg-5">
+            <nav class="navbar navbar-expand-xl navbar-light bg-white rounded-pill shadow-sm custom-nav px-4 py-2">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <div class="hospital-logo me-2">
+                        <i class="fas fa-plus-square text-danger fs-2"></i>
+                    </div>
+                    <div class="brand-text">
+                        <span class="d-block fw-bold text-dark lh-1">CAMBRIDGE</span>
+                        <span class="d-block fw-bold text-dark lh-1">HOSPITAL</span>
+                    </div>
+                </a>
+    
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#cambridgeNav" aria-controls="cambridgeNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="cambridgeNav">
+                    <ul class="navbar-nav mx-auto gap-2 align-items-center">
+                        <li class="nav-item"><a class="nav-link fw-medium" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="about.html">about us</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="sstories.html">success stories</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="feedback.html">Feedback</a></li>
+                        
+                        <li class="nav-item dropdown custom-dropdown">
+                            <a class="nav-link dropdown-toggle info-btn px-3 ms-lg-2" href="#" role="button" data-bs-toggle="dropdown">
+                                Explore more
+                            </a>
+                           <ul class="dropdown-menu shadow border-0 mt-3 rounded-4 p-2">
+                               <li><a class="dropdown-item" href="center.html"><i class="fas fa-house-medical me-2"></i> Center</a></li>
+                                <li><a class="dropdown-item" href="academic.html"><i class="fas fa-graduation-cap me-2"></i> Academic</a></li>
+                                <li><a class="dropdown-item" href="form..html"><i class="fas fa-file-alt me-2"></i> Foam</a></li>
+                                <li><a class="dropdown-item" href="QUERYY.HTML"><i class="fas fa-question-circle me-2"></i> Query</a></li>
+                                <li><a class="dropdown-item" href="facilities.html"><i class="fas fa-building me-2"></i> Facilities</a></li>
+                                <li><a class="dropdown-item" href="vacancies.html"><i class="fas fa-briefcase me-2"></i> Vacancies</a></li>
+                            </ul>
+                        </li>
+    
+                        <li class="nav-item dropdown custom-dropdown">
+                            <a class="nav-link dropdown-toggle dept-btn px-3 ms-lg-1" href="#" role="button" data-bs-toggle="dropdown">
+                                <span class="dot me-1">•</span> Departments
+                            </a>
+                            <ul class="dropdown-menu shadow border-0 mt-3 rounded-4 p-2">
+                                <li><a class="dropdown-item" href="emergancy-department.html"><i class="fas fa-exclamation-circle me-2"></i> Emergency Department</a></li>
+                                <li><a class="dropdown-item" href="opd-department.html"><i class="fas fa-calendar-alt me-2"></i> OPD (Outpatient Dept)</a></li>
+                                <li><a class="dropdown-item" href="ipd-department.html"><i class="fas fa-bed me-2"></i> IPD (Inpatient Dept)</a></li>
+                                <li><a class="dropdown-item" href="lab-department.html"><i class="fas fa-microscope me-2"></i> Laboratory Department</a></li>
+                                <li><a class="dropdown-item" href="radio.html"><i class="fas fa-x-ray me-2"></i> Radiology & Imaging</a></li>
+                                <li><a class="dropdown-item" href="pharmacy.html"><i class="fas fa-pills me-2"></i> Pharmacy</a></li>
+                                <li><a class="dropdown-item" href="neurology.html"><i class="fas fa-brain me-2"></i> Neurology Department</a></li>
+                                <li><a class="dropdown-item" href="GYNECOLOGY.HTML"><i class="fas fa-venus me-2"></i> Gynecology & Obstetrics</a></li>
+                                
+
+                            </ul>
+                        </li>
+                    </ul>
+    
+                    <div class="d-flex align-items-center gap-3 justify-content-center mt-3 mt-xl-0">
+                        <button class="btn btn-urgent rounded-pill px-4 fw-bold">URGENT CARE</button>
+                        
+                        <div class="notification-container position-relative">
+                            <button class="btn border-0 p-0" id="notifToggle">
+                                <i class="fas fa-bell fs-5 text-muted"></i>
+                                <span class="notif-badge"></span>
+                            </button>
+                            <div id="notifPanel" class="notif-panel shadow-lg d-none">
+                                <div class="panel-header d-flex justify-content-between p-3 border-bottom">
+                                    <h6 class="mb-0 fw-bold">Notifications</h6>
+                                    <button class="btn btn-sm text-danger p-0 fw-bold" id="markRead">Clear All</button>
+                                </div>
+                                <div class="notif-list custom-scrollbar" id="notifList">
+                                    <div class="notif-item p-3 border-bottom unread">
+                                        <p class="mb-0 small fw-bold text-dark">Lab Report Ready</p>
+                                        <span class="text-muted smaller">Your blood test results are now available.</span>
+                                    </div>
+                                </div>
+                                <div class="panel-footer p-2 text-center">
+                                    <button class="btn btn-sm text-danger fw-bold" id="viewAll">View All Notifications</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section d-flex align-items-center">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">Healing Lives Since 1928</h1>
+            <p class="lead">Excellence in Healthcare, Compassion in Heart.</p>
+        </div>
+    </section>
+
+    <section class="about-content py-5">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 text-content reveal-left">
+                    <span class="badge rounded-pill bg-light text-danger px-3 py-2 mb-3 shadow-sm border">Established 1928</span>
+                    <h2 class="fw-bold mb-4">Welcome to <span class="text-danger">Cambridge Hospital</span></h2>
+                    <div class="custom-hr mb-4"></div>
+                    <p class="text-secondary lead">What began as a small healthcare facility has grown into one of the most trusted and advanced hospitals in the region.</p>
+                    <p class="text-secondary">For over 95 years, we have been at the forefront of medical excellence, combining cutting-edge technology with a patient-first approach.</p>
+                    
+                    <div class="mission-box mt-4 p-4 border-start border-danger border-4 bg-white shadow-sm rounded-3">
+                        <i class="fas fa-quote-left text-danger opacity-25 fs-1 d-block mb-2"></i>
+                        <p class="h5 fw-medium italic text-dark">"Our mission is to improve lives through exceptional care, innovation, and a commitment to the community."</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 reveal-right">
+                    <div class="image-wrapper position-relative">
+                        <img src="hospital.png" class="img-fluid main-img shadow-lg rounded-5" alt="Hospital Building">
+                        <div class="experience-card glass-morphism p-3 text-center position-absolute bottom-0 start-0 m-4 rounded-4 shadow-lg border border-white border-opacity-50">
+                            <h3 class="fw-bold text-danger mb-0 counter" data-target="95">0</h3>
+                            <p class="small fw-bold text-dark mb-0">Years of Experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="legacy-section py-5">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2 class="fw-bold">Our Legacy</h2>
+                <div class="custom-hr mx-auto"></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="legacy-card text-center p-5 shadow-sm h-100 reveal-up">
+                        <div class="icon-box-modern mb-3"><i class="fa-regular fa-calendar-check"></i></div>
+                        <h3 class="fw-bold counter" data-target="1928">0</h3>
+                        <p class="text-muted fw-medium">Year Established</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="legacy-card text-center p-5 shadow-sm h-100 reveal-up" style="transition-delay: 0.1s;">
+                        <div class="icon-box-modern mb-3"><i class="fa-solid fa-trophy"></i></div>
+                        <h3 class="fw-bold counter" data-target="95">0</h3>
+                        <p class="text-muted fw-medium">Years of Excellence</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="legacy-card text-center p-5 shadow-sm h-100 reveal-up" style="transition-delay: 0.2s;">
+                        <div class="icon-box-modern mb-3"><i class="fa-solid fa-users"></i></div>
+                        <h3 class="fw-bold counter" data-target="100000">0</h3>
+                        <p class="text-muted fw-medium">Patients Annually</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="legacy-card text-center p-5 shadow-sm h-100 reveal-up" style="transition-delay: 0.3s;">
+                        <div class="icon-box-modern mb-3"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                        <h3 class="fw-bold counter" data-target="500">0</h3>
+                        <p class="text-muted fw-medium">Dedicated Staff</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="vmv-section py-5 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4 reveal-up">
+                    <div class="vmv-card-modern p-4 bg-white h-100 border-0 shadow-sm rounded-4">
+                        <div class="vmv-icon bg-danger-soft mb-3"><i class="fa-regular fa-eye"></i></div>
+                        <h3 class="h4 fw-bold">Our Vision</h3>
+                        <p class="text-secondary">To be a global leader in innovative healthcare, setting new standards of excellence.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal-up" style="transition-delay: 0.1s;">
+                    <div class="vmv-card-modern p-4 bg-white h-100 border-0 shadow-sm rounded-4">
+                        <div class="vmv-icon bg-danger-soft mb-3"><i class="fa-solid fa-bullseye"></i></div>
+                        <h3 class="h4 fw-bold">Our Mission</h3>
+                        <p class="text-secondary">To deliver exceptional healthcare services through advanced technology and skilled professionals.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal-up" style="transition-delay: 0.2s;">
+                    <div class="vmv-card-modern p-4 bg-white h-100 border-0 shadow-sm rounded-4">
+                        <div class="vmv-icon bg-danger-soft mb-3"><i class="fa-solid fa-gem"></i></div>
+                        <h3 class="h4 fw-bold">Our Values</h3>
+                        <p class="text-secondary">Integrity, Compassion, and Excellence guide everything we do for our patients.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="about.js"></script>
+</body>
+</html>
