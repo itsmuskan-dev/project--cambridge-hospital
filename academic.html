@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cambridge University Hospital</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <!-- Custom CSS -->
+    <link rel="stylesheet" href="academic.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23b33939'/%3E%3Cpath d='M30 50 h40 M50 30 v40' stroke='white' stroke-width='12' stroke-linecap='round'/%3E%3C/svg%3E">
+  </head>
+   <body class="bg-light">
+    <header class="main-header py-4">
+        <div class="container-fluid px-lg-5">
+            <nav class="navbar navbar-expand-xl navbar-light bg-white rounded-pill shadow-sm custom-nav px-4 py-2">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <div class="hospital-logo me-2">
+                        <i class="fas fa-plus-square text-danger fs-2"></i>
+                    </div>
+                    <div class="brand-text">
+                        <span class="d-block fw-bold text-dark lh-1">CAMBRIDGE</span>
+                        <span class="d-block fw-bold text-dark lh-1">HOSPITAL</span>
+                    </div>
+                </a>
+    
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#cambridgeNav" aria-controls="cambridgeNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                  <div class="collapse navbar-collapse" id="cambridgeNav">
+                    <ul class="navbar-nav mx-auto gap-2 align-items-center">
+                        <li class="nav-item"><a class="nav-link fw-medium" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="about.html">about us</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="sstories.html">success stories</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="feedback.html">Feedback</a></li>
+                        
+                        <li class="nav-item dropdown custom-dropdown">
+                            <a class="nav-link dropdown-toggle info-btn px-3 ms-lg-2" href="#" role="button" data-bs-toggle="dropdown">
+                                Explore more
+                            </a>
+                           <ul class="dropdown-menu shadow border-0 mt-3 rounded-4 p-2">
+                               <li><a class="dropdown-item" href="center.html"><i class="fas fa-house-medical me-2"></i> Center</a></li>
+                                <li><a class="dropdown-item" href="academic.html"><i class="fas fa-graduation-cap me-2"></i> Academic</a></li>
+                                <li><a class="dropdown-item" href="form..html"><i class="fas fa-file-alt me-2"></i> Foam</a></li>
+                                <li><a class="dropdown-item" href="QUERYY.HTML"><i class="fas fa-question-circle me-2"></i> Query</a></li>
+                                <li><a class="dropdown-item" href="facilities.html"><i class="fas fa-building me-2"></i> Facilities</a></li>
+                                <li><a class="dropdown-item" href="vacancies.html"><i class="fas fa-briefcase me-2"></i> Vacancies</a></li>
+                            </ul>
+                        </li>
+    
+                        <li class="nav-item dropdown custom-dropdown">
+                            <a class="nav-link dropdown-toggle dept-btn px-3 ms-lg-1" href="#" role="button" data-bs-toggle="dropdown">
+                                <span class="dot me-1">•</span> Departments
+                            </a>
+                            <ul class="dropdown-menu shadow border-0 mt-3 rounded-4 p-2">
+                                <li><a class="dropdown-item" href="emergancy-department.html"><i class="fas fa-exclamation-circle me-2"></i> Emergency Department</a></li>
+                                <li><a class="dropdown-item" href="opd-department.html"><i class="fas fa-calendar-alt me-2"></i> OPD (Outpatient Dept)</a></li>
+                                <li><a class="dropdown-item" href="ipd-department.html"><i class="fas fa-bed me-2"></i> IPD (Inpatient Dept)</a></li>
+                                <li><a class="dropdown-item" href="lab-department.html"><i class="fas fa-microscope me-2"></i> Laboratory Department</a></li>
+                                <li><a class="dropdown-item" href="radio.html"><i class="fas fa-x-ray me-2"></i> Radiology & Imaging</a></li>
+                                <li><a class="dropdown-item" href="pharmacy.html"><i class="fas fa-pills me-2"></i> Pharmacy</a></li>
+                                <li><a class="dropdown-item" href="neurology.html"><i class="fas fa-brain me-2"></i> Neurology Department</a></li>
+                                <li><a class="dropdown-item" href="GYNECOLOGY.HTML"><i class="fas fa-venus me-2"></i> Gynecology & Obstetrics</a></li>
+                                
+
+                            </ul>
+                        </li>
+                    </ul>
+    
+                    <div class="d-flex align-items-center gap-3 justify-content-center mt-3 mt-xl-0">
+                        <button class="btn btn-urgent rounded-pill px-4 fw-bold">URGENT CARE</button>
+                        
+                        <div class="notification-container position-relative">
+                            <button class="btn border-0 p-0" id="notifToggle">
+                                <i class="fas fa-bell fs-5 text-muted"></i>
+                                <span class="notif-badge"></span>
+                            </button>
+                            <div id="notifPanel" class="notif-panel shadow-lg d-none">
+                                <div class="panel-header d-flex justify-content-between p-3 border-bottom">
+                                    <h6 class="mb-0 fw-bold">Notifications</h6>
+                                    <button class="btn btn-sm text-danger p-0 fw-bold" id="markRead">Clear All</button>
+                                </div>
+                                <div class="notif-list custom-scrollbar" id="notifList">
+                                    <div class="notif-item p-3 border-bottom unread">
+                                        <p class="mb-0 small fw-bold text-dark">Lab Report Ready</p>
+                                        <span class="text-muted smaller">Your blood test results are now available.</span>
+                                    </div>
+                                </div>
+                                <div class="panel-footer p-2 text-center">
+                                    <button class="btn btn-sm text-danger fw-bold" id="viewAll">View All Notifications</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 1. Cambridge University Section -->
+    <section id="cambridge-university" class="py-5 position-relative overflow-hidden" style="background-color: #fcfcfc;">
+        <div class="container py-xl-5 py-4">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+                    <!-- Decorative background element for image -->
+                    <div class="position-absolute bg-danger rounded-2" style="width: 100%; height: 100%; top: -15px; left: -15px; opacity: 0.1; z-index: 0;"></div>
+                    <img src="university.a.png" alt="Cambridge Hospital Building" class="img-fluid w-100 shadow-lg rounded-2 position-relative" style="z-index: 1;" referrerPolicy="no-referrer">
+                </div>
+                <div class="col-lg-6 ps-lg-5">
+                    <div class="d-inline-block text-danger fw-bold mb-2 text-uppercase fs-6" style="letter-spacing: 2px;">About Our Center</div>
+                    <h2 class="text-dark fw-bolder mb-4 display-5">CAMBRIDGE UNIVERSITY <span class="fw-light text-danger border-bottom border-danger pb-1">HOSPITAL</span></h2>
+                    <p class="text-secondary fs-5 mb-4 lh-base">
+                        Why is Cambridge University Hospital ranked in the top 20 schools in the nation? It begins with our relentless commitment to educating future medical professionals at the highest levels and pursuing boundary-pushing research.
+                    </p>
+                    <p class="text-secondary fs-6 mb-5 border-start border-danger border-3 ps-3 fst-italic">
+                        For more than 40 years, the hospital has been among the nation's top recipients of biomedical research support. We are a national leader in applying science to personalized medicine to improve health care delivery through optimized outcomes.
+                    </p>
+                    
+                    <!-- Stats Section -->
+                    <div class="row text-center mb-5 g-3">
+                        <div class="col-4 border-end">
+                            <h4 class="fw-bold text-danger mb-0 h2">Top 20</h4>
+                            <span class="text-muted small fw-semibold">Nationally Ranked</span>
+                        </div>
+                        <div class="col-4 border-end">
+                            <h4 class="fw-bold text-dark mb-0 h2">98+</h4>
+                            <span class="text-muted small fw-semibold">Years of Research</span>
+                        </div>
+                        <div class="col-4">
+                            <h4 class="fw-bold text-dark mb-0 h2">#1</h4>
+                            <span class="text-muted small fw-semibold">Personalized Med</span>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-danger btn-lg rounded-1 px-5 py-3 fw-bold shadow-sm" data-bs-toggle="modal" data-bs-target="#universityModal">Learn More About the Center</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. WE CREATE Section -->
+    <section id="we-build" class="py-5 position-relative" style="background-color: var(--light-gray);">
+        <div class="container py-xl-5 py-4">
+            <div class="text-center mb-5">
+                <span class="text-uppercase fw-bold text-dark tracking-wider">Our Focus Areas</span>
+                <h2 class="text-danger fw-bolder mb-3 display-4">WE CREATE...</h2>
+                <p class="text-secondary fs-5 mx-auto" style="max-width: 650px;">
+                    Empowering the next generation of medical pioneers to push the boundaries of science and compassionate healthcare.
+                </p>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <!-- Doctors/Physicians -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="build-card position-relative overflow-hidden shadow-sm bg-dark rounded-4 h-100">
+                        <img src="doctor.png" class="w-100 h-100 object-fit-cover opacity-75" alt="Doctors" referrerPolicy="no-referrer">
+                        <div class="overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-4">
+                            <h3 class="fw-bold text-white mb-0 title-text fs-3">DOCTORS / PHYSICIANS</h3>
+                            <div class="hover-content text-start w-100">
+                                <p class="my-3 text-light fw-medium">Transforming care delivery and forging a new standard of medical excellence.</p>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-danger rounded-pill px-4 py-2 fw-bold btn-sm flex-fill shadow-sm" data-bs-toggle="modal" data-bs-target="#applyModal">Apply Now</button>
+                                    <button class="btn btn-outline-light text-white border-white rounded-pill px-4 py-2 fw-bold btn-sm flex-fill learn-more-btn" data-bs-toggle="modal" data-bs-target="#focusModal">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Scientists -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="build-card position-relative overflow-hidden shadow-sm bg-dark rounded-4 h-100">
+                        <img src="scientist.png" class="w-100 h-100 object-fit-cover opacity-75" alt="Scientists" referrerPolicy="no-referrer">
+                        <div class="overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-4">
+                            <h3 class="fw-bold text-white mb-0 title-text fs-3">SCIENTISTS</h3>
+                            <div class="hover-content text-start w-100">
+                                <p class="my-3 text-light fw-medium">Explore the groundbreaking work of our scientists & researchers.</p>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-danger rounded-pill px-4 py-2 fw-bold btn-sm flex-fill shadow-sm" data-bs-toggle="modal" data-bs-target="#applyModal">Apply Now</button>
+                                    <button class="btn btn-outline-light text-white border-white rounded-pill px-4 py-2 fw-bold btn-sm flex-fill learn-more-btn" data-bs-toggle="modal" data-bs-target="#focusModal">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pharmacists -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="build-card position-relative overflow-hidden shadow-sm bg-dark rounded-4 h-100">
+                        <img src="pharmasist.png" class="w-100 h-100 object-fit-cover opacity-75" alt="Pharmacists" referrerPolicy="no-referrer">
+                        <div class="overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-4">
+                            <h3 class="fw-bold text-white mb-0 title-text fs-3">PHARMACISTS</h3>
+                            <div class="hover-content text-start w-100">
+                                <p class="my-3 text-light fw-medium">Explore your path to innovation in modern Pharmacy today.</p>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-danger rounded-pill px-4 py-2 fw-bold btn-sm flex-fill shadow-sm" data-bs-toggle="modal" data-bs-target="#applyModal">Apply Now</button>
+                                    <button class="btn btn-outline-light text-white border-white rounded-pill px-4 py-2 fw-bold btn-sm flex-fill learn-more-btn" data-bs-toggle="modal" data-bs-target="#focusModal">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Surgeons -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="build-card position-relative overflow-hidden shadow-sm bg-dark rounded-4 h-100">
+                        <img src="surgeon.png" class="w-100 h-100 object-fit-cover opacity-75" alt="Surgeons" referrerPolicy="no-referrer">
+                        <div class="overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-4">
+                            <h3 class="fw-bold text-white mb-0 title-text fs-3">SURGEONS</h3>
+                            <div class="hover-content text-start w-100">
+                                <p class="my-3 text-light fw-medium">Mastering complex procedures with precision and cutting-edge tech.</p>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-danger rounded-pill px-4 py-2 fw-bold btn-sm flex-fill shadow-sm" data-bs-toggle="modal" data-bs-target="#applyModal">Apply Now</button>
+                                    <button class="btn btn-outline-light text-white border-white rounded-pill px-4 py-2 fw-bold btn-sm flex-fill learn-more-btn" data-bs-toggle="modal" data-bs-target="#focusModal">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Innovators -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="build-card position-relative overflow-hidden shadow-sm bg-dark rounded-4 h-100">
+                        <img src="innovator.png" class="w-100 h-100 object-fit-cover opacity-75" alt="Innovators" referrerPolicy="no-referrer">
+                        <div class="overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-4">
+                            <h3 class="fw-bold text-white mb-0 title-text fs-3">INNOVATORS</h3>
+                            <div class="hover-content text-start w-100">
+                                <p class="my-3 text-light fw-medium">Bridging the gap between clinical needs and technological breakthroughs.</p>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-danger rounded-pill px-4 py-2 fw-bold btn-sm flex-fill shadow-sm" data-bs-toggle="modal" data-bs-target="#applyModal">Apply Now</button>
+                                    <button class="btn btn-outline-light text-white border-white rounded-pill px-4 py-2 fw-bold btn-sm flex-fill learn-more-btn" data-bs-toggle="modal" data-bs-target="#focusModal">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Technologists -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="build-card position-relative overflow-hidden shadow-sm bg-dark rounded-4 h-100">
+                        <img src="technologist.png" class="w-100 h-100 object-fit-cover opacity-75" alt="Technologists" referrerPolicy="no-referrer">
+                        <div class="overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-4">
+                            <h3 class="fw-bold text-white mb-0 title-text fs-3">TECHNOLOGISTS</h3>
+                            <div class="hover-content text-start w-100">
+                                <p class="my-3 text-light fw-medium">Operating advanced diagnostic and lifecycle medical equipment.</p>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-danger rounded-pill px-4 py-2 fw-bold btn-sm flex-fill shadow-sm" data-bs-toggle="modal" data-bs-target="#applyModal">Apply Now</button>
+                                    <button class="btn btn-outline-light text-white border-white rounded-pill px-4 py-2 fw-bold btn-sm flex-fill learn-more-btn" data-bs-toggle="modal" data-bs-target="#focusModal">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Our Faculty Section -->
+    <section id="our-faculty" class="py-5 bg-white">
+        <div class="container py-xl-5 py-4">
+            <div class="text-center mb-5 pb-3">
+                <span class="text-uppercase fw-bold text-danger tracking-wider">Our Faculty</span>
+                <h2 class="text-dark fw-bolder mb-3 display-4 mt-2">Meet the Passionate Scholars and Changemakers</h2>
+                <p class="text-secondary mx-auto fs-5" style="max-width: 800px; line-height: 1.8;">
+                    Our esteemed faculty bring years of specialized experience and frontier knowledge to their classrooms. They empower the next generation of leaders and practitioners to tackle real-world medical challenges and pioneer solutions that directly impact global society.
+                </p>
+            </div>
+            
+            <!-- Faculty Grid -->
+            <div class="row g-5 justify-content-center pt-3">
+                <!-- Faculty 1 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 border-0 text-center faculty-card bg-transparent">
+                                <div class="img-wrapper mx-auto mb-4 rounded-1 shadow-sm" style="width: 220px; height: 260px;">
+                                    <img src="principal.png" class="w-100 h-100 object-fit-cover" alt="Hakim Shah" referrerPolicy="no-referrer">
+                                </div>
+                                <h5 class="fw-bold text-dark mb-1 fs-5">Hakim Shah</h5>
+                                <p class="text-secondary small mb-0 fw-semibold">Principal,</p>
+                                <p class="text-secondary small">Cambridge College of Medicine</p>
+                            </div>
+                        </div>
+                        <!-- Faculty 2 -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100 border-0 text-center faculty-card bg-transparent">
+                                <div class="img-wrapper mx-auto mb-4 rounded-1 shadow-sm" style="width: 220px; height: 260px;">
+                                    <img src="vprincipal.png" class="w-100 h-100 object-fit-cover" alt="Danish Ali Siddiqui" referrerPolicy="no-referrer">
+                                </div>
+                                <h5 class="fw-bold text-dark mb-1 fs-5">Danish Ali Siddiqui</h5>
+                                <p class="text-secondary small mb-0 fw-semibold">Vice Principal,</p>
+                                <p class="text-secondary small">Cambridge College of Medicine</p>
+                            </div>
+                        </div>
+                        <!-- Faculty 3 -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100 border-0 text-center faculty-card bg-transparent">
+                                <div class="img-wrapper mx-auto mb-4 rounded-1 shadow-sm" style="width: 220px; height: 260px;">
+                                    <img src="assissprof.png" class="w-100 h-100 object-fit-cover" alt="Muhammad Yousuf" referrerPolicy="no-referrer">
+                                </div>
+                                <h5 class="fw-bold text-dark mb-1 fs-5">Sajid Yousuf</h5>
+                                <p class="text-secondary small mb-0 fw-semibold">Assistant Professor,</p>
+                                <p class="text-secondary small">MSN</p>
+                            </div>
+                        </div>
+                        <!-- Faculty 4 -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100 border-0 text-center faculty-card bg-transparent">
+                                <div class="img-wrapper mx-auto mb-4 rounded-1 shadow-sm" style="width: 220px; height: 260px;">
+                                    <img src="lecturer.png" class="w-100 h-100 object-fit-cover" alt="Komal Ammar" referrerPolicy="no-referrer">
+                                </div>
+                                <h5 class="fw-bold text-dark mb-1 fs-5">Komal Ammar</h5>
+                                <p class="text-secondary small mb-0 fw-semibold">Lecturer,</p>
+                                <p class="text-secondary small">BSM</p>
+                            </div>
+                        </div>
+                        <!-- Faculty 5 -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100 border-0 text-center faculty-card bg-transparent">
+                                <div class="img-wrapper mx-auto mb-4 rounded-1 shadow-sm" style="width: 220px; height: 260px;">
+                                    <img src="assissprof.png" class="w-100 h-100 object-fit-cover" alt="Muhammad Rafique" referrerPolicy="no-referrer">
+                                </div>
+                                <h5 class="fw-bold text-dark mb-1 fs-5">Javed Rafique</h5>
+                                <p class="text-secondary small mb-0 fw-semibold">Assistant Professor,</p>
+                                <p class="text-secondary small">MSN</p>
+                            </div>
+                        </div>
+                        <!-- Faculty 6 -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100 border-0 text-center faculty-card bg-transparent">
+                                <div class="img-wrapper mx-auto mb-4 rounded-1 shadow-sm" style="width: 220px; height: 260px;">
+                                    <img src="senior.l.png" class="w-100 h-100 object-fit-cover" alt="Nasreen Jawaid" referrerPolicy="no-referrer">
+                                </div>
+                                <h5 class="fw-bold text-dark mb-1 fs-5">Eman Jawaid</h5>
+                                <p class="text-secondary small mb-0 fw-semibold">Senior Lecturer,</p>
+                                <p class="text-secondary small">PhD</p>
+                            </div>
+                        </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- University Details Modal (Fullscreen) -->
+    <div class="modal fade" id="universityModal" tabindex="-1" aria-labelledby="universityModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header bg-black text-white border-0 py-4 px-lg-5">
+            <h5 class="modal-title fw-bold fs-3" id="universityModalLabel">About Cambridge University Hospital</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          
+          <!-- Modal Body -->
+          <div class="modal-body p-0 bg-white">
+            <!-- Modal Banner -->
+            <div class="w-100 position-relative" style="height: 40vh; min-height: 350px;">
+                <img src="university.a.png" class="w-100 h-100 object-fit-cover position-absolute top-0 start-0" alt="Laboratory" referrerPolicy="no-referrer">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center" style="background: rgba(0,0,0,0.65);">
+                    <div class="text-center px-4">
+                        <span class="badge bg-danger mb-3 px-3 py-2 fs-6 rounded-1 tracking-wider">EST. 1928</span>
+                        <h2 class="text-white display-4 fw-bolder">History of Excellence & Innovation</h2>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modal Content Container -->
+            <div class="container py-5 mt-4">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <!-- Section: Overview -->
+                        <div class="mb-5 pb-4 border-bottom border-light">
+                            <h3 class="fw-bold text-danger mb-3">Overview & Legacy</h3>
+                            <p class="fs-5 text-secondary lh-lg mb-0 text-justify">Founded on the principles of academic rigor and compassionate care, Cambridge University Hospital has grown from a humble regional clinic into a globally recognized epicenter for medical research, advanced surgical intervention, and transformative healthcare education. Ranked consistently among the Top 20 academic medical centers, our legacy is defined by the countless lives saved and the generation of pioneering physicians we have trained over four decades.</p>
+                        </div>
+
+                        <!-- Section: Core Missions with Cards -->
+                        <div class="row g-4 mb-5 pb-4">
+                            <div class="col-md-4">
+                                <div class="card h-100 border border-light shadow-sm bg-light p-4 rounded-3 text-center transition-all hover-shadow">
+                                    <div class="text-danger mb-3 display-4">🎓</div>
+                                    <h4 class="fw-bold mb-3">Education</h4>
+                                    <p class="text-secondary small mb-0">Providing unparalleled training programs for medical students, residents, and nursing professionals to thrive in dynamic clinical environments.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 border border-light shadow-sm bg-light p-4 rounded-3 text-center transition-all hover-shadow">
+                                    <div class="text-danger mb-3 display-4">🔬</div>
+                                    <h4 class="fw-bold mb-3">Research</h4>
+                                    <p class="text-secondary small mb-0">Pioneering over $150M annually in funded research to accelerate discoveries in pharmacology, genomics, and targeted immunotherapies.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 border border-light shadow-sm bg-light p-4 rounded-3 text-center transition-all hover-shadow">
+                                    <div class="text-danger mb-3 display-4">🏥</div>
+                                    <h4 class="fw-bold mb-3">Patient Care</h4>
+                                    <p class="text-secondary small mb-0">Delivering world-class, personalized care that sets global benchmarks for patient satisfaction, safety, and rapid clinical recovery outcomes.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section: The Campus & Facilities -->
+                        <div class="mb-2 row align-items-center">
+                            <div class="col-md-6 order-md-2 mb-4 mb-md-0 position-relative">
+                                <div class="position-absolute bg-dark rounded-3" style="width: 100%; height: 100%; top: 15px; left: 15px; z-index: 0;"></div>
+                                <img src="u int.a.png" alt="Lab facilities" class="img-fluid rounded-3 shadow position-relative" style="z-index: 1;" referrerPolicy="no-referrer">
+                            </div>
+                            <div class="col-md-6 order-md-1 pe-md-5">
+                                <h3 class="fw-bold text-danger mb-4">State-of-the-Art Facilities</h3>
+                                <p class="fs-6 text-secondary lh-base mb-4">The hospital campus spans over 45 acres of interconnected research towers, clinical wards, and dedicated teaching auditoriums. Our recent $250M expansion included the unveiling of the Advanced Genomic Research Center and a Level 1 Trauma Pavilion.</p>
+                                <ul class="list-unstyled text-secondary">
+                                    <li class="mb-3 d-flex align-items-center"><span class="badge bg-danger rounded-circle p-1 me-3 d-inline-block" style="width:20px;height:20px;">✓</span> <span class="fw-semibold">800+ Patient Beds</span></li>
+                                    <li class="mb-3 d-flex align-items-center"><span class="badge bg-danger rounded-circle p-1 me-3 d-inline-block" style="width:20px;height:20px;">✓</span> <span class="fw-semibold">40 High-Tech Operating Theaters</span></li>
+                                    <li class="mb-3 d-flex align-items-center"><span class="badge bg-danger rounded-circle p-1 me-3 d-inline-block" style="width:20px;height:20px;">✓</span> <span class="fw-semibold">Dedicated Innovation & Biotech Incubator</span></li>
+                                    <li class="d-flex align-items-center"><span class="badge bg-danger rounded-circle p-1 me-3 d-inline-block" style="width:20px;height:20px;">✓</span> <span class="fw-semibold">24/7 Specialized Emergency Unit</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          
+          <!-- Modal Footer -->
+          <div class="modal-footer border-top shadow-sm py-3 px-lg-5">
+            <button type="button" class="btn btn-secondary px-5 py-2 fw-bold rounded-1" data-bs-dismiss="modal">Close Window</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Focus Areas Details Modal (Fullscreen) -->
+    <div class="modal fade" id="focusModal" tabindex="-1" aria-labelledby="focusModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header bg-black text-white border-0 py-4 px-lg-5">
+            <h5 class="modal-title fw-bold fs-3" id="focusModalLabel">Explore Our Focus Areas</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          
+          <!-- Modal Body -->
+          <div class="modal-body p-0 bg-white">
+            <!-- Modal Banner -->
+            <div class="w-100 position-relative" style="height: 35vh; min-height: 300px;">
+                <img src="student.a.png" class="w-100 h-100 object-fit-cover position-absolute top-0 start-0" alt="Medical Focus" referrerPolicy="no-referrer">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center" style="background: rgba(0,0,0,0.7);">
+                    <div class="text-center px-4">
+                        <span class="badge bg-danger mb-3 px-3 py-2 fs-6 rounded-1 tracking-wider">YOUR FUTURE AWAITS</span>
+                        <h2 class="text-white display-4 fw-bolder">Detailed Information</h2>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modal Content Container -->
+            <div class="container py-5 mt-4">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="row g-5">
+                            
+                            <!-- Left Column -->
+                            <div class="col-md-6 border-end border-light pe-md-5">
+                                <div class="mb-5">
+                                    <h3 class="fw-bold text-danger mb-3 border-bottom border-light pb-2">Doctors / Physicians</h3>
+                                    <p class="text-secondary lh-lg mb-3">Our physician training programs emphasize a balance of rigorous clinical science and compassionate patient care. Students have direct access to over 40 distinct specialties. Whether you are aiming to be a family practitioner or a specialized neurosurgeon, the curriculum guarantees extensive hands-on experience starting from your very first year.</p>
+                                    <ul class="text-secondary small fw-medium mb-0 list-unstyled">
+                                        <li class="mb-2 text-dark">• <span class="ms-2">Internal Medicine & Pediatrics</span></li>
+                                        <li class="mb-2 text-dark">• <span class="ms-2">Cardiology Fellowship</span></li>
+                                        <li class="mb-2 text-dark">• <span class="ms-2">Neurology & Psychiatry Programs</span></li>
+                                    </ul>
+                                </div>
+                                <div class="mb-5">
+                                    <h3 class="fw-bold text-danger mb-3 border-bottom border-light pb-2">Pharmacists</h3>
+                                    <p class="text-secondary lh-lg mb-3">Offering advanced Doctor of Pharmacy (PharmD) degrees alongside dual-degree opportunities (PharmD/MBA or PharmD/PhD). Our students lead the effort in drug discovery, optimized therapy strategies, and tackling complex pharmaceutical care across inpatient and community settings.</p>
+                                </div>
+                                <div>
+                                    <h3 class="fw-bold text-danger mb-3 border-bottom border-light pb-2">Innovators</h3>
+                                    <p class="text-secondary lh-lg">Bridging the critical gap between unsolved clinical needs and functional engineering solutions. The innovations department collaborates directly with MIT and leading biotech hubs to create smart health devices, medical wearables, AI-driven diagnostics, and software platforms that redefine global healthcare.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Right Column -->
+                            <div class="col-md-6 ps-md-5">
+                                <div class="mb-5">
+                                    <h3 class="fw-bold text-dark mb-3 border-bottom border-light pb-2">Scientists</h3>
+                                    <p class="text-secondary lh-lg mb-3">From genomic mapping to targeted immunology, our researchers do not just learn science—they push its vanguard. Supported by robust NIH grants, our PhD candidates and postdocs enjoy 24/7 access to high-containment laboratories, mass spectrometers, and advanced computing clusters.</p>
+                                </div>
+                                <div class="mb-5">
+                                    <h3 class="fw-bold text-dark mb-3 border-bottom border-light pb-2">Surgeons</h3>
+                                    <p class="text-secondary lh-lg mb-3">Training the world's most elite surgeons using 3D spatial trainers and robotic-assisted operating suites. We enforce a culture of surgical excellence, focusing on minimally invasive techniques, precision organ transplantation, and complex trauma reconstruction.</p>
+                                </div>
+                                <div>
+                                    <h3 class="fw-bold text-dark mb-3 border-bottom border-light pb-2">Technologists</h3>
+                                    <p class="text-secondary lh-lg mb-3">Medical technologists are the unsung heroes of modern diagnostics. We provide specialized tracks in radiology mapping, laboratory hematology, and sonography. The center houses over $50M in clinical imaging tech ensuring our graduates are ready for day one in any top-tier laboratory.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          
+          <!-- Modal Footer -->
+          <div class="modal-footer border-top shadow-sm py-3 px-lg-5">
+            <button type="button" class="btn btn-secondary px-5 py-2 fw-bold rounded-1" data-bs-dismiss="modal">Close Window</button>
+            <button type="button" class="btn btn-danger px-5 py-2 fw-bold rounded-1 ms-3" data-bs-toggle="modal" data-bs-target="#applyModal" data-bs-dismiss="modal">Apply Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Apply Now Form Modal -->
+    <div class="modal fade" id="applyModal" tabindex="-1" aria-labelledby="applyModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-0 shadow-lg">
+          <div class="modal-header bg-danger text-white border-0 py-4 px-lg-5">
+            <h5 class="modal-title fw-bold fs-4" id="applyModalLabel">Submit Application to Cambridge</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-4 p-lg-5 bg-light">
+            <div id="applySuccessMessage" class="alert alert-success d-none fw-bold shadow-sm" role="alert">
+                <span class="fs-5 display-inline-block mb-1">✅ Application Submitted Successfully!</span><br>
+                <span class="fw-normal text-dark fs-6" id="successDetailText">Your information was locally saved. We will review your profile shortly.</span>
+            </div>
+            
+            <form id="applyForm" class="needs-validation" novalidate>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <label for="appName" class="form-label fw-bold text-dark">Full Legal Name <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control form-control-lg shadow-sm border-0 rounded-1" id="appName" name="appName" pattern="^[A-Za-z\s]{3,50}$" placeholder="John H. Doe" required>
+                        <div class="invalid-feedback text-danger fw-semibold mt-2">Please enter a valid full name (letters only, min 3 chars).</div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="appEmail" class="form-label fw-bold text-dark">Email Address <span class="text-danger">*</span></label>
+                        <input type="email" class="form-control form-control-lg shadow-sm border-0 rounded-1" id="appEmail" name="appEmail" pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$" placeholder="name@example.com" required>
+                        <div class="invalid-feedback text-danger fw-semibold mt-2">Please provide a structurally valid email address.</div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="appPhone" class="form-label fw-bold text-dark">Contact Number</label>
+                        <input type="tel" class="form-control form-control-lg shadow-sm border-0 rounded-1" id="appPhone" name="appPhone" pattern="^\+?[0-9\s\-()]{10,20}$" placeholder="(Optional) 555-0199">
+                        <div class="invalid-feedback text-danger fw-semibold mt-2">Please enter a valid phone number pattern.</div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="appFocus" class="form-label fw-bold text-dark">Primary Focus Area <span class="text-danger">*</span></label>
+                        <select class="form-select form-select-lg shadow-sm border-0 rounded-1" id="appFocus" name="appFocus" required>
+                            <option value="" selected disabled>Choose specialized area...</option>
+                            <option value="Doctors">Doctors / Physicians</option>
+                            <option value="Scientists">Scientists</option>
+                            <option value="Pharmacists">Pharmacists</option>
+                            <option value="Surgeons">Surgeons</option>
+                            <option value="Innovators">Innovators</option>
+                            <option value="Technologists">Technologists</option>
+                        </select>
+                        <div class="invalid-feedback text-danger fw-semibold mt-2">Please select your primary focus tier.</div>
+                    </div>
+                    <div class="col-12">
+                        <label for="appMessage" class="form-label fw-bold text-dark">Why are you applying? <span class="text-danger">*</span></label>
+                        <textarea class="form-control form-control-lg shadow-sm border-0 rounded-1" id="appMessage" name="appMessage" rows="5" placeholder="Briefly describe your medical background, aspirations, and research interests..." required minlength="10"></textarea>
+                        <div class="invalid-feedback text-danger fw-semibold mt-2">Please provide at least 10 characters detailing your interest.</div>
+                    </div>
+                </div>
+                <div class="mt-5 text-end border-top border-secondary-subtle pt-4">
+                    <button type="button" class="btn btn-outline-secondary btn-lg px-4 me-2 rounded-1 fw-bold" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-dark btn-lg px-5 rounded-1 fw-bold shadow-sm">Submit Application</button>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+<footer class="hospital-footer py-5">
+    <div class="container footer-main-wrapper shadow-sm border rounded-5 p-4 p-lg-5 bg-white">
+        <div class="row g-4 overflow-hidden">
+            
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <div class="footer-logo mb-4">
+                    <i class="fas fa-plus-square text-danger fs-3 me-2"></i>
+                    <div class="brand-text d-inline-block align-middle">
+                        <span class="d-block fw-bold text-dark lh-1">CAMBRIDGE</span>
+                        <span class="d-block fw-bold text-dark lh-1">HOSPITAL</span>
+                    </div>
+                </div>
+               
+            </div>
+
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                <h6 class="fw-bold mb-4">Our Services</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#!" class="footer-link">About Us</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Our Services</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Careers</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Pharmacy</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Pediatrics & Imaging</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                <h6 class="fw-bold mb-4">Patients & Visitors</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#!" class="footer-link">Visitor Guidelines</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Insurance Information</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Patients Visitors</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Poster Information</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                <div class="map-container rounded shadow-sm border overflow-hidden">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.31399252169!2d67.0624645!3d24.8872645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33ef3b1716301%3A0x673907c082531a7d!2sCambridge%20Hospital!5e0!3m2!1sen!2s!4v1711800000000!5m2!1sen!2s" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 ps-lg-4">
+                <ul class="list-unstyled contact-info mb-4">
+                    <li class="mb-3 d-flex align-items-center">
+                        <i class="fas fa-phone-alt me-3 text-danger"></i>
+                        <span class="small-text">+1 234 567 890</span>
+                    </li>
+                    <li class="mb-3 d-flex align-items-center">
+                        <i class="fas fa-envelope me-3 text-danger"></i>
+                        <span class="small-text">info@cambridgehospital.org</span>
+                    </li>
+                    <li class="mb-3 d-flex align-items-start">
+                        <i class="fas fa-map-marker-alt me-3 mt-1 text-danger"></i>
+                        <span class="small-text">123 Hospital Lane, Cityville</span>
+                    </li>
+                </ul>
+                <div class="social-icons d-flex gap-2">
+                    <a href="https://www.facebook.com" target="_blank" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com" target="_blank" class="social-btn"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5 opacity-10">
+
+        <div class="text-center">
+            <p class="mb-0 text-muted small">
+                © 2024 Cambridge Hospital. All Rights Reserved. 
+                <a href="#!" class="ms-3 text-muted text-decoration-none">Terms of Service</a>
+                <a href="#!" class="ms-3 text-muted text-decoration-none">Privacy Policy</a>
+            </p>
+        </div>
+    </div>
+</footer>
+    
+    <div id="root" style="display: none;"></div>
+    
+    <!-- Bootstrap 5 JS and Popper.js CDN link just before closing body tag -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <!-- Custom Script -->
+    <script src="academic.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,445 @@
+:root {
+    --hosp-red: #b33939;
+    --hosp-cream: #fdfaf7;
+    --hosp-dark-red: #6e1d1d;
+}
+
+body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
+
+/* Hero Layout */
+.bg-hosp-cream { background-color: var(--hosp-cream); }
+.hero-main-title { font-size: 2.8rem; line-height: 1.2; color: #1a1a1a; }
+.text-hosp-red { color: var(--hosp-red); }
+.hero-sub-para { font-size: 0.95rem; line-height: 1.7; max-width: 32rem; }
+
+/* Buttons */
+.btn-red-hosp { background: var(--hosp-red); color: white; border: none; font-weight: 600; }
+.btn-red-hosp:hover { background: #880000; color: white; transform: translateY(-2px); }
+.btn-outline-hosp { border: 1.5px solid var(--hosp-red); color: var(--hosp-red); text-decoration: none; font-weight: 600; }
+
+/* The Exact Curvy Blob Shape */
+.image-blob-container {
+    width: 100%;
+    height: 42rem;
+    overflow: hidden;
+    /* Special curvy radius to match the image exactly */
+    border-radius: 35% 0% 0% 65% / 49% 0% 100% 51%;
+}
+
+.final-blob-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Red Highlights Bar (Overlapping) */
+.highlights-wrapper { margin-top: -3.5rem; position: relative; z-index: 10; }
+.red-highlights-bar {
+    background-color: var(--hosp-dark-red);
+    border-radius: 0.8rem;
+    color: white;
+}
+
+.h-item { display: flex; align-items: center; gap: 0.8rem; border-right: 1px solid rgba(255,255,255,0.1); padding: 0 1rem; flex: 1; }
+.h-item:last-child { border-right: none; }
+.h-item i { font-size: 1.5rem; opacity: 0.8; }
+.h-item h6 { font-size: 0.85rem; margin: 0; font-weight: 700; }
+.h-item p { font-size: 0.7rem; margin: 0; opacity: 0.6; }
+
+/* Mobile Responsiveness */
+@media (max-width: 48rem) {
+    .image-blob-container { border-radius: 0; height: 20rem; }
+    .hero-main-title { font-size: 1.8rem; }
+    .red-highlights-bar { flex-direction: column; gap: 1.5rem; padding: 2rem; }
+    .h-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); width: 100%; padding-bottom: 1rem; }
+}
+
+ /* section 1  */
+ :root { --hosp-red: #b33939; }
+
+.hospital-dashboard { background-color: #fcfcfc; font-family: 'Poppins', sans-serif; }
+
+/* 5 Column Grid for Services */
+.col-lg-2-4 { width: 20%; flex: 0 0 20%; }
+
+.dashboard-box, .service-mini-card {
+    background: white; border-radius: 1.2rem;
+    border: 1px solid #eeeeee; transition: 0.4s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.service-mini-card { padding: 1.5rem; height: 100%; text-align: center; }
+
+/* Grunge/Glow Hover Animation */
+.animate-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(179, 57, 57, 0.15);
+    border-color: var(--hosp-red);
+}
+
+.icon-circle-bg, .stat-icon-bg {
+    width: 3.5rem; height: 3.5rem; background: #fff1f1;
+    color: var(--hosp-red); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; margin: 0 auto;
+    font-size: 1.3rem;
+}
+
+.btn-outline-red { border: 1px solid var(--hosp-red); color: var(--hosp-red); border-radius: 2rem; font-size: 0.75rem; }
+.btn-outline-red:hover { background: var(--hosp-red); color: white; }
+
+/* Why Choose List */
+.why-list li { margin-bottom: 1rem; font-size: 0.9rem; font-weight: 500; }
+.text-red { color: var(--hosp-red); margin-right: 0.5rem; }
+
+/* Testimonials */
+.quote-icon { font-size: 2rem; color: #eee; }
+.dot { height: 8px; width: 8px; background-color: #ddd; border-radius: 50%; display: inline-block; margin: 0 4px; }
+.dot.active { background-color: var(--hosp-red); width: 20px; border-radius: 10px; }
+
+@media (max-width: 992px) { .col-lg-2-4 { width: 50%; flex: 0 0 50%; } }
+/* section 2  */
+:root {
+    --hosp-red: #b33939;
+    --hosp-soft-red: #fff1f1;
+    --hosp-cream: #fdfaf7; /* Muskan, light background as in image */
+}
+
+.bg-hosp-cream { background-color: var(--hosp-cream); }
+.bg-hosp-red { background-color: var(--hosp-red); }
+
+/* Header Styling */
+.heading-line {
+    width: 3rem;
+    height: 0.2rem;
+    background-color: var(--hosp-red);
+    margin-top: 0.5rem;
+}
+
+/* Icon Styling - Exact size from image */
+.spec-icon-circle {
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: var(--hosp-soft-red);
+    color: var(--hosp-red);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    transition: 0.3s ease;
+}
+
+.specialty-item:hover .spec-icon-circle {
+    background-color: var(--hosp-red);
+    color: white;
+    transform: translateY(-0.3rem);
+}
+
+.smaller { font-size: 0.85rem; }
+
+/* Button Styling */
+.btn-view-all {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    color: #444;
+    transition: 0.3s;
+}
+
+.btn-view-all:hover {
+    background-color: var(--hosp-red);
+    color: white;
+    border-color: var(--hosp-red);
+}
+
+@media (max-width: 48rem) {
+    .spec-icon-circle { width: 3.5rem; height: 3.5rem; font-size: 1.4rem; }
+}
+
+/* section 3  */
+:root {
+    --hosp-main-red: #b33939;
+    --card-normal-bg: #fffbf9;
+}
+
+.medical-services-section { font-family: 'Poppins', sans-serif; }
+
+.heading-accent {
+    width: 3.5rem; height: 0.2rem;
+    background-color: var(--hosp-main-red);
+    margin-top: 0.5rem;
+}
+
+/* Card Styling */
+.service-item-inner {
+    background-color: var(--card-normal-bg);
+    border: 1px solid #f1e3e0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Muskan, Hover par color darker ho jayega */
+.service-item-inner:hover {
+    background-color: #f7e0da; 
+    border-color: #e0b8b0;
+    transform: translateX(0.4rem);
+}
+
+/* Icons Styling (Exact same size) */
+.service-icon-bg {
+    width: 3.5rem; height: 3.5rem;
+    border-radius: 0.8rem;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem;
+    transition: 0.3s;
+}
+
+/* Background Colors for icons from your image */
+.bg-soft-red { background-color: #fff1f1; } .text-red { color: #b33939; }
+.bg-soft-brown { background-color: #fdf2f2; } .text-brown { color: #6e1d1d; }
+.bg-soft-maroon { background-color: #f9eeee; } .text-maroon { color: #880000; }
+.bg-soft-green { background-color: #f4f8f4; } .text-green { color: #4b6b4b; }
+.bg-soft-olive { background-color: #f8f8f2; } .text-olive { color: #556b2f; }
+.bg-soft-orange { background-color: #fff9f4; } .text-orange { color: #d35400; }
+.bg-soft-pink { background-color: #fff5f5; } .text-pink { color: #c0392b; }
+.bg-soft-magenta { background-color: #fff0f5; } .text-magenta { color: #b33939; }
+
+/* Extra Services Colors */
+.bg-soft-blue { background-color: #f0f4ff; } .text-blue { color: #2980b9; }
+.bg-soft-cyan { background-color: #f0ffff; } .text-cyan { color: #16a085; }
+
+/* View All Button */
+.btn-view-all-services {
+    background-color: white;
+    border: 1px solid #ddd;
+    color: #444;
+    border-radius: 0.5rem;
+    transition: 0.3s;
+}
+
+.btn-view-all-services:hover {
+    background-color: var(--hosp-main-red);
+    color: white;
+    border-color: var(--hosp-main-red);
+}
+
+.smaller { font-size: 0.85rem; }
+
+/* Slide Animation */
+.animate-slide {
+    animation: slideUp 0.5s ease forwards;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(1rem); }
+    to { opacity: 1; transform: translateY(0); }
+}
+ /* section 4  */
+ :root {
+    --hosp-maroon: #4e1a1a;
+    --hosp-red-deep: #6e1d1d;
+    --hosp-cream: #fff9f7;
+    --success-green: #2ecc71;
+}
+
+/* Card & Background */
+.appointment-section { background-color: #fcfcfc; }
+.appointment-card { background-color: var(--hosp-cream); border: 1px solid #f1e4e0; }
+
+/* Custom Inputs */
+.input-group-custom {
+    display: flex; background: white; border: 1px solid #e2e2e2;
+    border-radius: 0.6rem; transition: 0.3s;
+}
+.input-group-custom:focus-within { border-color: var(--hosp-maroon); box-shadow: 0 0 10px rgba(78, 26, 26, 0.05); }
+.input-icon { padding: 0.8rem 1rem; color: #999; }
+.form-control-custom { flex: 1; border: none; padding: 0.8rem 0.5rem; outline: none; background: transparent; font-size: 0.95rem; }
+
+/* Button */
+.btn-book-now { background: var(--hosp-red-deep); color: white; transition: 0.4s; }
+.btn-book-now:hover { background: var(--hosp-maroon); transform: translateY(-3px); box-shadow: 0 8px 20px rgba(110, 29, 29, 0.2); }
+
+/* SUCCESS MODAL UI */
+.success-icon-wrap { font-size: 5rem; color: var(--success-green); animation: popScale 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+.booking-details-box { border: 1px dashed #ddd; }
+
+@keyframes popScale {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Mobile Friendly */
+@media (max-width: 48rem) {
+    .appointment-card { padding: 2rem 1.2rem !important; }
+}
+:root {
+    --footer-bg: #4e1a1a; /* Deep Maroon from Image */
+    --footer-accent: #6e1d1d;
+}
+
+.hosp-footer {
+    background-color: var(--footer-bg);
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Links Styling */
+.footer-links li { margin-bottom: 0.8rem; }
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+}
+.footer-links a:hover { color: #ffffff; transform: translateX(0.3rem); }
+.footer-links i { font-size: 0.7rem; opacity: 0.5; }
+
+/* Social Icons */
+.social-icon {
+    width: 2.2rem; height: 2.2rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: white; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none; transition: 0.3s;
+}
+.social-icon:hover { background: white; color: var(--footer-bg); }
+
+/* Newsletter Styling */
+.newsletter-input {
+    background: white; border-radius: 0.4rem; padding: 0.2rem;
+}
+.form-control-custom {
+    padding: 0.5rem 1rem; font-size: 0.9rem; flex: 1; outline: none; border-radius: 0.4rem;
+}
+.btn-send {
+    background: transparent; border: none; color: var(--footer-bg); padding: 0 0.8rem; font-size: 1rem;
+}
+
+/* Badges */
+.badge-icon {
+    width: 3rem; height: 3rem;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 0.5rem; font-size: 1.2rem;
+}
+.tiny-text { font-size: 0.7rem; }
+
+/* Bottom Links */
+.footer-bottom-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none; margin-left: 1rem;
+}
+
+/* Responsiveness */
+@media (max-width: 48rem) {
+    .hosp-footer { padding-bottom: 2rem; }
+    .footer-badges { margin-top: 2rem; }
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar Design */
+.custom-nav {
+    border: 1px solid #f0f0f0;
+}
+
+.brand-text span {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.nav-link {
+    color: #444 !important;
+    font-size: 0.95rem;
+}
+
+/* Department Toggle Styling */
+.dept-btn {
+    background-color: #fdf2f2;
+    color: #b33939 !important;
+    font-weight: 600 !important;
+}
+
+.dept-btn .dot {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.dropdown-item {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+    color: #555;
+    transition: 0.3s;
+}
+
+.active-dept {
+    background-color: #fdf2f2 !important;
+    color: #b33939 !important;
+    font-weight: 600;
+}
+
+/* Urgent Care Button */
+.btn-urgent {
+    background-color: #b33939;
+    color: white;
+    font-size: 0.85rem;
+    padding: 10px 25px;
+    transition: 0.3s;
+}
+
+.btn-urgent:hover {
+    background-color: #880000;
+    color: white;
+}
+
+/* Notification Panel */
+.notif-badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 10px;
+    height: 10px;
+    background-color: #b33939;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.notif-panel {
+    position: absolute;
+    right: 0;
+    top: 45px;
+    width: 320px;
+    background: white;
+    border-radius: 15px;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.notif-list {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.unread {
+    background-color: #fff9f9;
+}
+
+.smaller {
+    font-size: 0.8rem;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #eee;
+}

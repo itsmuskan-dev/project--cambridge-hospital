@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambridge Hospital | Home</title>
+      <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23b33939'/%3E%3Cpath d='M30 50 h40 M50 30 v40' stroke='white' stroke-width='12' stroke-linecap='round'/%3E%3C/svg%3E">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="center.css">
+</head>
+<body>
+   <header class="main-header py-4">
+        <div class="container-fluid px-lg-5">
+            <nav class="navbar navbar-expand-xl navbar-light bg-white rounded-pill shadow-sm custom-nav px-4 py-2">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <div class="hospital-logo me-2">
+                        <i class="fas fa-plus-square text-danger fs-2"></i>
+                    </div>
+                    <div class="brand-text">
+                        <span class="d-block fw-bold text-dark lh-1">CAMBRIDGE</span>
+                        <span class="d-block fw-bold text-dark lh-1">HOSPITAL</span>
+                    </div>
+                </a>
+    
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#cambridgeNav" aria-controls="cambridgeNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                  <div class="collapse navbar-collapse" id="cambridgeNav">
+                    <ul class="navbar-nav mx-auto gap-2 align-items-center">
+                        <li class="nav-item"><a class="nav-link fw-medium" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="about.html">about us</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="sstories.html">success stories</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="feedback.html">Feedback</a></li>
+                        
+                        <li class="nav-item dropdown custom-dropdown">
+                            <a class="nav-link dropdown-toggle info-btn px-3 ms-lg-2" href="#" role="button" data-bs-toggle="dropdown">
+                                Explore more
+                            </a>
+                           <ul class="dropdown-menu shadow border-0 mt-3 rounded-4 p-2">
+                               <li><a class="dropdown-item" href="center.html"><i class="fas fa-house-medical me-2"></i> Center</a></li>
+                                <li><a class="dropdown-item" href="academic.html"><i class="fas fa-graduation-cap me-2"></i> Academic</a></li>
+                                <li><a class="dropdown-item" href="form..html"><i class="fas fa-file-alt me-2"></i> Foam</a></li>
+                                <li><a class="dropdown-item" href="QUERYY.HTML"><i class="fas fa-question-circle me-2"></i> Query</a></li>
+                                <li><a class="dropdown-item" href="facilities.html"><i class="fas fa-building me-2"></i> Facilities</a></li>
+                                <li><a class="dropdown-item" href="vacancies.html"><i class="fas fa-briefcase me-2"></i> Vacancies</a></li>
+                            </ul>
+                        </li>
+    
+                        <li class="nav-item dropdown custom-dropdown">
+                            <a class="nav-link dropdown-toggle dept-btn px-3 ms-lg-1" href="#" role="button" data-bs-toggle="dropdown">
+                                <span class="dot me-1">•</span> Departments
+                            </a>
+                            <ul class="dropdown-menu shadow border-0 mt-3 rounded-4 p-2">
+                                <li><a class="dropdown-item" href="emergancy-department.html"><i class="fas fa-exclamation-circle me-2"></i> Emergency Department</a></li>
+                                <li><a class="dropdown-item" href="opd-department.html"><i class="fas fa-calendar-alt me-2"></i> OPD (Outpatient Dept)</a></li>
+                                <li><a class="dropdown-item" href="ipd-department.html"><i class="fas fa-bed me-2"></i> IPD (Inpatient Dept)</a></li>
+                                <li><a class="dropdown-item" href="lab-department.html"><i class="fas fa-microscope me-2"></i> Laboratory Department</a></li>
+                                <li><a class="dropdown-item" href="radio.html"><i class="fas fa-x-ray me-2"></i> Radiology & Imaging</a></li>
+                                <li><a class="dropdown-item" href="pharmacy.html"><i class="fas fa-pills me-2"></i> Pharmacy</a></li>
+                                <li><a class="dropdown-item" href="neurology.html"><i class="fas fa-brain me-2"></i> Neurology Department</a></li>
+                                <li><a class="dropdown-item" href="GYNECOLOGY.HTML"><i class="fas fa-venus me-2"></i> Gynecology & Obstetrics</a></li>
+                                
+
+                            </ul>
+                        </li>
+                    </ul>
+    
+                    <div class="d-flex align-items-center gap-3 justify-content-center mt-3 mt-xl-0">
+                        <button class="btn btn-urgent rounded-pill px-4 fw-bold">URGENT CARE</button>
+                        
+                        <div class="notification-container position-relative">
+                            <button class="btn border-0 p-0" id="notifToggle">
+                                <i class="fas fa-bell fs-5 text-muted"></i>
+                                <span class="notif-badge"></span>
+                            </button>
+                            <div id="notifPanel" class="notif-panel shadow-lg d-none">
+                                <div class="panel-header d-flex justify-content-between p-3 border-bottom">
+                                    <h6 class="mb-0 fw-bold">Notifications</h6>
+                                    <button class="btn btn-sm text-danger p-0 fw-bold" id="markRead">Clear All</button>
+                                </div>
+                                <div class="notif-list custom-scrollbar" id="notifList">
+                                    <div class="notif-item p-3 border-bottom unread">
+                                        <p class="mb-0 small fw-bold text-dark">Lab Report Ready</p>
+                                        <span class="text-muted smaller">Your blood test results are now available.</span>
+                                    </div>
+                                </div>
+                                <div class="panel-footer p-2 text-center">
+                                    <button class="btn btn-sm text-danger fw-bold" id="viewAll">View All Notifications</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+<section class="cambridge-hero-final">
+    <div class="container-fluid p-0">
+        <div class="row g-0 align-items-stretch">
+            
+            <div class="col-lg-5 d-flex align-items-center bg-hosp-cream">
+                <div class="hero-content-padding p-5">
+                    <h1 class="hero-main-title fw-bold">
+                        Compassionate Care, <br>
+                        Advanced Medicine, <br>
+                        <span class="text-hosp-red">Trusted by Families</span>
+                    </h1>
+                    <p class="hero-sub-para my-4 text-muted">
+                        Founded in 2030 by Dr. Sarah Ali, Cambridge Hospital was established with a vision to provide reliable and high-quality healthcare. Our mission is to improve lives through compassionate care and continuous innovation.
+                    </p>
+                    <div class="hero-action-btns d-flex flex-wrap gap-3">
+                        <button class="btn btn-red-hosp px-4 py-2" data-bs-toggle="modal" data-bs-target="#aptModal">
+                            <i class="far fa-calendar-alt me-2"></i> Book an Appointment
+                        </button>
+                        <a href="tel:+92123456789" class="btn btn-outline-hosp px-4 py-2">
+                            <i class="fas fa-phone-alt me-2"></i> Call for Assistance
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7 position-relative">
+                <div class="image-blob-container">
+                    <img src="hospital.png" alt="Cambridge Hospital" class="final-blob-img">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container highlights-wrapper">
+        <div class="red-highlights-bar d-flex justify-content-between align-items-center px-4 py-3 shadow-lg">
+            <div class="h-item">
+                <i class="fas fa-clock"></i>
+                <div class="h-text"><h6>24/7 Emergency</h6><p>Round the clock care</p></div>
+            </div>
+            <div class="h-item">
+                <i class="fas fa-user-md"></i>
+                <div class="h-text"><h6>Expert Doctors</h6><p>Highly qualified team</p></div>
+            </div>
+            <div class="h-item">
+                <i class="fas fa-microscope"></i>
+                <div class="h-text"><h6>Modern Equipment</h6><p>State-of-the-art tech</p></div>
+            </div>
+            <div class="h-item">
+                <i class="fas fa-heart"></i>
+                <div class="h-text"><h6>Patient First</h6><p>Your health is priority</p></div>
+            </div>
+            <div class="h-item">
+                <i class="fas fa-hand-holding-heart"></i>
+                <div class="h-text"><h6>Compassionate Care</h6><p>With care & respect</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="aptModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 rounded-4 shadow">
+            <div class="modal-header bg-dark text-white border-0">
+                <h5 class="modal-title fw-bold">Book Your Appointment</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <form id="bookingForm">
+                    <div class="mb-3"><input type="text" id="pName" class="form-control" placeholder="Full Name" required></div>
+                    <div class="mb-3"><input type="date" id="pDate" class="form-control" required></div>
+                    <button type="submit" class="btn btn-red-hosp w-100 py-2">Confirm & Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- section 1  -->
+ <section class="hospital-dashboard py-5">
+    <div class="container">
+        <div class="row g-3 mb-5">
+            <div class="col-lg-2-4 col-md-6">
+                <div class="service-mini-card animate-hover">
+                    <div class="icon-circle-bg mb-3"><i class="fas fa-heartbeat"></i></div>
+                    <h6 class="fw-bold">Cardiology Center</h6>
+                    <p class="small text-muted mb-2">Heart care services with advanced diagnostics.</p>
+                    <div class="extra-text d-none small text-secondary mb-2">We provide 24/7 cardiac monitoring and emergency surgery.</div>
+                    <button class="btn btn-sm btn-outline-red" onclick="toggleText(this)">Learn More</button>
+                </div>
+            </div>
+            <div class="col-lg-2-4 col-md-6">
+                <div class="service-mini-card animate-hover">
+                    <div class="icon-circle-bg mb-3"><i class="fas fa-brain"></i></div>
+                    <h6 class="fw-bold">Neurology Center</h6>
+                    <p class="small text-muted mb-2">Expert care for brain and nervous system.</p>
+                    <div class="extra-text d-none small text-secondary mb-2">Specialized in stroke recovery and neuro-rehabilitation.</div>
+                    <button class="btn btn-sm btn-outline-red" onclick="toggleText(this)">Learn More</button>
+                </div>
+            </div>
+            <div class="col-lg-2-4 col-md-6">
+                <div class="service-mini-card animate-hover">
+                    <div class="icon-circle-bg mb-3"><i class="fas fa-pills"></i></div>
+                    <h6 class="fw-bold">Pharmacy</h6>
+                    <p class="small text-muted mb-2">Well-stocked with genuine medicines.</p>
+                    <div class="extra-text d-none small text-secondary mb-2">Home delivery and expert pharmacist guidance available.</div>
+                    <button class="btn btn-sm btn-outline-red" onclick="toggleText(this)">Learn More</button>
+                </div>
+            </div>
+             <div class="col-lg-2-4 col-md-6">
+                <div class="service-mini-card animate-hover">
+                    <div class="icon-circle-bg mb-3"><i class="fas fa-flask"></i></div>
+                    <h6 class="fw-bold">Pathology Lab</h6>
+                    <p class="small text-muted mb-2">Accurate lab tests and quick reports.</p>
+                    <div class="extra-text d-none small text-secondary mb-2">NABL accredited lab with digital report access.</div>
+                    <button class="btn btn-sm btn-outline-red" onclick="toggleText(this)">Learn More</button>
+                </div>
+            </div>
+             <div class="col-lg-2-4 col-md-6">
+                <div class="service-mini-card animate-hover">
+                    <div class="icon-circle-bg mb-3"><i class="fas fa-ambulance"></i></div>
+                    <h6 class="fw-bold">Emergency</h6>
+                    <p class="small text-muted mb-2">Immediate medical care for critical cases.</p>
+                    <div class="extra-text d-none small text-secondary mb-2">Trauma response team available round the clock.</div>
+                    <button class="btn btn-sm btn-outline-red" onclick="toggleText(this)">Learn More</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="dashboard-box p-4 h-100">
+                    <h5 class="fw-bold mb-4">Why Choose Cambridge?</h5>
+                    <ul class="list-unstyled why-list">
+                        <li><i class="fas fa-check text-red"></i> International Healthcare Services</li>
+                        <li><i class="fas fa-check text-red"></i> Experienced Medical Professionals</li>
+                        <li><i class="fas fa-check text-red"></i> Advanced Medical Infrastructure</li>
+                        <li><i class="fas fa-check text-red"></i> Affordable & Transparent Pricing</li>
+                    </ul>
+                    <div class="text-center mt-3"><img src="heart checkup.png" width="200 alt="Shield"></div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="dashboard-box p-4 h-100 text-center">
+                    <h5 class="fw-bold mb-5">Our Statistics</h5>
+                    <div class="row g-3">
+                        <div class="col-6 mb-4">
+                            <div class="stat-icon-bg mb-2"><i class="fas fa-user-md"></i></div>
+                            <h4 class="fw-bold mb-0">50+</h4><p class="smaller text-muted">Doctors</p>
+                        </div>
+                        <div class="col-6 mb-4">
+                            <div class="stat-icon-bg mb-2"><i class="fas fa-bed"></i></div>
+                            <h4 class="fw-bold mb-0">200+</h4><p class="smaller text-muted">Beds</p>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-icon-bg mb-2"><i class="fas fa-smile"></i></div>
+                            <h4 class="fw-bold mb-0">20K+</h4><p class="smaller text-muted">Happy Patients</p>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-icon-bg mb-2"><i class="fas fa-calendar-alt"></i></div>
+                            <h4 class="fw-bold mb-0">14+</h4><p class="smaller text-muted">Years of Care</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="dashboard-box p-4 h-100 position-relative">
+                    <h5 class="fw-bold mb-4">Patient Testimonials</h5>
+                    <div class="quote-icon mb-3"><i class="fas fa-quote-left"></i></div>
+                    <p class="fst-italic text-muted mb-4">"Cambridge Hospital provided excellent care and support. The staff is very cooperative and the environment is friendly."</p>
+                    <h6 class="fw-bold mb-0">— muskan</h6>
+                    <div class="testimonial-dots mt-4">
+                        <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+ <!-- section 2  -->
+  <section class="specialties-section py-5 bg-hosp-cream">
+    <div class="container">
+        <div class="header-box mb-5">
+            <h2 class="fw-bold text-dark-emphasis">Our Specialties</h2>
+            <p class="text-muted">Expert care in every specialty</p>
+            <div class="heading-line"></div>
+        </div>
+
+        <div class="row g-5 text-center">
+            <div class="col-lg-3 col-md-6 specialty-item">
+                <div class="spec-icon-circle mx-auto mb-3"><i class="fas fa-heartbeat"></i></div>
+                <h6 class="fw-bold">Cardiology</h6>
+                <p class="smaller text-muted">Heart care with advanced technology</p>
+            </div>
+            <div class="col-lg-3 col-md-6 specialty-item">
+                <div class="spec-icon-circle mx-auto mb-3"><i class="fas fa-brain"></i></div>
+                <h6 class="fw-bold">Neurology</h6>
+                <p class="smaller text-muted">Expert care for brain and nerves</p>
+            </div>
+            <div class="col-lg-3 col-md-6 specialty-item">
+                <div class="spec-icon-circle mx-auto mb-3"><i class="fas fa-bone"></i></div>
+                <h6 class="fw-bold">Orthopedics</h6>
+                <p class="smaller text-muted">Bone, joint and spine care excellence</p>
+            </div>
+            <div class="col-lg-3 col-md-6 specialty-item">
+                <div class="spec-icon-circle mx-auto mb-3"><i class="fas fa-baby"></i></div>
+                <h6 class="fw-bold">Pediatrics</h6>
+                <p class="smaller text-muted">Special care for your little ones</p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 specialty-item">
+                <div class="spec-icon-circle mx-auto mb-3"><i class="fas fa-female"></i></div>
+                <h6 class="fw-bold">Gynecology</h6>
+                <p class="smaller text-muted">Women's health is our priority</p>
+            </div>
+            <div class="col-lg-3 col-md-6 specialty-item">
+                <div class="spec-icon-circle mx-auto mb-3"><i class="fas fa-stomach"></i></div>
+                <h6 class="fw-bold">Gastroenterology</h6>
+                <p class="smaller text-muted">Digestive health and liver care</p>
+            </div>
+            <div class="col-lg-3 col-md-6 specialty-item">
+                <div class="spec-icon-circle mx-auto mb-3"><i class="fas fa-lungs"></i></div>
+                <h6 class="fw-bold">Pulmonology</h6>
+                <p class="smaller text-muted">Advanced care for lung diseases</p>
+            </div>
+            <div class="col-lg-3 col-md-6 specialty-item">
+                <div class="spec-icon-circle mx-auto mb-3"><i class="fas fa-eye"></i></div>
+                <h6 class="fw-bold">Ophthalmology</h6>
+                <p class="smaller text-muted">Complete eye care solutions</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="deptModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-4 border-0 shadow">
+            <div class="modal-header bg-hosp-red text-white">
+                <h5 class="modal-title fw-bold">All Hospital Departments</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Dermatology</li>
+                    <li class="list-group-item">Urology</li>
+                    <li class="list-group-item">Ent Specialists</li>
+                    <li class="list-group-item">Radiology & Imaging</li>
+                    <li class="list-group-item">Oncology</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+ <!-- section 3  -->
+  <section class="medical-services-section py-5">
+    <div class="container bg-white shadow-sm p-5 rounded-4 border">
+        <div class="services-header mb-5">
+            <h2 class="fw-bold text-dark-emphasis">Our Medical Services</h2>
+            <p class="text-muted">Comprehensive healthcare under one roof</p>
+            <div class="heading-accent"></div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="service-item-inner d-flex align-items-center p-3 rounded-3">
+                    <div class="service-icon-bg bg-soft-red text-red"><i class="fas fa-truck-medical"></i></div>
+                    <div class="ms-3">
+                        <h6 class="fw-bold mb-1">Emergency Care</h6>
+                        <p class="smaller text-muted mb-0">24/7 emergency support for critical situations</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="service-item-inner d-flex align-items-center p-3 rounded-3">
+                    <div class="service-icon-bg bg-soft-brown text-brown"><i class="fas fa-ambulance"></i></div>
+                    <div class="ms-3">
+                        <h6 class="fw-bold mb-1">Ambulance Service</h6>
+                        <p class="smaller text-muted mb-0">Quick and safe patient transportation</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="service-item-inner d-flex align-items-center p-3 rounded-3">
+                    <div class="service-icon-bg bg-soft-maroon text-maroon"><i class="fas fa-microscope"></i></div>
+                    <div class="ms-3">
+                        <h6 class="fw-bold mb-1">Diagnostics</h6>
+                        <p class="smaller text-muted mb-0">Advanced lab tests and imaging services</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="service-item-inner d-flex align-items-center p-3 rounded-3">
+                    <div class="service-icon-bg bg-soft-green text-green"><i class="fas fa-bed-pulse"></i></div>
+                    <div class="ms-3">
+                        <h6 class="fw-bold mb-1">ICU & Critical Care</h6>
+                        <p class="smaller text-muted mb-0">Advanced ICU and critical care units</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="service-item-inner d-flex align-items-center p-3 rounded-3">
+                    <div class="service-icon-bg bg-soft-olive text-olive"><i class="fas fa-tools"></i></div>
+                    <div class="ms-3">
+                        <h6 class="fw-bold mb-1">Surgery</h6>
+                        <p class="smaller text-muted mb-0">Advanced surgical procedures</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="service-item-inner d-flex align-items-center p-3 rounded-3">
+                    <div class="service-icon-bg bg-soft-orange text-orange"><i class="fas fa-user-doctor"></i></div>
+                    <div class="ms-3">
+                        <h6 class="fw-bold mb-1">Physiotherapy</h6>
+                        <p class="smaller text-muted mb-0">Rehabilitation and physiotherapy care</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="service-item-inner d-flex align-items-center p-3 rounded-3">
+                    <div class="service-icon-bg bg-soft-pink text-pink"><i class="fas fa-pills"></i></div>
+                    <div class="ms-3">
+                        <h6 class="fw-bold mb-1">Pharmacy</h6>
+                        <p class="smaller text-muted mb-0">Genuine medicines and pharmacy care</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="service-item-inner d-flex align-items-center p-3 rounded-3">
+                    <div class="service-icon-bg bg-soft-magenta text-magenta"><i class="fas fa-heart-pulse"></i></div>
+                    <div class="ms-3">
+                        <h6 class="fw-bold mb-1">Health Checkups</h6>
+                        <p class="smaller text-muted mb-0">Regular health checkups for a better you</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 d-none extra-row animate-slide">
+                <div class="service-item-inner d-flex align-items-center p-3 rounded-3">
+                    <div class="service-icon-bg bg-soft-blue text-blue"><i class="fas fa-brain"></i></div>
+                    <div class="ms-3">
+                        <h6 class="fw-bold mb-1">Psychiatry</h6>
+                        <p class="smaller text-muted mb-0">Mental health and counseling services</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 d-none extra-row animate-slide">
+                <div class="service-item-inner d-flex align-items-center p-3 rounded-3">
+                    <div class="service-icon-bg bg-soft-cyan text-cyan"><i class="fas fa-tooth"></i></div>
+                    <div class="ms-3">
+                        <h6 class="fw-bold mb-1">Dental Care</h6>
+                        <p class="smaller text-muted mb-0">Comprehensive oral and dental surgery</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <button class="btn btn-view-all-services px-5 py-2 fw-bold" onclick="showAllServices()">
+                View All Services <i class="fas fa-chevron-right ms-2"></i>
+            </button>
+        </div>
+    </div>
+</section>
+ <!-- section 4  -->
+  <section class="appointment-section py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-10">
+                <div class="appointment-card p-4 p-md-5 shadow-lg rounded-4 border-0">
+                    <div class="form-header mb-4">
+                        <h2 class="fw-bold text-dark-maroon">Book an Appointment</h2>
+                        <p class="text-muted small">Your health is our priority. Schedule your visit today.</p>
+                        <div class="accent-line"></div>
+                    </div>
+
+                    <form id="premiumAptForm">
+                        <div class="input-group-custom mb-3">
+                            <span class="input-icon"><i class="far fa-user"></i></span>
+                            <input type="text" id="fullName" class="form-control-custom" placeholder="Enter Full Name" required>
+                        </div>
+
+                        <div class="input-group-custom mb-3">
+                            <span class="input-icon"><i class="fas fa-phone-alt"></i></span>
+                            <input type="tel" id="phoneNum" class="form-control-custom" placeholder="Phone Number" required>
+                        </div>
+
+                        <div class="input-group-custom mb-3">
+                            <span class="input-icon"><i class="fas fa-briefcase-medical"></i></span>
+                            <select id="deptSelect" class="form-control-custom" required>
+                                <option value="" disabled selected>Select Department</option>
+                                <option value="Cardiology">Cardiology (Heart Care)</option>
+                                <option value="Neurology">Neurology (Brain & Nerves)</option>
+                                <option value="Orthopedics">Orthopedics (Bone & Joint)</option>
+                                <option value="Pediatrics">Pediatrics (Child Care)</option>
+                                <option value="Gynecology">Gynecology (Women's Health)</option>
+                                <option value="Dermatology">Dermatology (Skin Care)</option>
+                                <option value="Radiology">Radiology & Imaging</option>
+                                <option value="Emergency">Emergency Care</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group-custom mb-3">
+                            <span class="input-icon"><i class="fas fa-user-md"></i></span>
+                            <select id="docSelect" class="form-control-custom" required>
+                                <option value="" disabled selected>Select Specialist</option>
+                                <option value="Dr. Sarah Ali">Dr. Sarah Ali (Senior Consultant)</option>
+                                <option value="Dr. Arsalan Ali">Dr. Arsalan Ali (Surgeon)</option>
+                                <option value="Dr. Vivekananda">Dr. Vivekananda (Specialist)</option>
+                            </select>
+                        </div>
+
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <div class="input-group-custom">
+                                    <span class="input-icon"><i class="far fa-calendar-alt"></i></span>
+                                    <input type="date" id="aptDate" class="form-control-custom" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group-custom">
+                                    <span class="input-icon"><i class="far fa-clock"></i></span>
+                                    <input type="time" id="aptTime" class="form-control-custom" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-group-custom mb-4 align-items-start">
+                            <span class="input-icon mt-2"><i class="far fa-comment-alt"></i></span>
+                            <textarea id="userMsg" class="form-control-custom" rows="3" placeholder="Additional Notes (Optional)"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-book-now w-100 py-3 rounded-3 fw-bold">
+                            <i class="far fa-calendar-check me-2"></i> Confirm Appointment
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 rounded-4 shadow-lg">
+            <div class="modal-body text-center p-5">
+                <div class="success-icon-wrap mb-4">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3 class="fw-bold text-dark">Appointment Confirmed!</h3>
+                <p class="text-muted">Thank you for choosing Cambridge Hospital. Our team will contact you shortly to verify your details.</p>
+                <div class="booking-details-box p-3 bg-light rounded-3 my-3">
+                    <p class="mb-1 small"><strong>Booking ID:</strong> <span id="displayID"></span></p>
+                    <p class="mb-0 small"><strong>Patient:</strong> <span id="displayName"></span></p>
+                </div>
+                <button type="button" class="btn btn-dark w-100 rounded-pill py-2" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="hosp-footer pt-5 pb-3">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-logo mb-3">
+                    <h5 class="text-white fw-bold d-inline ms-2">CAMBRIDGE HOSPITAL</h5>
+                </div>
+                <p class="small opacity-75 text-white mb-4">
+                    Cambridge Hospital is committed to providing exceptional healthcare with compassion, advanced technology, and a patient-first approach.
+                </p>
+                <div class="social-links d-flex gap-2">
+                    <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://youtube.com" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6">
+                <h6 class="text-white fw-bold mb-4">Quick Links</h6>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#">Home <i class="fas fa-chevron-right"></i></a></li>
+                    <li><a href="#">Departments <i class="fas fa-chevron-right"></i></a></li>
+                    <li><a href="#">Doctors <i class="fas fa-chevron-right"></i></a></li>
+                    <li><a href="#">Services <i class="fas fa-chevron-right"></i></a></li>
+                    <li><a href="#">Patients <i class="fas fa-chevron-right"></i></a></li>
+                    <li><a href="#">Contact Us <i class="fas fa-chevron-right"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-6">
+                <h6 class="text-white fw-bold mb-4">Departments</h6>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#">Emergency <i class="fas fa-chevron-right"></i></a></li>
+                    <li><a href="#">Cardiology <i class="fas fa-chevron-right"></i></a></li>
+                    <li><a href="#">Neurology <i class="fas fa-chevron-right"></i></a></li>
+                    <li><a href="#">Orthopedics <i class="fas fa-chevron-right"></i></a></li>
+                    <li><a href="#">Pediatrics <i class="fas fa-chevron-right"></i></a></li>
+                    <li><a href="#">View All <i class="fas fa-chevron-right"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-6">
+                <h6 class="text-white fw-bold mb-4">Contact Us</h6>
+                <div class="contact-item d-flex mb-3">
+                    <i class="fas fa-location-dot mt-1 me-2"></i>
+                    <p class="small mb-0">123 Health Street, Cambridge, Lahore, Pakistan</p>
+                </div>
+                <div class="contact-item d-flex mb-3">
+                    <i class="fas fa-phone mt-1 me-2"></i>
+                    <p class="small mb-0">+92 300 1234567</p>
+                </div>
+                <div class="contact-item d-flex mb-3">
+                    <i class="fas fa-envelope mt-1 me-2"></i>
+                    <p class="small mb-0">info@cambridgehospital.com</p>
+                </div>
+                <div class="contact-item d-flex">
+                    <i class="fas fa-globe mt-1 me-2"></i>
+                    <p class="small mb-0">www.cambridgehospital.com</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <h6 class="text-white fw-bold mb-4">Newsletter</h6>
+                <p class="small opacity-75 text-white mb-3">Subscribe to get health tips and hospital updates in your inbox.</p>
+                <div class="newsletter-input d-flex mb-4">
+                    <input type="email" placeholder="Enter your email" class="form-control-custom border-0">
+                    <button class="btn-send"><i class="fas fa-paper-plane"></i></button>
+                </div>
+                <div class="footer-badges d-flex justify-content-between align-items-center">
+                    <div class="badge-item text-center">
+                        <div class="badge-icon"><i class="fas fa-award"></i></div>
+                        <span class="tiny-text">ISO Certified</span>
+                    </div>
+                    <div class="badge-item text-center">
+                        <div class="badge-icon"><i class="fas fa-clock"></i></div>
+                        <span class="tiny-text">24/7 Care</span>
+                    </div>
+                    <div class="badge-item text-center">
+                        <div class="badge-icon"><i class="fas fa-shield-halved"></i></div>
+                        <span class="tiny-text">Patient First</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="border-secondary opacity-25 my-4">
+
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <p class="tiny-text opacity-75 mb-0 text-white">© 2026 Cambridge Hospital. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <div class="tiny-text text-white footer-bottom-links">
+                    <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="center.js"></script>
+</body>
+</html>
