@@ -1,0 +1,680 @@
+/* Full Design with REM units */
+:root {
+    --hospital-red: #b33939;
+    --hospital-red-dark: #880000;
+} 
+
+/* home page loodder  */
+#medical-loader {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100vh;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* Jab website load ho jaye to loader uper chala jaye */
+.loader-finish {
+    transform: translateY(-100%);
+}
+
+.pulse-container {
+    width: 300px;
+    text-align: center;
+}
+
+.pulse-svg {
+    width: 100%;
+    fill: none;
+    stroke: #b33939; /* Aapka Maroon Color */
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.pulse-line {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: drawPulse 4s ease-in-out infinite;
+}
+
+@keyframes drawPulse {
+    0% { stroke-dashoffset: 1000; }
+    50% { stroke-dashoffset: 0; }
+    100% { stroke-dashoffset: -1000; }
+}
+
+.loader-brand {
+    margin-top: 20px;
+    color: #333;
+}
+
+.loader-brand i {
+    color: #b33939;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.loader-brand h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.loader-brand p {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 5px;
+}
+
+
+
+@keyframes heartBeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Page load hone ke baad isse hide karne ke liye class */
+.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Master Section with Full Background Image */
+.medcare-master-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+   /* background image  */
+    background: url('banner.png') no-repeat right top;
+    background-size: 65% auto; /* Image right side par doctors wali */
+    background-color: #fffcfc; 
+}
+
+/* Gradient Overlay taake left side ka text bilkul saaf dikhe aur image cut na ho */
+.overlay-gradient {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to right, rgb(248, 239, 239) 35%, rgba(255,255,255,0.1) 100%);
+    z-index: 1;
+}
+
+.content-layer {
+    position: relative;
+    z-index: 2; /* Sits on top of image and gradient */
+}
+
+/* Button & Hover Styling */
+.btn-hospital-red {
+    background-color: var(--hospital-red);
+    color: white;
+    border: none;
+    border-radius: 0.35rem;
+    transition: all 0.3s ease;
+}
+
+.hover-dark:hover {
+    background-color: var(--hospital-red-dark);
+    transform: scale(1.04);
+    box-shadow: 0 0.5rem 1.2rem rgba(179, 57, 57, 0.3);
+    color: white;
+}
+
+/* Service Cards Overlapping BG */
+.med-card {
+    transition: all 0.4s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.med-card:hover {
+    transform: translateY(-0.7rem);
+    box-shadow: 0 1.2rem 2.5rem rgba(0,0,0,0.12) !important;
+}
+
+.card-icon {
+    font-size: 2.8rem;
+    color: var(--hospital-red);
+}
+
+.bg-light-soft {
+    background-color: rgba(248, 249, 250, 0.95);
+}
+
+/* Animations */
+.animate-left {
+    animation: slideInLeft 1s ease-out;
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-3rem); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive */
+@media (max-width: 48rem) {
+    .medcare-master-section { 
+        background-size: cover; 
+        background-position: center; 
+    }
+    .overlay-gradient { background: rgba(255,255,255,0.85); }
+    .hero-info { text-align: center; }
+    .display-5 { font-size: 2.2rem; }
+}
+
+
+/* section 2  */
+/* Pixel-Perfect Architect Styles */
+:root {
+    --hosp-red: #b33939;
+    --hosp-gray: #e8e8e8;
+}
+
+body {
+    background-color: var(--hosp-gray);
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-title {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    color: #1a1a1a;
+}
+
+/* Red Stack Effect (Asli Shadow jaisa look) */
+.stack-red {
+    position: relative;
+    background-color: var(--hosp-red); /* Piche wala red box */
+    display: inline-block;
+    padding-right: 8px;
+    padding-bottom: 8px;
+}
+
+.white-box {
+    background: white;
+    border: 1.5px solid var(--hosp-red);
+    position: relative;
+    z-index: 2;
+}
+
+.services-box {
+    min-width: 20rem;
+}
+
+/* Cut Corner Logic */
+.cut-corner {
+    clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 25%);
+}
+
+/* Right Side Cards Alignment (Exact Zigzag) */
+.cards-container {
+    height: 35rem;
+}
+
+.item-1 { position: absolute; top: 0; right: 1rem; width: 18rem; }
+.item-2 { position: absolute; top: 12rem; left: -2rem; width: 13rem; }
+.item-3 { position: absolute; top: 15rem; right: 0; width: 16rem; }
+.item-4 { position: absolute; top: 26rem; right: 8rem; width: 14rem; }
+
+.btn-red {
+    background-color: var(--hosp-red);
+    color: white;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-red:hover {
+    background-color: #880000;
+    color: white;
+    transform: scale(1.02);
+}
+
+.red-dot-icon {
+    width: 2.5rem; height: 2.5rem;
+    background: var(--hosp-red);
+    color: white; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+}
+
+/* Mobile Responsive */
+@media (max-width: 48rem) {
+    .cards-container { height: auto; display: flex; flex-direction: column; gap: 2rem; margin-top: 3rem;}
+    .stack-red { position: static; width: 100%; }
+    .main-title { font-size: 2.2rem; }
+}
+
+
+     /* section 3  */
+     :root {
+    --hosp-red: #b33939;
+    --hosp-black: #1a1a1a;
+}
+
+.health-journey-section { font-family: 'Poppins', sans-serif; background: #fff; padding: 5rem 0; overflow: hidden; }
+
+/* Corner Cards Styling */
+.health-card {
+    position: absolute; width: 14rem; background: #fff; 
+    border-radius: 1.2rem; overflow: hidden; z-index: 10;
+}
+.health-card img { width: 100%; height: 8rem; object-fit: cover; }
+.card-info { position: relative; }
+.mini-icon { 
+    position: absolute; right: 0.5rem; bottom: 0.5rem; 
+    width: 2rem; height: 2rem; background: #f0f0f0; 
+    border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem;
+}
+
+.top-left { top: 0; left: 0; }
+.top-right { top: 0; right: 0; }
+.bottom-left { bottom: 0; left: 0; }
+.bottom-right { bottom: 0; right: 0; }
+
+/* Circular Map Logic */
+.circular-container {
+    width: 30rem; height: 30rem; margin: 0 auto; 
+    position: relative; display: flex; align-items: center; justify-content: center;
+}
+.circle-path {
+    position: absolute; border: 1px solid #3b343498; border-radius: 50%;
+}
+.outer { width: 100%; height: 100%; }
+.middle { width: 70%; height: 70%; }
+.inner { width: 40%; height: 40%; }
+
+.icon-point {
+    position: absolute; background: #fff; border: 1px solid gray;
+    width: 2.5rem; height: 2.5rem; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; font-size: 1rem;
+}
+.icon-point span {
+    position: absolute; font-size: 0.7rem; color: gray; width: 8rem; text-align: center;
+}
+
+/* Precise Positions based on Image */
+.p1 { top: -1.25rem; left: 50%; transform: translateX(-50%); } .p1 span { top: -1.5rem; }
+.p2 { top: 20%; right: 15%; }
+.p3 { top: 50%; right: -1.25rem; transform: translateY(-50%); } .p3 span { right: -8.5rem; }
+.p4 { bottom: -1.25rem; left: 50%; transform: translateX(-50%); } .p4 span { bottom: -1.5rem; }
+.p5 { top: 50%; left: -1.25rem; transform: translateY(-50%); } .p5 span { left: -8.5rem; }
+.p6 { top: 20%; left: 15%; }
+.p7 { bottom: 20%; left: 15%; }
+
+/* Buttons */
+.btn-red-custom { background: var(--hosp-red); color: #fff; transition: 0.3s; border: none; }
+.btn-red-custom:hover { background: #880000; box-shadow: 0 0.5rem 1.5rem rgba(179,57,57,0.4); }
+
+.btn-black-custom { background: var(--hosp-black); color: #fff; transition: 0.3s; border: none; }
+.btn-black-custom:hover { background: #000; box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.4); }
+
+.smaller { font-size: 0.75rem; }
+     /* section 4  */
+
+     /* English: Styling for Organic Shape Hospital Room Section */
+
+.future-care-wrapper {
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+/* Creating the Dynamic Organic Shape Border from Image */
+.organic-image-container {
+    width: 100%;
+    height: 30rem; /* Flexible height in rem */
+    background-color: #eee;
+    overflow: hidden;
+    position: relative;
+    /* Special masking or border radius for exact shape from image_12.png */
+    border-radius: 41% 59% 45% 55% / 46% 41% 59% 54%; /* Organic shape similar to image */
+    box-shadow: 0 0 1rem rgba(255,255,255,0.7), 0 0.5rem 2rem rgba(0,0,0,0.05); /* Outer glowing effect from image */
+}
+
+.organic-slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Content Box Center Alignment */
+.content-box-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Typography Scale in REM */
+.care-main-title {
+    font-size: 2.8rem;
+    line-height: 1.2;
+}
+
+.care-description {
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* Red Gradient Button from Image */
+.btn-red-hosp-gradient {
+    background: linear-gradient(135deg, #b33939 0%, #880000 100%);
+    color: white;
+    border: none;
+    transition: 0.3s;
+    letter-spacing: 0.05rem;
+}
+
+.btn-red-hosp-gradient:hover {
+    background: linear-gradient(135deg, #880000 0%, #b33939 100%);
+    color: white;
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1.5rem rgba(179, 57, 57, 0.4);
+}
+
+/* Text Fading effect */
+.animate-fade {
+    animation: textFadeIn 0.6s;
+}
+
+@keyframes textFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 48rem) {
+    .organic-image-container {
+        height: 22rem;
+        border-radius: 2rem; /* Simpler shape for mobile */
+    }
+    .care-main-title {
+        font-size: 1.8rem;
+    }
+    .content-box-right {
+        padding-top: 2rem;
+    }
+}
+.hosp-stats-section {
+    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.stat-percent {
+    color: #333;
+}
+
+/* Gray background of the bar */
+.progress-container {
+    width: 100%;
+    height: 1.8rem;
+    background-color: #e9ecef;
+    border-radius: 2rem;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Red animated fill */
+.progress-bar-fill {
+    height: 100%;
+    background-color: #b33939; /* Your Hospital Red */
+    border-radius: 2rem;
+    transition: width 2s cubic-bezier(0.1, 0.5, 0.1, 1);
+    box-shadow: 0 4px 10px rgba(179, 57, 57, 0.3);
+}
+
+/* Icon Alignment */
+.text-danger {
+    color: #b33939 !important;
+    min-width: 2rem;
+    text-align: center;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar Design */
+.custom-nav {
+    border: 1px solid #f0f0f0;
+}
+
+.brand-text span {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.nav-link {
+    color: #444 !important;
+    font-size: 0.95rem;
+}
+
+/* Department Toggle Styling */
+.dept-btn {
+    background-color: #fdf2f2;
+    color: #b33939 !important;
+    font-weight: 600 !important;
+}
+
+.dept-btn .dot {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.dropdown-item {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+    color: #555;
+    transition: 0.3s;
+}
+
+.active-dept {
+    background-color: #fdf2f2 !important;
+    color: #b33939 !important;
+    font-weight: 600;
+}
+
+/* Urgent Care Button */
+.btn-urgent {
+    background-color: #b33939;
+    color: white;
+    font-size: 0.85rem;
+    padding: 10px 25px;
+    transition: 0.3s;
+}
+
+.btn-urgent:hover {
+    background-color: #880000;
+    color: white;
+}
+
+/* Notification Panel */
+.notif-badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 10px;
+    height: 10px;
+    background-color: #b33939;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.nav-link:hover {
+    color: #b33939 !important; /* Hospital theme red */
+    transform: translateY(-2px);
+}
+
+.notif-panel {
+    position: absolute;
+    right: 0;
+    top: 45px;
+    width: 320px;
+    background: white;
+    border-radius: 15px;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.notif-list {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.unread {
+    background-color: #fff9f9;
+}
+
+.smaller {
+    font-size: 0.8rem;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #eee;
+}
+
+/* Custom Global Styles */
+.hospital-footer {
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.footer-main-wrapper {
+    border-radius: 2rem !important;
+    background: #ffffff;
+    max-width: 100%;
+}
+
+.footer-link {
+    color: #555;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.footer-link:hover {
+    color: #b33939;
+    transform: translateX(0.3rem);
+}
+
+/* Map Container Fix */
+.map-container {
+    width: 100%;
+    height: 10rem; /* Fixed height for map in footer */
+    background: #eee;
+}
+
+/* Contact Text wrapping fix */
+.small-text {
+    font-size: 0.85rem;
+    word-break: break-word; /* Text bahar nahi jayega */
+    color: #333;
+}
+
+/* Social Buttons */
+.social-btn {
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: #b33939;
+    color: #ffffff !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-btn:hover {
+    background-color: #880000;
+    transform: translateY(-0.2rem);
+}
+
+/* Brand Logo Text */
+.brand-text span {
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+}
+
+/* Scroll Jump Fix for # links */
+a[href="#!"] {
+    cursor: pointer;
+}
+
+/* Responsive adjustment */
+@media (max-width: 992px) {
+    .footer-main-wrapper {
+        margin: 1rem;
+        padding: 2rem !important;
+    }
+}
+
+
+
+/* navbar */
+
+/* Purana style barkaraar rakhte huye naya button style */
+.info-btn {
+    background-color: #f8f9fa; /* Light grey for subtle look */
+    color: #444 !important;
+    border-radius: 50px;
+    font-weight: 500 !important;
+    transition: 0.3s ease;
+}
+
+.info-btn:hover {
+    background-color: #eee;
+}
+
+/* Department button style (as per your theme) */
+.dept-btn {
+    background-color: #fdf2f2;
+    color: #b33939 !important;
+    font-weight: 600 !important;
+    border-radius: 50px;
+}
+
+.dept-btn .dot {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+/* Common Dropdown Styling */
+.custom-dropdown .dropdown-menu {
+    min-width: 220px;
+}
+
+.dropdown-item:hover {
+    background-color: #fdf2f2;
+    color: #b33939;
+}
+
+/* Scannable spacing for nav links */
+.navbar-nav .nav-link {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+}
