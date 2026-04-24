@@ -1,0 +1,567 @@
+/* Custom Global Styles */
+:root {
+    --hospital-red: #b33939;
+    --dark-red: #880000;
+    --white: #ffffff;
+    --glass-effect: rgba(255, 255, 255, 0.2);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+/* Hero Section Styling */
+.opd-hero {
+    position: relative;
+    width: 100%;
+    height: 38rem;
+    overflow: hidden;
+    background: #000;
+}
+
+.hero-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(136, 0, 0, 0.85) 0%, rgba(136, 0, 0, 0.4) 60%, transparent 100%);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    color: var(--white);
+    padding-left: 1rem;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    font-weight: 500;
+    opacity: 0.9;
+    margin-bottom: 2.5rem;
+}
+
+/* Action Buttons */
+.btn-opd-primary {
+    background: var(--hospital-red);
+    color: var(--white);
+    padding: 0.8rem 2.2rem;
+    border-radius: 0.6rem;
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-opd-primary:hover {
+    background: var(--dark-red);
+    transform: translateY(-0.2rem);
+    color: var(--white);
+}
+
+.btn-opd-glass {
+    background: var(--glass-effect);
+    backdrop-filter: blur(10px);
+    color: var(--white);
+    padding: 0.8rem 2.2rem;
+    border-radius: 0.6rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-opd-glass:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: var(--white);
+}
+
+/* Modal Customization */
+.modal-content {
+    border-radius: 1.5rem;
+}
+
+.modal-header {
+    background: var(--hospital-red);
+    color: var(--white);
+    padding: 1.5rem;
+}
+
+.btn-close-white {
+    filter: invert(1) brightness(200%);
+}
+
+.custom-field {
+    padding: 0.8rem 1rem;
+    border-radius: 0.6rem;
+    border: 1px solid #ddd;
+    font-size: 0.95rem;
+}
+
+.custom-field:focus {
+    border-color: var(--hospital-red);
+    box-shadow: 0 0 0 0.2rem rgba(179, 57, 57, 0.1);
+}
+
+/* Table Design */
+.custom-table thead {
+    background: #f8f9fa;
+    color: var(--hospital-red);
+}
+
+.custom-table td {
+    padding: 1rem;
+    font-size: 0.9rem;
+    vertical-align: middle;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 48rem) {
+    .hero-title { font-size: 2.2rem; }
+    .hero-content { text-align: center; padding-left: 0; }
+    .hero-btns { flex-direction: column; }
+    .hero-btns button { width: 100%; }
+}
+
+
+/* footer section  */
+/* Custom Global Styles */
+.hospital-footer {
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.footer-main-wrapper {
+    border-radius: 2rem !important;
+    background: #ffffff;
+    max-width: 100%;
+}
+
+.footer-link {
+    color: #555;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.footer-link:hover {
+    color: #b33939;
+    transform: translateX(0.3rem);
+}
+
+/* Map Container Fix */
+.map-container {
+    width: 100%;
+    height: 10rem; /* Fixed height for map in footer */
+    background: #eee;
+}
+
+/* Contact Text wrapping fix */
+.small-text {
+    font-size: 0.85rem;
+    word-break: break-word; /* Text bahar nahi jayega */
+    color: #333;
+}
+
+/* Social Buttons */
+.social-btn {
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: #b33939;
+    color: #ffffff !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-btn:hover {
+    background-color: #880000;
+    transform: translateY(-0.2rem);
+}
+
+/* Brand Logo Text */
+.brand-text span {
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+}
+
+/* Scroll Jump Fix for # links */
+a[href="#!"] {
+    cursor: pointer;
+}
+
+/* Responsive adjustment */
+@media (max-width: 992px) {
+    .footer-main-wrapper {
+        margin: 1rem;
+        padding: 2rem !important;
+    }
+}
+
+
+/* header section  */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar Design */
+.custom-nav {
+    border: 1px solid #f0f0f0;
+}
+
+.brand-text span {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.nav-link {
+    color: #444 !important;
+    font-size: 0.95rem;
+}
+
+/* Department Toggle Styling */
+.dept-btn {
+    background-color: #fdf2f2;
+    color: #b33939 !important;
+    font-weight: 600 !important;
+}
+
+.dept-btn .dot {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.dropdown-item {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+    color: #555;
+    transition: 0.3s;
+}
+
+.active-dept {
+    background-color: #fdf2f2 !important;
+    color: #b33939 !important;
+    font-weight: 600;
+}
+
+/* Urgent Care Button */
+.btn-urgent {
+    background-color: #b33939;
+    color: white;
+    font-size: 0.85rem;
+    padding: 10px 25px;
+    transition: 0.3s;
+}
+
+.btn-urgent:hover {
+    background-color: #880000;
+    color: white;
+}
+
+/* Notification Panel */
+.notif-badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 10px;
+    height: 10px;
+    background-color: #b33939;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.notif-panel {
+    position: absolute;
+    right: 0;
+    top: 45px;
+    width: 320px;
+    background: white;
+    border-radius: 15px;
+    z-index: 1000;
+    overflow: hidden;
+}
+.nav-link:hover {
+    color: #b33939 !important; /* Hospital theme red */
+    transform: translateY(-2px);
+}
+
+.notif-list {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.unread {
+    background-color: #fff9f9;
+}
+
+.smaller {
+    font-size: 0.8rem;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #eee;
+}
+/* Section Styling */
+.medical-excellence-section {
+    padding: 5rem 0;
+    background-color: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Red Badge Title */
+.excellence-badge {
+    color: #b33939; /* Hospital Red */
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+/* Main Bold Heading */
+.excellence-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 2rem;
+    letter-spacing: -0.02rem;
+}
+
+/* Paragraph Description */
+.excellence-desc {
+    max-width: 55rem;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #666;
+    font-weight: 400;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 48rem) {
+    .excellence-title {
+        font-size: 2rem;
+    }
+    .excellence-desc {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+}
+/* Section Padding */
+.consultation-grid-section {
+    padding: 4rem 0;
+    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Base Card Styling */
+.consultation-card {
+    background-color: #f8f9fa; /* Light grey background */
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    border: none;
+    height: 100%;
+}
+
+/* Icons Styling */
+.icon-box-bg {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #ffdbd6; /* Soft peach/red */
+    color: #b33939;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: 0.3s;
+}
+
+.icon-simple {
+    color: #b33939;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    transition: 0.3s;
+}
+
+/* Typography */
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.8rem;
+}
+
+.card-title-sm {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 0;
+}
+
+/* --- HOVER EFFECT --- */
+.consultation-card:hover {
+    background-color: #880000; /* Dark Red background */
+    transform: translateY(-0.3rem);
+}
+
+.consultation-card:hover .card-title,
+.consultation-card:hover .card-title-sm,
+.consultation-card:hover .card-text,
+.consultation-card:hover .icon-simple {
+    color: #ffffff !important;
+}
+
+.consultation-card:hover .icon-box-bg {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+/* Small Card Compact Padding */
+.small-card {
+    padding: 1.8rem 2.2rem;
+}
+
+/* Responsive adjustment */
+@media (max-width: 48rem) {
+    .consultation-card {
+        padding: 1.5rem;
+    }
+}
+
+:root {
+    --hospital-red: #b33939;
+}
+
+.portal-card {
+    max-width: 55rem;
+    min-height: 38rem; /* Container chota nahi hoga */
+    background-color: #f5f5f5 !important;
+    transition: all 0.4s ease;
+}
+
+/* Container for fields to prevent size change */
+.method-fields-container {
+    min-height: 15rem; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.method-btn {
+    flex: 1; padding: 1rem; border: 2px solid transparent;
+    background: white; border-radius: 0.8rem;
+    transition: 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+.method-btn.active { border-color: var(--hospital-red); color: var(--hospital-red); }
+
+.portal-icon-bg {
+    background-color: var(--hospital-red); width: 3.5rem; height: 3.5rem;
+    border-radius: 0.8rem; display: flex; align-items: center; justify-content: center;
+}
+
+.custom-input { border: none; border-radius: 0.6rem; padding: 0.8rem; background: white; }
+.btn-process { background: var(--hospital-red); color: white; padding: 1rem; border-radius: 0.8rem; font-weight: 700; border: none; }
+
+/* Custom Success Alert Styling */
+.success-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(5px);
+    display: flex; align-items: center; justify-content: center; z-index: 9999;
+}
+
+.success-box {
+    background: white; padding: 3rem; border-radius: 2rem;
+    text-align: center; max-width: 25rem; width: 90%;
+}
+
+.check-icon-bg {
+    width: 5rem; height: 5rem; background: #28a745; color: white;
+    font-size: 2.5rem; border-radius: 50%; display: flex;
+    align-items: center; justify-content: center; margin: 0 auto;
+    box-shadow: 0 10px 20px rgba(40, 167, 69, 0.3);
+}
+
+/* Animations */
+.animate-fade { animation: fadeIn 0.5s ease; }
+.animate-pop { animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes popIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+/* navbar */
+
+/* Purana style barkaraar rakhte huye naya button style */
+.info-btn {
+    background-color: #f8f9fa; /* Light grey for subtle look */
+    color: #444 !important;
+    border-radius: 50px;
+    font-weight: 500 !important;
+    transition: 0.3s ease;
+}
+
+.info-btn:hover {
+    background-color: #eee;
+}
+
+/* Department button style (as per your theme) */
+.dept-btn {
+    background-color: #fdf2f2;
+    color: #b33939 !important;
+    font-weight: 600 !important;
+    border-radius: 50px;
+}
+
+.dept-btn .dot {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+/* Common Dropdown Styling */
+.custom-dropdown .dropdown-menu {
+    min-width: 220px;
+}
+
+.dropdown-item:hover {
+    background-color: #fdf2f2;
+    color: #b33939;
+}
+
+/* Scannable spacing for nav links */
+.navbar-nav .nav-link {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+}

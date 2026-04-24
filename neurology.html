@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neurology | Cambridge Hospital</title>
+        <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23b33939'/%3E%3Cpath d='M30 50 h40 M50 30 v40' stroke='white' stroke-width='12' stroke-linecap='round'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --maroon: #800000;
+            --white: #ffffff;
+            --light-bg: #fdfdfd;
+            --text: #333;
+        }
+
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; color: var(--text); scroll-behavior: smooth; }
+
+        /* HEADER */
+        header {
+            body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar Design */
+.custom-nav {
+    border: 1px solid #f0f0f0;
+}
+
+.brand-text span {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.nav-link {
+    color: #444 !important;
+    font-size: 0.95rem;
+}
+
+/* Department Toggle Styling */
+.dept-btn {
+    background-color: #fdf2f2;
+    color: #b33939 !important;
+    font-weight: 600 !important;
+}
+
+.dept-btn .dot {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.dropdown-item {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+    color: #555;
+    transition: 0.3s;
+}
+
+.active-dept {
+    background-color: #fdf2f2 !important;
+    color: #b33939 !important;
+    font-weight: 600;
+}
+
+/* Urgent Care Button */
+.btn-urgent {
+    background-color: #b33939;
+    color: white;
+    font-size: 0.85rem;
+    padding: 10px 25px;
+    transition: 0.3s;
+}
+
+.btn-urgent:hover {
+    background-color: #880000;
+    color: white;
+}
+
+/* Notification Panel */
+.notif-badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 10px;
+    height: 10px;
+    background-color: #b33939;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.notif-panel {
+    position: absolute;
+    right: 0;
+    top: 45px;
+    width: 320px;
+    background: white;
+    border-radius: 15px;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.notif-list {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.unread {
+    background-color: #fff9f9;
+}
+
+.smaller {
+    font-size: 0.8rem;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #eee;
+}
+
+           
+        }
+        
+        /* HERO SECTION */
+        .hero {
+            height: 70vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(128,0,0,0.3)), 
+                        url('https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&q=80&w=1600');
+            background-size: cover; background-position: center;
+            display: flex; align-items: center; justify-content: center; color: white; text-align: center;
+        }
+        .hero h1 { font-size: 3.5rem; margin: 0; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+
+        /* 8 NEURO CONTAINERS */
+        .section-padding { padding: 80px 8%; }
+        .section-title { text-align: center; margin-bottom: 60px; }
+        .section-title h2 { color: var(--maroon); font-size: 2.5rem; text-transform: uppercase; }
+        .section-title div { width: 70px; height: 4px; background: var(--maroon); margin: 15px auto; }
+
+        .grid-8 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
+        .neuro-card {
+            background: var(--white); padding: 40px 25px; text-align: center;
+            border: 1px solid #eee; border-bottom: 6px solid var(--maroon); transition: 0.4s ease;
+        }
+        .neuro-card i { font-size: 3.5rem; color: var(--maroon); margin-bottom: 20px; }
+        /* MAROON HOVER EFFECT */
+        .neuro-card:hover { background: var(--maroon); color: white; transform: translateY(-10px); }
+        .neuro-card:hover i, .neuro-card:hover h3, .neuro-card:hover p { color: white; }
+
+        /* 3 SPECIALISTS */
+        .doc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
+        .doc-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 1px solid #eee; }
+        .doc-img { height: 380px; background-size: cover; background-position: top; }
+        .doc-info { padding: 30px; text-align: center; }
+        
+        .btn-book {
+            background: var(--maroon); color: white; border: none; padding: 15px 25px;
+            width: 100%; font-weight: 700; cursor: pointer; border-radius: 5px; margin-top: 15px; transition: 0.3s;
+        }
+        .btn-book:hover { background: #333; }
+
+        /* PAYMENT MODAL */
+        #payment-modal { 
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8); z-index: 2000; align-items: center; justify-content: center;
+        }
+        .payment-card {
+            background: white; padding: 40px; border-radius: 15px; width: 90%; max-width: 450px;
+            border-top: 10px solid var(--maroon); position: relative;
+        }
+        .close-btn { position: absolute; top: 15px; right: 20px; font-size: 25px; cursor: pointer; }
+        .form-input { margin-bottom: 15px; text-align: left; }
+        .form-input label { display: block; font-weight: bold; margin-bottom: 5px; }
+        .form-input input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
+
+        #success-msg { display: none; text-align: center; }
+        .success-icon { font-size: 60px; color: #28a745; margin-bottom: 15px; }
+
+        /* 5 KEY POINTS */
+        .key-points-bg { background: #f9f9f9; padding: 60px 8%; }
+        .key-points-container { background: white; border-left: 10px solid var(--maroon); padding: 40px; }
+        .key-points-container li { margin-bottom: 15px; list-style: none; font-weight: 500; display: flex; align-items: center; }
+        .key-points-container i { color: var(--maroon); margin-right: 15px; }
+
+        /* FOOTER */
+       /* Custom Global Styles */
+.hospital-footer {
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.footer-main-wrapper {
+    border-radius: 2rem !important;
+    background: #ffffff;
+    max-width: 100%;
+}
+
+.footer-link {
+    color: #555;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.footer-link:hover {
+    color: #b33939;
+    transform: translateX(0.3rem);
+}
+
+/* Map Container Fix */
+.map-container {
+    width: 100%;
+    height: 10rem; /* Fixed height for map in footer */
+    background: #eee;
+}
+
+/* Contact Text wrapping fix */
+.small-text {
+    font-size: 0.85rem;
+    word-break: break-word; /* Text bahar nahi jayega */
+    color: #333;
+}
+
+/* Social Buttons */
+.social-btn {
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: #b33939;
+    color: #ffffff !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-btn:hover {
+    background-color: #880000;
+    transform: translateY(-0.2rem);
+}
+
+/* Brand Logo Text */
+.brand-text span {
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+}
+
+/* Scroll Jump Fix for # links */
+a[href="#!"] {
+    cursor: pointer;
+}
+
+/* Responsive adjustment */
+@media (max-width: 992px) {
+    .footer-main-wrapper {
+        margin: 1rem;
+        padding: 2rem !important;
+    }
+}
+/* Purana style barkaraar rakhte huye naya button style */
+.info-btn {
+    background-color: #f8f9fa; /* Light grey for subtle look */
+    color: #444 !important;
+    border-radius: 50px;
+    font-weight: 500 !important;
+    transition: 0.3s ease;
+}
+
+.info-btn:hover {
+    background-color: #eee;
+}
+
+/* Department button style (as per your theme) */
+.dept-btn {
+    background-color: #fdf2f2;
+    color: #b33939 !important;
+    font-weight: 600 !important;
+    border-radius: 50px;
+}
+
+.dept-btn .dot {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+/* Common Dropdown Styling */
+.custom-dropdown .dropdown-menu {
+    min-width: 220px;
+}
+
+.dropdown-item:hover {
+    background-color: #fdf2f2;
+    color: #b33939;
+}
+
+/* Scannable spacing for nav links */
+.navbar-nav .nav-link {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+}
+
+    </style>
+</head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambridge Hospital | Medical Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ 
+<body class="bg-light">
+ 
+    <header class="main-header py-4">
+        <div class="container-fluid px-lg-5">
+            <nav class="navbar navbar-expand-xl navbar-light bg-white rounded-pill shadow-sm custom-nav px-4 py-2">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <div class="hospital-logo me-2">
+                        <i class="fas fa-plus-square text-danger fs-2"></i>
+                    </div>
+                    <div class="brand-text">
+                        <span class="d-block fw-bold text-dark lh-1">CAMBRIDGE</span>
+                        <span class="d-block fw-bold text-dark lh-1">HOSPITAL</span>
+                    </div>
+                </a>
+    
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#cambridgeNav" aria-controls="cambridgeNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                 <div class="collapse navbar-collapse" id="cambridgeNav">
+                    <ul class="navbar-nav mx-auto gap-2 align-items-center">
+                        <li class="nav-item"><a class="nav-link fw-medium" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="about.html">about us</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="sstories.html">success stories</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="feedback.html">Feedback</a></li>
+                        
+                        <li class="nav-item dropdown custom-dropdown">
+                            <a class="nav-link dropdown-toggle info-btn px-3 ms-lg-2" href="#" role="button" data-bs-toggle="dropdown">
+                                Explore more
+                            </a>
+                           <ul class="dropdown-menu shadow border-0 mt-3 rounded-4 p-2">
+                               <li><a class="dropdown-item" href="center.html"><i class="fas fa-house-medical me-2"></i> Center</a></li>
+                                <li><a class="dropdown-item" href="academic.html"><i class="fas fa-graduation-cap me-2"></i> Academic</a></li>
+                                <li><a class="dropdown-item" href="form..html"><i class="fas fa-file-alt me-2"></i> Foam</a></li>
+                                <li><a class="dropdown-item" href="QUERYY.HTML"><i class="fas fa-question-circle me-2"></i> Query</a></li>
+                                <li><a class="dropdown-item" href="facilities.html"><i class="fas fa-building me-2"></i> Facilities</a></li>
+                                <li><a class="dropdown-item" href="vacancies.html"><i class="fas fa-briefcase me-2"></i> Vacancies</a></li>
+                            </ul>
+                        </li>
+    
+                        <li class="nav-item dropdown custom-dropdown">
+                            <a class="nav-link dropdown-toggle dept-btn px-3 ms-lg-1" href="#" role="button" data-bs-toggle="dropdown">
+                                <span class="dot me-1">•</span> Departments
+                            </a>
+                            <ul class="dropdown-menu shadow border-0 mt-3 rounded-4 p-2">
+                                <li><a class="dropdown-item" href="emergancy-department.html"><i class="fas fa-exclamation-circle me-2"></i> Emergency Department</a></li>
+                                <li><a class="dropdown-item" href="opd-department.html"><i class="fas fa-calendar-alt me-2"></i> OPD (Outpatient Dept)</a></li>
+                                <li><a class="dropdown-item" href="ipd-department.html"><i class="fas fa-bed me-2"></i> IPD (Inpatient Dept)</a></li>
+                                <li><a class="dropdown-item" href="lab-department.html"><i class="fas fa-microscope me-2"></i> Laboratory Department</a></li>
+                                <li><a class="dropdown-item" href="radio.html"><i class="fas fa-x-ray me-2"></i> Radiology & Imaging</a></li>
+                                <li><a class="dropdown-item" href="pharmacy.html"><i class="fas fa-pills me-2"></i> Pharmacy</a></li>
+                                <li><a class="dropdown-item" href="neurology.html"><i class="fas fa-brain me-2"></i> Neurology Department</a></li>
+                                <li><a class="dropdown-item" href="GYNECOLOGY.HTML"><i class="fas fa-venus me-2"></i> Gynecology & Obstetrics</a></li>
+                                
+
+                            </ul>
+                        </li>
+                    </ul>
+    
+                    <div class="d-flex align-items-center gap-3 justify-content-center mt-3 mt-xl-0">
+                        <button class="btn btn-urgent rounded-pill px-4 fw-bold">URGENT CARE</button>
+                        
+                        <div class="notification-container position-relative">
+                            <button class="btn border-0 p-0" id="notifToggle">
+                                <i class="fas fa-bell fs-5 text-muted"></i>
+                                <span class="notif-badge"></span>
+                            </button>
+                            <div id="notifPanel" class="notif-panel shadow-lg d-none">
+                                <div class="panel-header d-flex justify-content-between p-3 border-bottom">
+                                    <h6 class="mb-0 fw-bold">Notifications</h6>
+                                    <button class="btn btn-sm text-danger p-0 fw-bold" id="markRead">Clear All</button>
+                                </div>
+                                <div class="notif-list custom-scrollbar" id="notifList">
+                                    <div class="notif-item p-3 border-bottom unread">
+                                        <p class="mb-0 small fw-bold text-dark">Lab Report Ready</p>
+                                        <span class="text-muted smaller">Your blood test results are now available.</span>
+                                    </div>
+                                </div>
+                                <div class="panel-footer p-2 text-center">
+                                    <button class="btn btn-sm text-danger fw-bold" id="viewAll">View All Notifications</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="emergancy-department.js"></script>
+
+
+
+<section class="hero">
+    <div>
+        <h1>Neurological Excellence</h1>
+        <p>Comprehensive Care for Brain, Spine, and Nerve Disorders</p>
+    </div>
+</section>
+
+<section class="section-padding" id="services">
+    <div class="section-title"><h2>Specialized Services</h2><div></div></div>
+    <div class="grid-8">
+        <div class="neuro-card"><i class="fas fa-brain"></i><h3>Stroke Unit</h3><p>Immediate 24/7 care for acute stroke patients.</p></div>
+        <div class="neuro-card"><i class="fas fa-bolt"></i><h3>Epilepsy</h3><p>Advanced diagnostic EEG and long-term management.</p></div>
+        <div class="neuro-card"><i class="fas fa-walking"></i><h3>Parkinson's</h3><p>Expert therapies for various movement disorders.</p></div>
+        <div class="neuro-card"><i class="fas fa-head-side-virus"></i><h3>Neuro-Surgery</h3><p>Complex surgical care for brain and spine tumors.</p></div>
+        <div class="neuro-card"><i class="fas fa-file-medical-alt"></i><h3>Sleep Center</h3><p>Diagnostics for insomnia and sleep-related conditions.</p></div>
+        <div class="neuro-card"><i class="fas fa-dna"></i><h3>Neuro-Genetics</h3><p>Testing for inherited neurological syndromes.</p></div>
+        <div class="neuro-card"><i class="fas fa-child"></i><h3>Pediatrics</h3><p>Specialized care for children's brain health.</p></div>
+        <div class="neuro-card"><i class="fas fa-microscope"></i><h3>Neuro-Testing</h3><p>Advanced EMG and nerve conduction studies.</p></div>
+    </div>
+</section>
+
+<section class="section-padding" id="specialists">
+    <div class="section-title"><h2>Specialist Doctors</h2><div></div></div>
+    <div class="doc-grid">
+        <div class="doc-card">
+            <div class="doc-img" style="background-image: url(femail\ 2.jpeg)"></div>
+            <div class="doc-info">
+                <h3>Dr. Amna Qureshi</h3>
+                <p>Consultant Neurologist (15 Yrs Exp)</p>
+                <button class="btn-book" onclick="openPayment('Dr. Amna Qureshi')">dr. amna Qureshi    </button>
+            </div>
+        </div>
+        <div class="doc-card">
+            <div class="doc-img" style="background-image: url(male\ 4\ micro.jpeg)"></div>
+            <div class="doc-info">
+                <h3>Dr. Hassan Rizvi</h3>
+                <p>Chief Neurosurgeon (22 Yrs Exp)</p>
+                <button class="btn-book" onclick="openPayment('Dr. Hassan Rizvi')"> Dr. Hassan Rizvi </button>
+            </div>
+        </div>
+        <div class="doc-card">
+            <div class="doc-img" style="background-image: url(male\ 3.jpeg)"></div>
+            <div class="doc-info">
+                <h3>Dr. Faisal Sheikh</h3>
+                <p>Stroke Specialist (18 Yrs Exp)</p>
+                <button class="btn-book" onclick="openPayment('Dr. Faisal Sheikh')"> Dr. Faisal Sheikh </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="key-points-bg">
+    <div class="key-points-container">
+        <h2>Department Highlights</h2>
+        <ul>
+            <li><i class="fas fa-check-circle"></i> 24/7 Intensive Care for Stroke Emergencies.</li>
+            <li><i class="fas fa-check-circle"></i> Advanced MRI & CT Imaging Diagnostics.</li>
+            <li><i class="fas fa-check-circle"></i> Personalized Neuro-Rehabilitation Programs.</li>
+            <li><i class="fas fa-check-circle"></i> Adherence to International Safety Protocols.</li>
+            <li><i class="fas fa-check-circle"></i> Minimally Invasive Spine & Nerve Surgery.</li>
+        </ul>
+    </div>
+</section>
+
+<div id="payment-modal">
+    <div class="payment-card">
+        <span class="close-btn" onclick="closePayment()">&times;</span>
+        <div id="payment-form">
+            <h2 style="color:var(--maroon)">Book Consultation</h2>
+            <p>Doctor: <strong id="sel-doc"></strong></p>
+            <div class="form-input"><label>Patient Name</label><input type="text" id="patient-name" placeholder="Full Name"></div>
+            <div class="form-input"><label>Phone Number</label><input type="text" id="patient-phone" placeholder="03xx-xxxxxxx"></div>
+            <div class="form-input"><label>Card Info</label><input type="text" placeholder="XXXX XXXX XXXX XXXX"></div>
+            <button class="btn-book" onclick="processPayment()">Confirm & Pay (Rs. 3000)</button>
+        </div>
+        <div id="success-msg">
+            <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+            <h2>Appointment Confirmed!</h2>
+            <p>Your appointment has been successfully scheduled.</p>
+            <button class="btn-book" onclick="closePayment()">Done</button>
+        </div>
+    </div>
+</div>
+
+<footer class="hospital-footer py-5">
+    <div class="container footer-main-wrapper shadow-sm border rounded-5 p-4 p-lg-5 bg-white">
+        <div class="row g-4 overflow-hidden">
+            
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <div class="footer-logo mb-4">
+                    <i class="fas fa-plus-square text-danger fs-3 me-2"></i>
+                    <div class="brand-text d-inline-block align-middle">
+                        <span class="d-block fw-bold text-dark lh-1">CAMBRIDGE</span>
+                        <span class="d-block fw-bold text-dark lh-1">HOSPITAL</span>
+                    </div>
+                </div>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#!" class="footer-link">About Us</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                <h6 class="fw-bold mb-4">Our Services</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#!" class="footer-link">About Us</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Our Services</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Careers</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Pharmacy</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Pediatrics & Imaging</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                <h6 class="fw-bold mb-4">Patients & Visitors</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#!" class="footer-link">Visitor Guidelines</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Insurance Information</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Patients Visitors</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Poster Information</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                <div class="map-container rounded shadow-sm border overflow-hidden">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.31399252169!2d67.0624645!3d24.8872645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33ef3b1716301%3A0x673907c082531a7d!2sCambridge%20Hospital!5e0!3m2!1sen!2s!4v1711800000000!5m2!1sen!2s" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 ps-lg-4">
+                <ul class="list-unstyled contact-info mb-4">
+                    <li class="mb-3 d-flex align-items-center">
+                        <i class="fas fa-phone-alt me-3 text-danger"></i>
+                        <span class="small-text">+1 234 567 890</span>
+                    </li>
+                    <li class="mb-3 d-flex align-items-center">
+                        <i class="fas fa-envelope me-3 text-danger"></i>
+                        <span class="small-text">info@cambridgehospital.org</span>
+                    </li>
+                    <li class="mb-3 d-flex align-items-start">
+                        <i class="fas fa-map-marker-alt me-3 mt-1 text-danger"></i>
+                        <span class="small-text">123 Hospital Lane, Cityville</span>
+                    </li>
+                </ul>
+                <div class="social-icons d-flex gap-2">
+                    <a href="https://www.facebook.com" target="_blank" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com" target="_blank" class="social-btn"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5 opacity-10">
+
+        <div class="text-center">
+            <p class="mb-0 text-muted small">
+                © 2024 Cambridge Hospital. All Rights Reserved. 
+                <a href="#!" class="ms-3 text-muted text-decoration-none">Terms of Service</a>
+                <a href="#!" class="ms-3 text-muted text-decoration-none">Privacy Policy</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+
+
+
+
+
+<script>
+    // Toggle Notification Panel
+const notifToggle = document.getElementById('notifToggle');
+const notifPanel = document.getElementById('notifPanel');
+const viewAllBtn = document.getElementById('viewAll');
+const notifList = document.getElementById('notifList');
+const markRead = document.getElementById('markRead');
+
+notifToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    notifPanel.classList.toggle('d-none');
+});
+
+// Close panel when clicking outside
+document.addEventListener('click', (e) => {
+    if (!notifPanel.contains(e.target)) {
+        notifPanel.classList.add('d-none');
+    }
+});
+
+// Mark all as read / Clear
+markRead.addEventListener('click', () => {
+    notifList.innerHTML = '<div class="p-4 text-center text-muted smaller">No new notifications</div>';
+    document.querySelector('.notif-badge').style.display = 'none';
+});
+
+// View All Logic (Loads 5 more items)
+viewAllBtn.addEventListener('click', () => {
+    const moreMessages = [
+        { title: "Prescription Updated", desc: "Your medicine list has been updated." },
+        { title: "Billing Confirmed", desc: "Payment for Invoice #992 received." },
+        { title: "Health Tip", desc: "Drink 8 glasses of water daily for better skin." },
+        { title: "Vaccination Drive", desc: "Polio drops camp starting next Sunday." },
+        { title: "Laboratory Alert", desc: "Thyroid test results are pending." }
+    ];
+
+    moreMessages.forEach(msg => {
+        const item = document.createElement('div');
+        item.className = "notif-item p-3 border-bottom";
+        item.innerHTML = `
+            <p class="mb-0 small fw-bold text-dark">${msg.title}</p>
+            <span class="text-muted smaller">${msg.desc}</span>
+        `;
+        notifList.appendChild(item);
+    });
+
+    viewAllBtn.innerText = "All Notifications Loaded";
+    viewAllBtn.disabled = true;
+});
+
+    function openPayment(doc) {
+        document.getElementById('sel-doc').innerText = doc;
+        document.getElementById('payment-modal').style.display = 'flex';
+        document.getElementById('payment-form').style.display = 'block';
+        document.getElementById('success-msg').style.display = 'none';
+    }
+
+    function closePayment() { document.getElementById('payment-modal').style.display = 'none'; }
+
+    function processPayment() {
+        const docName = document.getElementById('sel-doc').innerText;
+        const pName = document.getElementById('patient-name').value;
+        const pPhone = document.getElementById('patient-phone').value;
+
+        if(!pName || !pPhone) {
+            alert("Please provide patient details!");
+            return;
+        }
+
+        // --- LOCAL STORAGE (Saving in background) ---
+        const appointment = {
+            doctor: docName,
+            patient: pName,
+            contact: pPhone,
+            bookedAt: new Date().toLocaleString()
+        };
+
+        let bookings = JSON.parse(localStorage.getItem('hospital_appointments')) || [];
+        bookings.push(appointment);
+        localStorage.setItem('hospital_appointments', JSON.stringify(bookings));
+
+        // Show Success Message to UI
+        document.getElementById('payment-form').style.display = 'none';
+        document.getElementById('success-msg').style.display = 'block';
+    }
+    
+document.querySelectorAll('a[href="#!"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault(); // Stop page from jumping to top
+        console.log("Link clicked, but page won't jump.");
+    });
+});
+document.querySelectorAll('a[href="#!"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault(); // Stop page from jumping to top
+        console.log("Link clicked, but page won't jump.");
+    });
+});
+
+</script>
+
+</body>
+</html>
