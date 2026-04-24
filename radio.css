@@ -1,0 +1,577 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #000;
+}
+ 
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    /* Aap apni MRI image ka link yahan lagayein */
+    background: url('https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=2070') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Red Gradient Overlay jaisa image mein tha */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(179, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.8) 100%);
+    z-index: 1;
+}
+
+.content-container {
+    position: relative;
+    z-index: 2;
+    padding-left: 8%;
+    color: white;
+    max-width: 800px;
+}
+
+/* Heading styles - 3 Lines */
+.main-heading-1{
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.main-heading span {
+    display: block; /* Har span ko alag line mein lane ke liye */
+}
+
+.line-3 {
+    font-weight: 400; /* Hospital ka naam thoda light */
+    font-size: 3.5rem;
+}
+
+.tagline {
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.6;
+    max-width: 600px;
+    opacity: 0.9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-heading {
+        font-size: 2.5rem;
+    }
+    .line-3 {
+        font-size: 2rem;
+    }
+    .tagline {
+        font-size: 1rem;
+    }
+}
+
+body {
+    background-color: #fcfcfc; /* Light greyish white background as per image */
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.precision-section {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center;    /* Vertically center */
+    min-height: 100vh;
+    padding: 40px;
+}
+
+.content-wrapper {
+    max-width: 800px; /* Text ki width control karne ke liye */
+    text-align: center; /* Heading aur subheading center karne ke liye */
+}
+
+.sub-heading {
+    color: #b33939; /* Deep Red */
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.main-heading {
+    color: #2d3436;
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.text-content {
+    text-align: justify; /* Professional look ke liye text barabar hoga */
+    color: #555;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+/* Image wala Red "C" Drop Cap effect */
+.drop-cap {
+    float: left;
+    color: #b33939;
+    font-size: 60px;
+    line-height: 50px;
+    padding-top: 4px;
+    padding-right: 8px;
+    font-weight: bold;
+    font-family: serif;
+}
+
+p {
+    margin-bottom: 20px;
+}
+:root {
+    --deep-red: #b33939;
+    --border-radius: 25px; /* Rounded corners like the image */
+}
+
+.diagnostic-grid-section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Heading Styles */
+.grid-header {
+    margin-bottom: 40px;
+}
+.grid-header .badge {
+    color: var(--deep-red);
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+.grid-header h2 {
+    font-size: 36px;
+    color: #2d3436;
+    margin: 10px 0;
+}
+
+/* Grid Layout Logic */
+.bento-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr; /* 3 columns */
+    grid-template-rows: 250px 250px;      /* 2 rows */
+    gap: 20px;
+}
+
+/* Card Styling */
+.grid-card {
+    position: relative;
+    overflow: hidden; /* Hover effect bahar na jaye */
+    border-radius: var(--border-radius);
+    background: #f0f0f0;
+}
+
+.grid-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease; /* Smooth Zoom Effect */
+}
+
+/* Zoom Hover Effect */
+.grid-card:hover img {
+    transform: scale(1.1); /* Image thodi zoom hogi */
+}
+
+/* Card Text Labels */
+.card-label {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+/* Specific Grid Placements */
+.mri-card {
+    grid-row: 1 / span 2; /* Full height left side */
+}
+
+.ct-card {
+    grid-column: 2 / span 2; /* Top right wide box */
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .bento-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .mri-card, .ct-card {
+        grid-row: auto;
+        grid-column: auto;
+    }
+}
+/* Process Timeline Styling */
+.process-timeline-area {
+    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    padding: 4rem 0;
+}
+
+/* Horizontal Row with Line */
+.timeline-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    padding-top: 2rem;
+}
+
+/* Gray separator line behind icons */
+.timeline-row::before {
+    content: '';
+    position: absolute;
+    top: 5.5rem; /* Icon ke bilkul niche line ke liye */
+    left: 5%;
+    width: 90%;
+    height: 0.1rem;
+    background-color: #eeeeee;
+    z-index: 1;
+}
+
+.timeline-item {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    padding: 0 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Circle Icon Styling */
+.icon-circle {
+    width: 5.5rem;
+    height: 5.5rem;
+    background-color: #b33939; /* Hospital Red */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2.5rem auto;
+    font-size: 1.8rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 0.4rem solid white; /* Line ke upar gap ke liye */
+    box-shadow: 0 0 0 0.1rem #eeeeee;
+}
+
+/* Typography */
+.step-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.8rem;
+    transition: color 0.3s ease;
+}
+
+.step-desc {
+    font-size: 0.85rem;
+    color: #666666;
+    line-height: 1.5;
+    padding: 0 0.5rem;
+}
+
+/* --- HOVER EFFECTS --- */
+.timeline-item:hover .icon-circle {
+    transform: scale(1.15);
+    background-color: #880000;
+    box-shadow: 0 0.5rem 1.5rem rgba(179, 57, 57, 0.3);
+}
+
+.timeline-item:hover .step-title {
+    color: #b33939;
+}
+
+/* Mobile Responsive */
+@media (max-width: 48rem) {
+    .timeline-row {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .timeline-row::before {
+        display: none; /* Mobile par vertical line ki zarurat nahi */
+    }
+    .icon-circle {
+        margin-bottom: 1rem;
+    }
+}
+body {
+  background: #f4f6f9;
+  font-size: 1rem;
+}
+
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 0.2rem 0.8rem rgba(0,0,0,0.1);
+}
+
+h5 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+input, select {
+  font-size: 1rem;
+  padding: 0.6rem;
+}
+
+button {
+  font-size: 1rem;
+  padding: 0.7rem;
+}
+
+
+/* Custom Global Styles */
+.hospital-footer {
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.footer-main-wrapper {
+    border-radius: 2rem !important;
+    background: #ffffff;
+    max-width: 100%;
+}
+
+.footer-link {
+    color: #555;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.footer-link:hover {
+    color: #b33939;
+    transform: translateX(0.3rem);
+}
+
+/* Map Container Fix */
+.map-container {
+    width: 100%;
+    height: 10rem; /* Fixed height for map in footer */
+    background: #eee;
+}
+
+/* Contact Text wrapping fix */
+.small-text {
+    font-size: 0.85rem;
+    word-break: break-word; /* Text bahar nahi jayega */
+    color: #333;
+}
+
+/* Social Buttons */
+.social-btn {
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: #b33939;
+    color: #ffffff !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-btn:hover {
+    background-color: #880000;
+    transform: translateY(-0.2rem);
+}
+
+/* Brand Logo Text */
+.brand-text span {
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+}
+
+/* Scroll Jump Fix for # links */
+a[href="#!"] {
+    cursor: pointer;
+}
+
+/* Responsive adjustment */
+@media (max-width: 992px) {
+    .footer-main-wrapper {
+        margin: 1rem;
+        padding: 2rem !important;
+    }
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar Design */
+.custom-nav {
+    border: 1px solid #f0f0f0;
+}
+
+.brand-text span {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.nav-link {
+    color: #444 !important;
+    font-size: 0.95rem;
+}
+.nav-link:hover {
+    color: #b33939 !important; /* Hospital theme red */
+    transform: translateY(-2px);
+}
+
+/* Department Toggle Styling */
+.dept-btn {
+    background-color: #fdf2f2;
+    color: #b33939 !important;
+    font-weight: 600 !important;
+}
+
+.dept-btn .dot {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.dropdown-item {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+    color: #555;
+    transition: 0.3s;
+}
+
+.active-dept {
+    background-color: #fdf2f2 !important;
+    color: #b33939 !important;
+    font-weight: 600;
+}
+
+/* Urgent Care Button */
+.btn-urgent {
+    background-color: #b33939;
+    color: white;
+    font-size: 0.85rem;
+    padding: 10px 25px;
+    transition: 0.3s;
+}
+
+.btn-urgent:hover {
+    background-color: #880000;
+    color: white;
+}
+
+/* Notification Panel */
+.notif-badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 10px;
+    height: 10px;
+    background-color: #b33939;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.notif-panel {
+    position: absolute;
+    right: 0;
+    top: 45px;
+    width: 320px;
+    background: white;
+    border-radius: 15px;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.notif-list {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.unread {
+    background-color: #fff9f9;
+}
+
+.smaller {
+    font-size: 0.8rem;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #eee;
+}
+
+
+
+/* navbar */
+
+/* Purana style barkaraar rakhte huye naya button style */
+.info-btn {
+    background-color: #f8f9fa; /* Light grey for subtle look */
+    color: #444 !important;
+    border-radius: 50px;
+    font-weight: 500 !important;
+    transition: 0.3s ease;
+}
+
+.info-btn:hover {
+    background-color: #eee;
+}
+
+/* Department button style (as per your theme) */
+.dept-btn {
+    background-color: #fdf2f2;
+    color: #b33939 !important;
+    font-weight: 600 !important;
+    border-radius: 50px;
+}
+
+.dept-btn .dot {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+/* Common Dropdown Styling */
+.custom-dropdown .dropdown-menu {
+    min-width: 220px;
+}
+
+.dropdown-item:hover {
+    background-color: #fdf2f2;
+    color: #b33939;
+}
+
+/* Scannable spacing for nav links */
+.navbar-nav .nav-link {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+}

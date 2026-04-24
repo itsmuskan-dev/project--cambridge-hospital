@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambridge Hospital | Query Portal</title>
+        <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23b33939'/%3E%3Cpath d='M30 50 h40 M50 30 v40' stroke='white' stroke-width='12' stroke-linecap='round'/%3E%3C/svg%3E">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- EXACT CSS FROM YOUR HEADER/FOOTER FILES --- */
+        body { font-family: 'Poppins', sans-serif; margin: 0; }
+        .custom-nav { border: 1px solid #f0f0f0; }
+        .brand-text span { font-size: 14px; letter-spacing: 0.5px; }
+        .nav-link { color: #444 !important; font-size: 0.95rem; }
+        .dept-btn { background-color: #fdf2f2; color: #b33939 !important; font-weight: 600 !important; }
+        .dept-btn .dot { font-size: 20px; vertical-align: middle; }
+        .dropdown-item { font-size: 0.9rem; padding: 10px 15px; color: #555; transition: 0.3s; }
+        .active-dept { background-color: #fdf2f2 !important; color: #b33939 !important; font-weight: 600; }
+        .btn-urgent { background-color: #b33939; color: white; font-size: 0.85rem; padding: 10px 25px; transition: 0.3s; }
+        .btn-urgent:hover { background-color: #880000; color: white; }
+        
+        /* Notification Panel CSS */
+        .notif-badge { position: absolute; top: -2px; right: -2px; width: 10px; height: 10px; background-color: #b33939; border-radius: 50%; border: 2px solid white; }
+        .notif-panel { position: absolute; right: 0; top: 45px; width: 320px; background: white; border-radius: 15px; z-index: 1000; overflow: hidden; }
+        .notif-list { max-height: 250px; overflow-y: auto; }
+        .unread { background-color: #fff9f9; }
+        .smaller { font-size: 0.8rem; }
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #eee; }
+
+        /* Footer CSS */
+        .hospital-footer { background-color: #f8f9fa; margin-top: 60px; }
+        .footer-main-wrapper { border-radius: 2rem !important; background: #ffffff; max-width: 100%; }
+        .footer-link { color: #555; text-decoration: none; font-size: 0.85rem; transition: 0.3s ease; display: inline-block; }
+        .footer-link:hover { color: #b33939; transform: translateX(0.3rem); }
+        .map-container { width: 100%; height: 10rem; background: #eee; border-radius: 12px; overflow: hidden; }
+        .small-text { font-size: 0.85rem; word-break: break-word; color: #333; }
+        .social-btn { width: 2.2rem; height: 2.2rem; background-color: #b33939; color: #ffffff !important; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: 0.3s; }
+        .social-btn:hover { background-color: #880000; transform: translateY(-0.2rem); }
+
+        /* --- QUERY FORM SECTION STYLES --- */
+        .query-section { position: relative; min-height: 90vh; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 40px 0; }
+        .bg-slider { position: absolute; top:0; left:0; width:100%; height:100%; z-index:-1; }
+        .slide { position: absolute; width:100%; height:100%; background-size:cover; background-position:center; opacity:0; transition: opacity 2s; }
+        .slide.active { opacity:1; }
+        .overlay { position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.6); }
+
+        .card-query { background: rgba(255,255,255,0.98); padding: 40px; border-radius: 20px; width: 90%; max-width: 500px; z-index: 5; border-top: 10px solid #b33939; box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        .query-title { color: #b33939; font-weight: 700; margin-bottom: 20px; text-transform: uppercase; text-align: center; }
+        .field-label { font-weight: 600; font-size: 13px; display: block; margin-bottom: 5px; color: #333; }
+        .query-input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 10px; margin-bottom: 15px; transition: 0.3s; }
+        .query-input:focus { border-color: #b33939; outline: none; }
+        .btn-submit-query { background: #b33939; color: white; width: 100%; padding: 15px; border: none; border-radius: 10px; font-weight: bold; font-size: 16px; transition: 0.3s; cursor: pointer; }
+        .btn-submit-query:hover { background: #880000; transform: translateY(-3px); }
+        /* Purana style barkaraar rakhte huye naya button style */
+.info-btn {
+    background-color: #f8f9fa; /* Light grey for subtle look */
+    color: #444 !important;
+    border-radius: 50px;
+    font-weight: 500 !important;
+    transition: 0.3s ease;
+}
+
+.info-btn:hover {
+    background-color: #eee;
+}
+
+/* Department button style (as per your theme) */
+.dept-btn {
+    background-color: #fdf2f2;
+    color: #b33939 !important;
+    font-weight: 600 !important;
+    border-radius: 50px;
+}
+
+.dept-btn .dot {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+/* Common Dropdown Styling */
+.custom-dropdown .dropdown-menu {
+    min-width: 220px;
+}
+
+.dropdown-item:hover {
+    background-color: #fdf2f2;
+    color: #b33939;
+}
+
+/* Scannable spacing for nav links */
+.navbar-nav .nav-link {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+}
+    </style>
+</head>
+<body>
+
+    
+    <header class="main-header py-4">
+        <div class="container-fluid px-lg-5">
+            <nav class="navbar navbar-expand-xl navbar-light bg-white rounded-pill shadow-sm custom-nav px-4 py-2">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <div class="hospital-logo me-2">
+                        <i class="fas fa-plus-square text-danger fs-2"></i>
+                    </div>
+                    <div class="brand-text">
+                        <span class="d-block fw-bold text-dark lh-1">CAMBRIDGE</span>
+                        <span class="d-block fw-bold text-dark lh-1">HOSPITAL</span>
+                    </div>
+                </a>
+    
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#cambridgeNav" aria-controls="cambridgeNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                 <div class="collapse navbar-collapse" id="cambridgeNav">
+                    <ul class="navbar-nav mx-auto gap-2 align-items-center">
+                        <li class="nav-item"><a class="nav-link fw-medium" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="about.html">about us</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="sstories.html">success stories</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="feedback.html">Feedback</a></li>
+                        
+                        <li class="nav-item dropdown custom-dropdown">
+                            <a class="nav-link dropdown-toggle info-btn px-3 ms-lg-2" href="#" role="button" data-bs-toggle="dropdown">
+                                Explore more
+                            </a>
+                           <ul class="dropdown-menu shadow border-0 mt-3 rounded-4 p-2">
+                               <li><a class="dropdown-item" href="center.html"><i class="fas fa-house-medical me-2"></i> Center</a></li>
+                                <li><a class="dropdown-item" href="academic.html"><i class="fas fa-graduation-cap me-2"></i> Academic</a></li>
+                                <li><a class="dropdown-item" href="form..html"><i class="fas fa-file-alt me-2"></i> Foam</a></li>
+                                <li><a class="dropdown-item" href="QUERYY.HTML"><i class="fas fa-question-circle me-2"></i> Query</a></li>
+                                <li><a class="dropdown-item" href="facilities.html"><i class="fas fa-building me-2"></i> Facilities</a></li>
+                                <li><a class="dropdown-item" href="vacancies.html"><i class="fas fa-briefcase me-2"></i> Vacancies</a></li>
+                            </ul>
+                        </li>
+    
+                        <li class="nav-item dropdown custom-dropdown">
+                            <a class="nav-link dropdown-toggle dept-btn px-3 ms-lg-1" href="#" role="button" data-bs-toggle="dropdown">
+                                <span class="dot me-1">•</span> Departments
+                            </a>
+                            <ul class="dropdown-menu shadow border-0 mt-3 rounded-4 p-2">
+                                <li><a class="dropdown-item" href="emergancy-department.html"><i class="fas fa-exclamation-circle me-2"></i> Emergency Department</a></li>
+                                <li><a class="dropdown-item" href="opd-department.html"><i class="fas fa-calendar-alt me-2"></i> OPD (Outpatient Dept)</a></li>
+                                <li><a class="dropdown-item" href="ipd-department.html"><i class="fas fa-bed me-2"></i> IPD (Inpatient Dept)</a></li>
+                                <li><a class="dropdown-item" href="lab-department.html"><i class="fas fa-microscope me-2"></i> Laboratory Department</a></li>
+                                <li><a class="dropdown-item" href="radio.html"><i class="fas fa-x-ray me-2"></i> Radiology & Imaging</a></li>
+                                <li><a class="dropdown-item" href="pharmacy.html"><i class="fas fa-pills me-2"></i> Pharmacy</a></li>
+                                <li><a class="dropdown-item" href="neurology.html"><i class="fas fa-brain me-2"></i> Neurology Department</a></li>
+                                <li><a class="dropdown-item" href="GYNECOLOGY.HTML"><i class="fas fa-venus me-2"></i> Gynecology & Obstetrics</a></li>
+                                
+
+                            </ul>
+                        </li>
+                    </ul>
+    
+                    <div class="d-flex align-items-center gap-3 justify-content-center mt-3 mt-xl-0">
+                        <button class="btn btn-urgent rounded-pill px-4 fw-bold">URGENT CARE</button>
+                        
+                        <div class="notification-container position-relative">
+                            <button class="btn border-0 p-0" id="notifToggle">
+                                <i class="fas fa-bell fs-5 text-muted"></i>
+                                <span class="notif-badge"></span>
+                            </button>
+                            <div id="notifPanel" class="notif-panel shadow-lg d-none">
+                                <div class="panel-header d-flex justify-content-between p-3 border-bottom">
+                                    <h6 class="mb-0 fw-bold">Notifications</h6>
+                                    <button class="btn btn-sm text-danger p-0 fw-bold" id="markRead">Clear All</button>
+                                </div>
+                                <div class="notif-list custom-scrollbar" id="notifList">
+                                    <div class="notif-item p-3 border-bottom unread">
+                                        <p class="mb-0 small fw-bold text-dark">Lab Report Ready</p>
+                                        <span class="text-muted smaller">Your blood test results are now available.</span>
+                                    </div>
+                                </div>
+                                <div class="panel-footer p-2 text-center">
+                                    <button class="btn btn-sm text-danger fw-bold" id="viewAll">View All Notifications</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="query-section">
+        <div class="bg-slider">
+            <div class="overlay"></div>
+            <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053')"></div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1504813184591-01592fd039d5?q=80&w=2071')"></div>
+        </div>
+
+        <div class="card-query">
+            <div id="form-container">
+                <h2 class="query-title">Medical Query</h2>
+                <form id="queryForm">
+                    <label class="field-label">FULL NAME</label>
+                    <input type="text" id="qName" class="query-input" placeholder="Enter your name" required>
+
+                    <label class="field-label">CONTACT NUMBER</label>
+                    <input type="tel" id="qPhone" class="query-input" placeholder="03xx-xxxxxxx" required>
+
+                    <label class="field-label">SELECT DEPARTMENT</label>
+                    <select id="qDept" class="query-input">
+                        <option>General Medicine</option>
+                        <option>Emergency Service</option>
+                        <option>Cardiology</option>
+                        <option>Neurology</option>
+                        <option>Pediatrics</option>
+                    </select>
+
+                    <label class="field-label">YOUR MESSAGE</label>
+                    <textarea id="qMsg" class="query-input" rows="4" placeholder="How can we help you?" required></textarea>
+
+                    <button type="submit" class="btn-submit-query">SUBMIT REQUEST</button>
+                </form>
+            </div>
+            
+            <div id="success-container" class="text-center" style="display:none;">
+                <i class="fas fa-check-circle text-success" style="font-size: 60px; margin-bottom: 15px;"></i>
+                <h3 class="fw-bold">Submitted!</h3>
+                <p>Thank you <span id="resName" class="fw-bold"></span>. Your query has been saved.</p>
+                <button onclick="location.reload()" class="btn btn-dark mt-3 rounded-pill px-4">New Query</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="hospital-footer py-5">
+        <div class="container footer-main-wrapper shadow-sm border rounded-5 p-4 p-lg-5 bg-white">
+            <div class="row g-4 overflow-hidden">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-logo mb-4">
+                        <i class="fas fa-plus-square text-danger fs-3 me-2"></i>
+                        <div class="brand-text d-inline-block align-middle">
+                            <span class="d-block fw-bold text-dark lh-1">CAMBRIDGE</span>
+                            <span class="d-block fw-bold text-dark lh-1">HOSPITAL</span>
+                        </div>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#!" class="footer-link">About Us</a></li>
+                        <li class="mb-2"><a href="#!" class="footer-link">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-4">Our Services</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#!" class="footer-link">Pharmacy</a></li>
+                        <li class="mb-2"><a href="#!" class="footer-link">Cardiology</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-4">Patients</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#!" class="footer-link">Guidelines</a></li>
+                        <li class="mb-2"><a href="#!" class="footer-link">Insurance</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="map-container shadow-sm">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.551346543434!2d74.3023612!3d31.4815447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919014a601e3b05%3A0xc3163e7f47493a12!2sCambridge%20International%20Hospital!5e0!3m2!1sen!2s!4v1700000000000" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 text-lg-end">
+                    <ul class="list-unstyled contact-info mb-4">
+                        <li class="mb-3 d-flex align-items-center justify-content-lg-end"><i class="fas fa-phone-alt me-2 text-danger"></i><span class="small-text">+1 234 567 890</span></li>
+                        <li class="mb-3 d-flex align-items-center justify-content-lg-end"><i class="fas fa-envelope me-2 text-danger"></i><span class="small-text">info@cambridge.org</span></li>
+                    </ul>
+                    <div class="social-icons d-flex gap-2 justify-content-lg-end">
+                        <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5 opacity-10">
+            <div class="text-center"><p class="mb-0 text-muted small">© 2024 Cambridge Hospital. All Rights Reserved.</p></div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // --- Header/Notif Logic ---
+        const notifToggle = document.getElementById('notifToggle');
+        const notifPanel = document.getElementById('notifPanel');
+        notifToggle.onclick = (e) => { e.stopPropagation(); notifPanel.classList.toggle('d-none'); };
+        document.onclick = () => notifPanel.classList.add('d-none');
+
+        // --- Slider Logic ---
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        setInterval(() => {
+            slides[slideIndex].classList.remove('active');
+            slideIndex = (slideIndex + 1) % slides.length;
+            slides[slideIndex].classList.add('active');
+        }, 5000);
+
+        // --- Form Submission & Local Storage ---
+        document.getElementById('queryForm').onsubmit = function(e) {
+            e.preventDefault();
+            
+            const queryData = {
+                name: document.getElementById('qName').value,
+                phone: document.getElementById('qPhone').value,
+                dept: document.getElementById('qDept').value,
+                msg: document.getElementById('qMsg').value,
+                time: new Date().toLocaleString()
+            };
+
+            // Save to Local Storage
+            let queries = JSON.parse(localStorage.getItem('hospital_queries')) || [];
+            queries.push(queryData);
+            localStorage.setItem('hospital_queries', JSON.stringify(queries));
+
+            // UI Update
+            document.getElementById('resName').innerText = queryData.name;
+            document.getElementById('form-container').style.display = 'none';
+            document.getElementById('success-container').style.display = 'block';
+        };
+    </script>
+</body>
+</html>

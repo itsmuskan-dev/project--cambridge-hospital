@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radiology Department - Cambridge Hospital</title>
+    <link rel="stylesheet" href="radio.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23b33939'/%3E%3Cpath d='M30 50 h40 M50 30 v40' stroke='white' stroke-width='12' stroke-linecap='round'/%3E%3C/svg%3E">
+    
+</head>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="emergance-department.css">
+</head>
+<body class="bg-light">
+
+    <header class="main-header py-4">
+        <div class="container-fluid px-lg-5">
+            <nav class="navbar navbar-expand-xl navbar-light bg-white rounded-pill shadow-sm custom-nav px-4 py-2">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <div class="hospital-logo me-2">
+                        <i class="fas fa-plus-square text-danger fs-2"></i>
+                    </div>
+                    <div class="brand-text">
+                        <span class="d-block fw-bold text-dark lh-1">CAMBRIDGE</span>
+                        <span class="d-block fw-bold text-dark lh-1">HOSPITAL</span>
+                    </div>
+                </a>
+    
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#cambridgeNav" aria-controls="cambridgeNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                 <div class="collapse navbar-collapse" id="cambridgeNav">
+                    <ul class="navbar-nav mx-auto gap-2 align-items-center">
+                        <li class="nav-item"><a class="nav-link fw-medium" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="about.html">about us</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="sstories.html">success stories</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="feedback.html">Feedback</a></li>
+                        
+                        <li class="nav-item dropdown custom-dropdown">
+                            <a class="nav-link dropdown-toggle info-btn px-3 ms-lg-2" href="#" role="button" data-bs-toggle="dropdown">
+                                Explore more
+                            </a>
+                           <ul class="dropdown-menu shadow border-0 mt-3 rounded-4 p-2">
+                               <li><a class="dropdown-item" href="center.html"><i class="fas fa-house-medical me-2"></i> Center</a></li>
+                                <li><a class="dropdown-item" href="academic.html"><i class="fas fa-graduation-cap me-2"></i> Academic</a></li>
+                                <li><a class="dropdown-item" href="form..html"><i class="fas fa-file-alt me-2"></i> Foam</a></li>
+                                <li><a class="dropdown-item" href="QUERYY.HTML"><i class="fas fa-question-circle me-2"></i> Query</a></li>
+                                <li><a class="dropdown-item" href="facilities.html"><i class="fas fa-building me-2"></i> Facilities</a></li>
+                                <li><a class="dropdown-item" href="vacancies.html"><i class="fas fa-briefcase me-2"></i> Vacancies</a></li>
+                            </ul>
+                        </li>
+    
+                        <li class="nav-item dropdown custom-dropdown">
+                            <a class="nav-link dropdown-toggle dept-btn px-3 ms-lg-1" href="#" role="button" data-bs-toggle="dropdown">
+                                <span class="dot me-1">•</span> Departments
+                            </a>
+                            <ul class="dropdown-menu shadow border-0 mt-3 rounded-4 p-2">
+                                <li><a class="dropdown-item" href="emergancy-department.html"><i class="fas fa-exclamation-circle me-2"></i> Emergency Department</a></li>
+                                <li><a class="dropdown-item" href="opd-department.html"><i class="fas fa-calendar-alt me-2"></i> OPD (Outpatient Dept)</a></li>
+                                <li><a class="dropdown-item" href="ipd-department.html"><i class="fas fa-bed me-2"></i> IPD (Inpatient Dept)</a></li>
+                                <li><a class="dropdown-item" href="lab-department.html"><i class="fas fa-microscope me-2"></i> Laboratory Department</a></li>
+                                <li><a class="dropdown-item" href="radio.html"><i class="fas fa-x-ray me-2"></i> Radiology & Imaging</a></li>
+                                <li><a class="dropdown-item" href="pharmacy.html"><i class="fas fa-pills me-2"></i> Pharmacy</a></li>
+                                <li><a class="dropdown-item" href="neurology.html"><i class="fas fa-brain me-2"></i> Neurology Department</a></li>
+                                <li><a class="dropdown-item" href="GYNECOLOGY.HTML"><i class="fas fa-venus me-2"></i> Gynecology & Obstetrics</a></li>
+                                
+
+                            </ul>
+                        </li>
+                    </ul>
+    
+                    <div class="d-flex align-items-center gap-3 justify-content-center mt-3 mt-xl-0">
+                        <button class="btn btn-urgent rounded-pill px-4 fw-bold">URGENT CARE</button>
+                        
+                        <div class="notification-container position-relative">
+                            <button class="btn border-0 p-0" id="notifToggle">
+                                <i class="fas fa-bell fs-5 text-muted"></i>
+                                <span class="notif-badge"></span>
+                            </button>
+                            <div id="notifPanel" class="notif-panel shadow-lg d-none">
+                                <div class="panel-header d-flex justify-content-between p-3 border-bottom">
+                                    <h6 class="mb-0 fw-bold">Notifications</h6>
+                                    <button class="btn btn-sm text-danger p-0 fw-bold" id="markRead">Clear All</button>
+                                </div>
+                                <div class="notif-list custom-scrollbar" id="notifList">
+                                    <div class="notif-item p-3 border-bottom unread">
+                                        <p class="mb-0 small fw-bold text-dark">Lab Report Ready</p>
+                                        <span class="text-muted smaller">Your blood test results are now available.</span>
+                                    </div>
+                                </div>
+                                <div class="panel-footer p-2 text-center">
+                                    <button class="btn btn-sm text-danger fw-bold" id="viewAll">View All Notifications</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+<body class="bg-light">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="emergancy-department.js"></script>
+
+
+    <section class="hero-section">
+        <div class="overlay"></div>
+        <div class="content-container">
+            <h1 class="main-heading-1">
+                <span class="line-1">Radiology &</span>
+                <span class="line-2">Imaging Department –</span>
+                <span class="line-3">Cambridge Hospital</span>
+            </h1>
+            <p class="tagline">
+                Advanced Imaging for Accurate Diagnosis. <br>
+                Experience clinical excellence powered by state-of-the-art diagnostic technology.
+            </p>
+        </div>
+    </section>
+    <section class="precision-section">
+    <div class="content-wrapper">
+        <span class="sub-heading">CLINICAL EXCELLENCE</span>
+        <h1 class="main-heading">Setting the Standard in <br> Diagnostic Precision</h1>
+        
+        <div class="text-content">
+            <p><span class="drop-cap">C</span>ambridge Hospital’s Radiology and Imaging Department stands as a beacon of medical innovation and patient-centric care. Our facility is equipped with the most advanced diagnostic technologies available today, ensuring that every image captured is of the highest clarity and diagnostic utility. We understand that accurate diagnosis is the cornerstone of effective treatment, which is why we invest in ultra-high-definition MRI suites, dual-source CT scanners, and cutting-edge 3D mammography.</p>
+            
+            <p>Our team of board-certified radiologists and expert technicians work in seamless coordination to provide rapid, precise interpretations that empower physicians and offer patients peace of mind. Beyond the technology, we prioritize the human experience. Our imaging suites are designed with a calming aesthetic to reduce patient anxiety, while our streamlined digital workflow ensures that results are delivered securely and efficiently to your healthcare team.</p>
+            
+            <p>From routine screenings to complex interventional procedures, Cambridge Hospital remains dedicated to delivering clinical excellence through the lens of compassionate care and scientific rigor. We continue to expand our capabilities to serve the community with the latest breakthroughs in medical imaging science.</p>
+        </div>
+    </div>
+</section>
+<section class="diagnostic-grid-section">
+    <!-- Custom Heading Created for You -->
+    <div class="grid-header">
+        <span class="badge">OUR FACILITIES</span>
+        <h2>Advanced Diagnostic Services</h2>
+        <p>Experience precision with our world-class medical imaging technology.</p>
+    </div>
+
+    <!-- The Image Grid Layout -->
+    <div class="bento-grid">
+        <!-- Big MRI Card -->
+        <div class="grid-card mri-card">
+            <img src="A_modern_hospital_202604060404.png" alt="MRI Scan">
+            <div class="card-label">MRI Scan</div>
+        </div>
+
+        <!-- Top Right CT Scan -->
+        <div class="grid-card ct-card">
+            <img src="A_hospital_CT_202604060404.png" alt="CT Scan">
+            <div class="card-label">CT Scan</div>
+        </div>
+
+        <!-- Bottom Left X-Ray -->
+        <div class="grid-card xray-card">
+            <img src="A_hospital_X-ray_202604060406.png" alt="X-Ray Imaging">
+            <div class="card-label">X-Ray Imaging</div>
+        </div>
+
+        <!-- Bottom Right Ultrasound -->
+        <div class="grid-card ultrasound-card">
+            <img src="ultrasound imag.jpeg" alt="Ultrasound">
+            <div class="card-label">Ultrasound</div>
+        </div>
+    </div>
+</section>
+<section class="process-timeline-area py-5">
+    <div class="container">
+        <div class="timeline-row">
+            
+            <div class="timeline-item">
+                <div class="icon-circle">
+                    <i class="fas fa-user-edit"></i>
+                </div>
+                <div class="timeline-content">
+                    <h5 class="step-title">Patient Preparation</h5>
+                    <p class="step-desc">Registration and safety briefing with our clinicians.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="icon-circle">
+                    <i class="fas fa-microscope"></i>
+                </div>
+                <div class="timeline-content">
+                    <h5 class="step-title">Imaging Scan</h5>
+                    <p class="step-desc">High-precision scan session in our modern suites.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="icon-circle">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <div class="timeline-content">
+                    <h5 class="step-title">Image Processing</h5>
+                    <p class="step-desc">Advanced computational reconstruction of data.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="icon-circle">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <div class="timeline-content">
+                    <h5 class="step-title">Report Generation</h5>
+                    <p class="step-desc">Expert interpretation by board-certified radiologists.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lab Payment Dashboard</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="container py-5">
+
+  <div class="row g-4">
+
+    <!-- LEFT FORM -->
+    <div class="col-lg-6">
+      <div class="card p-4">
+
+        <h5>Patient Info</h5>
+
+        <input type="text" id="name" class="form-control mb-3" placeholder="Patient Name">
+
+        <select id="test" class="form-select mb-3">
+          <option value="100">MRI (RS 5000)</option>
+          <option value="150">CT SCAN  (RS 1000)</option>
+          <option value="200">ultrasound (RS 2500)</option>
+          <option value="200">X-Ray (RS 3300)</option>
+        </select>
+
+        <select id="status" class="form-select mb-3">
+          <option>Pending</option>
+          <option>Completed</option>
+        </select>
+
+        <!-- PAYMENT METHODS -->
+        <h6>Payment Method</h6>
+
+        <div class="mb-3">
+          <input type="radio" name="payment" value="card" checked> Card
+          <input type="radio" name="payment" value="cash" class="ms-3"> Cash
+          <input type="radio" name="payment" value="bank" class="ms-3"> Online / Bank
+        </div>
+
+        <!-- CARD -->
+        <div id="cardBox">
+          <input type="text" id="cardNumber" class="form-control mb-2" placeholder="Card Number (Visa / MasterCard)">
+          <input type="text" id="expiry" class="form-control mb-2" placeholder="MM/YY">
+          <input type="text" id="cvv" class="form-control mb-3" placeholder="CVV">
+        </div>
+
+        <!-- BANK -->
+        <div id="bankBox" class="d-none">
+          <input type="text" id="bankName" class="form-control mb-2" placeholder="Bank Name">
+          <input type="text" id="accountNumber" class="form-control mb-3" placeholder="Account Number">
+        </div>
+
+        <button id="payBtn" class="btn btn-danger w-100">Pay & Download Report</button>
+
+      </div>
+    </div>
+
+    <!-- RIGHT SUMMARY -->
+    <div class="col-lg-6">
+      <div class="card p-4">
+
+        <h5>Payment Summary</h5>
+
+        <!-- IMAGE PLACEHOLDER -->
+        <img src="A_doctor_analyzing_202604060226 (1).png" alt="report-image" class="img-fluid mb-3">
+
+        <div id="summaryBox">
+          <p>No Data Yet</p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<footer class="hospital-footer py-5">
+    <div class="container footer-main-wrapper shadow-sm border rounded-5 p-4 p-lg-5 bg-white">
+        <div class="row g-4 overflow-hidden">
+            
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <div class="footer-logo mb-4">
+                    <i class="fas fa-plus-square text-danger fs-3 me-2"></i>
+                    <div class="brand-text d-inline-block align-middle">
+                        <span class="d-block fw-bold text-dark lh-1">CAMBRIDGE</span>
+                        <span class="d-block fw-bold text-dark lh-1">HOSPITAL</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                <h6 class="fw-bold mb-4">Our Services</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="services.html" class="footer-link">Our Services</a></li>
+                    <li class="mb-2"><a href="facilities.html" class="footer-link">facilities</a></li>
+                    <li class="mb-2"><a href="contact.html" class="footer-link">contact us </a></li>
+                    <li class="mb-2"><a href="feedback.html" class="footer-link">feedback</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                <h6 class="fw-bold mb-4">Patients & Visitors</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#!" class="footer-link">Visitor Guidelines</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Insurance Information</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Patients Visitors</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Poster Information</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                <div class="map-container rounded shadow-sm border overflow-hidden">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.31399252169!2d67.0624645!3d24.8872645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33ef3b1716301%3A0x673907c082531a7d!2sCambridge%20Hospital!5e0!3m2!1sen!2s!4v1711800000000!5m2!1sen!2s" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 ps-lg-4">
+                <ul class="list-unstyled contact-info mb-4">
+                    <li class="mb-3 d-flex align-items-center">
+                        <i class="fas fa-phone-alt me-3 text-danger"></i>
+                        <span class="small-text">+1 234 567 890</span>
+                    </li>
+                    <li class="mb-3 d-flex align-items-center">
+                        <i class="fas fa-envelope me-3 text-danger"></i>
+                        <span class="small-text">info@cambridgehospital.org</span>
+                    </li>
+                    <li class="mb-3 d-flex align-items-start">
+                        <i class="fas fa-map-marker-alt me-3 mt-1 text-danger"></i>
+                        <span class="small-text">123 Hospital Lane, Cityville</span>
+                    </li>
+                </ul>
+                <div class="social-icons d-flex gap-2">
+                    <a href="https://www.facebook.com" target="_blank" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com" target="_blank" class="social-btn"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5 opacity-10">
+
+        <div class="text-center">
+            <p class="mb-0 text-muted small">
+                © 2024 Cambridge Hospital. All Rights Reserved. 
+                 <a href="/services(4)/services.html" class="ms-3 text-muted text-decoration-none">Terms of Service</a>
+                <a href="/facilities(1)/facilities.html" class="ms-3 text-muted text-decoration-none">facilities</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+    <script src="radio.js"></script>
+</body>
+</html>

@@ -1,0 +1,403 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+/* Navbar Design */
+.custom-nav {
+    border: 1px solid #f0f0f0;
+}
+
+.brand-text span {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.nav-link {
+    color: #444 !important;
+    font-size: 0.95rem;
+}
+
+/* Department Toggle Styling */
+.dept-btn {
+    background-color: #fdf2f2;
+    color: #b33939 !important;
+    font-weight: 600 !important;
+}
+
+.dept-btn .dot {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.dropdown-item {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+    color: #555;
+    transition: 0.3s;
+}
+
+.active-dept {
+    background-color: #fdf2f2 !important;
+    color: #b33939 !important;
+    font-weight: 600;
+}
+
+/* Urgent Care Button */
+.btn-urgent {
+    background-color: #b33939;
+    color: white;
+    font-size: 0.85rem;
+    padding: 10px 25px;
+    transition: 0.3s;
+}
+
+.btn-urgent:hover {
+    background-color: #880000;
+    color: white;
+}
+
+/* Notification Panel */
+.notif-badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 10px;
+    height: 10px;
+    background-color: #b33939;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.notif-panel {
+    position: absolute;
+    right: 0;
+    top: 45px;
+    width: 320px;
+    background: white;
+    border-radius: 15px;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.notif-list {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.unread {
+    background-color: #fff9f9;
+}
+
+.smaller {
+    font-size: 0.8rem;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #eee;
+}
+
+
+/* HERO */
+.hero{
+    height:90vh;
+    background:url('main\ image.jfif') no-repeat center/cover;
+    display:flex;
+    align-items:center;
+    padding:80px;
+}
+
+.hero-text{
+    max-width:500px;
+    animation:fadeIn 1.5s ease;
+}
+
+.hero h4{
+    color:#b33939;
+    letter-spacing:2px;
+}
+
+.hero h1{
+    font-size:48px;
+    margin:10px 0;
+}
+
+.hero span{
+    color:#b33939;
+}
+
+.hero p{
+    margin:15px 0;
+    color:#555;
+}
+
+.hero button{
+    padding:12px 25px;
+    border:none;
+    background:#b33939;
+    color:#fff;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.hero button:hover{
+    background:#000;
+}
+
+/* FEATURES */
+.features{
+    display:flex;
+    justify-content:space-around;
+    padding:40px;
+    background:#fff;
+}
+
+.feature-box{
+    width:20%;
+    text-align:center;
+    padding:20px;
+    transition:0.3s;
+    border-radius:10px;
+}
+
+.feature-box:hover{
+    background:#f1f1f1;
+    transform:translateY(-10px);
+}
+
+/* SERVICES */
+.services{
+    display:flex;
+    padding:60px;
+    gap:40px;
+}
+
+.services-text{
+    width:30%;
+}
+
+.services-text h4{
+    color:#b33939;
+}
+
+.services-text h2{
+    margin:10px 0;
+}
+
+.services-text button{
+    margin-top:15px;
+    padding:10px 20px;
+    background:#b33939;
+    color:#fff;
+    border:none;
+    cursor:pointer;
+}
+
+/* CARDS */
+.service-cards{
+    width:70%;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    background:#fff;
+    padding:30px;
+    text-align:center;
+    border-radius:10px;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+/* IMAGE IN CARD */
+.card img{
+    width:70px;
+    margin-bottom:15px;
+    transition:0.3s;
+}
+
+/* HOVER EFFECT */
+.card:hover{
+    transform:translateY(-10px);
+    background:#b33939;
+    color:#fff;
+}
+
+.card:hover img{
+    transform:scale(1.1) rotate(5deg);
+}
+
+/* CTA */
+.cta{
+    background:#b33939;
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:30px 60px;
+}
+
+.cta button{
+    padding:10px 20px;
+    background:#fff;
+    border:none;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.cta button:hover{
+    background:#000;
+    color:#fff;
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar Design */
+.custom-nav {
+    border: 1px solid #f0f0f0;
+}
+
+.brand-text span {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.nav-link {
+    color: #444 !important;
+    font-size: 0.95rem;
+}
+
+/* Department Toggle Styling */
+.dept-btn {
+    background-color: #fdf2f2;
+    color: #b33939 !important;
+    font-weight: 600 !important;
+}
+
+.dept-btn .dot {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.dropdown-item {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+    color: #555;
+    transition: 0.3s;
+}
+
+.active-dept {
+    background-color: #fdf2f2 !important;
+    color: #b33939 !important;
+    font-weight: 600;
+}
+
+/* Urgent Care Button */
+.btn-urgent {
+    background-color: #b33939;
+    color: white;
+    font-size: 0.85rem;
+    padding: 10px 25px;
+    transition: 0.3s;
+}
+
+.btn-urgent:hover {
+    background-color: #880000;
+    color: white;
+}
+
+/* Notification Panel */
+.notif-badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 10px;
+    height: 10px;
+    background-color: #b33939;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.notif-panel {
+    position: absolute;
+    right: 0;
+    top: 45px;
+    width: 320px;
+    background: white;
+    border-radius: 15px;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.notif-list {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.unread {
+    background-color: #fff9f9;
+}
+
+.smaller {
+    font-size: 0.8rem;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #eee;
+}
+
+/* Department button style (as per your theme) */
+.dept-btn {
+    background-color: #fdf2f2;
+    color: #b33939 !important;
+    font-weight: 600 !important;
+    border-radius: 50px;
+}
+
+.dept-btn .dot {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+/* Common Dropdown Styling */
+.custom-dropdown .dropdown-menu {
+    min-width: 220px;
+}
+
+.dropdown-item:hover {
+    background-color: #fdf2f2;
+    color: #b33939;
+}
+
+/* Scannable spacing for nav links */
+.navbar-nav .nav-link {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+}
