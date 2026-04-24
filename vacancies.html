@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Careers & Vacancies</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23b33939'/%3E%3Cpath d='M30 50 h40 M50 30 v40' stroke='white' stroke-width='12' stroke-linecap='round'/%3E%3C/svg%3E">
+    
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="vacancies.css">
+</head>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="emergance-department.css">
+</head>
+<body class="bg-light">
+
+    <header class="main-header py-4">
+        <div class="container-fluid px-lg-5">
+            <nav class="navbar navbar-expand-xl navbar-light bg-white rounded-pill shadow-sm custom-nav px-4 py-2">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <div class="hospital-logo me-2">
+                        <i class="fas fa-plus-square text-danger fs-2"></i>
+                    </div>
+                    <div class="brand-text">
+                        <span class="d-block fw-bold text-dark lh-1">CAMBRIDGE</span>
+                        <span class="d-block fw-bold text-dark lh-1">HOSPITAL</span>
+                    </div>
+                </a>
+    
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#cambridgeNav" aria-controls="cambridgeNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                  <div class="collapse navbar-collapse" id="cambridgeNav">
+                    <ul class="navbar-nav mx-auto gap-2 align-items-center">
+                        <li class="nav-item"><a class="nav-link fw-medium" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="about.html">about us</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="sstories.html">success stories</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="feedback.html">Feedback</a></li>
+                        
+                        <li class="nav-item dropdown custom-dropdown">
+                            <a class="nav-link dropdown-toggle info-btn px-3 ms-lg-2" href="#" role="button" data-bs-toggle="dropdown">
+                                Explore more
+                            </a>
+                           <ul class="dropdown-menu shadow border-0 mt-3 rounded-4 p-2">
+                               <li><a class="dropdown-item" href="center.html"><i class="fas fa-house-medical me-2"></i> Center</a></li>
+                                <li><a class="dropdown-item" href="academic.html"><i class="fas fa-graduation-cap me-2"></i> Academic</a></li>
+                                <li><a class="dropdown-item" href="form..html"><i class="fas fa-file-alt me-2"></i> Foam</a></li>
+                                <li><a class="dropdown-item" href="QUERYY.HTML"><i class="fas fa-question-circle me-2"></i> Query</a></li>
+                                <li><a class="dropdown-item" href="facilities.html"><i class="fas fa-building me-2"></i> Facilities</a></li>
+                                <li><a class="dropdown-item" href="vacancies.html"><i class="fas fa-briefcase me-2"></i> Vacancies</a></li>
+                            </ul>
+                        </li>
+    
+                        <li class="nav-item dropdown custom-dropdown">
+                            <a class="nav-link dropdown-toggle dept-btn px-3 ms-lg-1" href="#" role="button" data-bs-toggle="dropdown">
+                                <span class="dot me-1">•</span> Departments
+                            </a>
+                            <ul class="dropdown-menu shadow border-0 mt-3 rounded-4 p-2">
+                                <li><a class="dropdown-item" href="emergancy-department.html"><i class="fas fa-exclamation-circle me-2"></i> Emergency Department</a></li>
+                                <li><a class="dropdown-item" href="opd-department.html"><i class="fas fa-calendar-alt me-2"></i> OPD (Outpatient Dept)</a></li>
+                                <li><a class="dropdown-item" href="ipd-department.html"><i class="fas fa-bed me-2"></i> IPD (Inpatient Dept)</a></li>
+                                <li><a class="dropdown-item" href="lab-department.html"><i class="fas fa-microscope me-2"></i> Laboratory Department</a></li>
+                                <li><a class="dropdown-item" href="radio.html"><i class="fas fa-x-ray me-2"></i> Radiology & Imaging</a></li>
+                                <li><a class="dropdown-item" href="pharmacy.html"><i class="fas fa-pills me-2"></i> Pharmacy</a></li>
+                                <li><a class="dropdown-item" href="neurology.html"><i class="fas fa-brain me-2"></i> Neurology Department</a></li>
+                                <li><a class="dropdown-item" href="GYNECOLOGY.HTML"><i class="fas fa-venus me-2"></i> Gynecology & Obstetrics</a></li>
+                                
+
+                            </ul>
+                        </li>
+                    </ul>
+    
+                    <div class="d-flex align-items-center gap-3 justify-content-center mt-3 mt-xl-0">
+                        <button class="btn btn-urgent rounded-pill px-4 fw-bold">URGENT CARE</button>
+                        
+                        <div class="notification-container position-relative">
+                            <button class="btn border-0 p-0" id="notifToggle">
+                                <i class="fas fa-bell fs-5 text-muted"></i>
+                                <span class="notif-badge"></span>
+                            </button>
+                            <div id="notifPanel" class="notif-panel shadow-lg d-none">
+                                <div class="panel-header d-flex justify-content-between p-3 border-bottom">
+                                    <h6 class="mb-0 fw-bold">Notifications</h6>
+                                    <button class="btn btn-sm text-danger p-0 fw-bold" id="markRead">Clear All</button>
+                                </div>
+                                <div class="notif-list custom-scrollbar" id="notifList">
+                                    <div class="notif-item p-3 border-bottom unread">
+                                        <p class="mb-0 small fw-bold text-dark">Lab Report Ready</p>
+                                        <span class="text-muted smaller">Your blood test results are now available.</span>
+                                    </div>
+                                </div>
+                                <div class="panel-footer p-2 text-center">
+                                    <button class="btn btn-sm text-danger fw-bold" id="viewAll">View All Notifications</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+<body class="bg-light text-dark">
+
+    <!-- Banner Section -->
+    <section class="banner-section d-flex align-items-center">
+        <div class="banner-overlay"></div>
+        <div class="container position-relative z-1">
+            <div class="row">
+                <div class="col-lg-7 col-md-9 text-white py-5">
+                    <div class="d-inline-block bg-brand-red text-white px-3 py-1 rounded-pill small fw-bold mb-4 shadow-sm tracking-wide text-uppercase">
+                        <i class="fas fa-award me-1"></i> Award-Winning Workplace
+                    </div>
+                    <h2 class="h3 fw-light mb-2 opacity-75" style="letter-spacing: 1px;">Welcome to</h2>
+                    <h1 class="display-4 fw-bolder mb-4" style="letter-spacing: -1px; text-shadow: 0 2px 4px rgba(0,0,0,0.2);">Cambridge Hospital Careers</h1>
+                    <div class="bg-brand-red mb-4 rounded" style="height: 4px; width: 80px;"></div>
+                    <p class="lead fs-5 mb-0 opacity-100" style="line-height: 1.7; max-width: 550px; text-shadow: 0 1px 2px rgba(0,0,0,0.1);">Join an award-winning team driven by a mission to deliver compassionate, quality care to patients and better healthcare to over 600 communities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section id="search" class="pt-5 pb-4 bg-white border-top">
+        <div class="container">
+            <!-- Search Bar -->
+            <div class="row bg-light p-4 rounded shadow-sm border">
+                <div class="col-md-5 mb-3 mb-md-0">
+                    <label class="form-label fw-bold text-dark">Search Vacancies</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-white text-dark border-end-0"><i class="fas fa-search"></i></span>
+                        <input type="text" id="searchInput" class="form-control border-start-0 ps-0 text-dark" placeholder="Job title or keyword...">
+                    </div>
+                </div>
+                <div class="col-md-5 mb-3 mb-md-0">
+                    <label class="form-label fw-bold text-dark">Filter by Department</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-white text-dark border-end-0"><i class="fas fa-filter"></i></span>
+                        <select id="departmentSelect" class="form-select border-start-0 ps-0 text-dark">
+                            <option value="all" selected>All Departments</option>
+                            <option value="Medical & Clinical Roles">Medical & Clinical Roles</option>
+                            <option value="Diagnostic & Technical Roles">Diagnostic & Technical Roles</option>
+                            <option value="Allied Health Professionals">Allied Health Professionals</option>
+                            <option value="Administrative & Management Roles">Administrative & Management Roles</option>
+                            <option value="Emergency & Support Services">Emergency & Support Services</option>
+                            <option value="Maintenance & Technical Support">Maintenance & Technical Support</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-2 d-flex align-items-end">
+                    <button id="searchBtn" class="btn btn-brand-red w-100 py-2 fw-bold">Search</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jobs Section -->
+    <section id="jobs" class="py-5 bg-white border-top">
+        <div class="container">
+            
+            <!-- Job Results Header -->
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5 pb-3 border-bottom">
+                <div class="mb-3 mb-md-0">
+                    <h2 class="display-6 fw-bolder text-dark mb-2" style="letter-spacing: -1px;">Current Openings</h2>
+                    <div class="bg-brand-red rounded" style="height: 4px; width: 50px;"></div>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <span id="jobCountBadge" class="badge bg-dark rounded-pill px-3 py-2">15 Jobs Found</span>
+                    <select id="sortSelect" class="form-select form-select-sm w-auto text-dark">
+                        <option value="default">Sort By...</option>
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Job List -->
+            <div class="job-list">
+                
+                <!-- Job 1 -->
+                <div class="card job-card p-4 bg-white">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <div>
+                            <small class="text-dark d-block mb-1">Prime Healthcare Management Inc</small>
+                            <h4 class="text-brand-red mb-0 fw-bold">Cardiologist</h4>
+                        </div>
+                        <span class="badge bg-dark px-3 py-2">Full Time</span>
+                    </div>
+                    <p class="text-dark mt-3 mb-4">Diagnose and treat disorders of the cardiovascular system. Perform patient exams, order tests, and develop treatment plans to ensure optimal patient health.</p>
+                    <div class="d-flex flex-wrap mb-4">
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">Category</span> Medical & Clinical Roles</span>
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">ID</span> 2026-3001</span>
+                        <span class="job-tag fw-semibold"><i class="fas fa-rupee-sign text-dark me-1"></i> 2,00,000 - 4,00,000 / mo</span>
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">Shift</span> Variable</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center border-top pt-3">
+                        <small class="text-dark fw-medium"><i class="far fa-clock me-1"></i> Posted: 2026-04-12</small>
+                        <button class="btn btn-outline-dark px-4 fw-bold">Apply Now <i class="fas fa-arrow-right ms-2"></i></button>
+                    </div>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="card job-card p-4 bg-white">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <div>
+                            <small class="text-dark d-block mb-1">Prime Healthcare Management Inc</small>
+                            <h4 class="text-brand-red mb-0 fw-bold">Neurologist</h4>
+                        </div>
+                        <span class="badge bg-dark px-3 py-2">Full Time</span>
+                    </div>
+                    <p class="text-dark mt-3 mb-4">Specialize in the diagnosis and treatment of nervous system disorders, including diseases of the brain, spinal cord, nerves, and muscles.</p>
+                    <div class="d-flex flex-wrap mb-4">
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">Category</span> Medical & Clinical Roles</span>
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">ID</span> 2026-3002</span>
+                        <span class="job-tag fw-semibold"><i class="fas fa-rupee-sign text-dark me-1"></i> 2,00,000 - 3,50,000 / mo</span>
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">Shift</span> Days</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center border-top pt-3">
+                        <small class="text-dark fw-medium"><i class="far fa-clock me-1"></i> Posted: 2026-04-11</small>
+                        <button class="btn btn-outline-dark px-4 fw-bold">Apply Now <i class="fas fa-arrow-right ms-2"></i></button>
+                    </div>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="card job-card p-4 bg-white">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <div>
+                            <small class="text-dark d-block mb-1">St. Mary's Hospital</small>
+                            <h4 class="text-brand-red mb-0 fw-bold">Pharmacist</h4>
+                        </div>
+                        <span class="badge bg-dark px-3 py-2">Full Time</span>
+                    </div>
+                    <p class="text-dark mt-3 mb-4">Dispense prescription medications to patients and offer expertise in the safe use of prescriptions. Collaborate with physicians on medication therapy management.</p>
+                    <div class="d-flex flex-wrap mb-4">
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">Category</span> Allied Health Professionals</span>
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">ID</span> 2026-3003</span>
+                        <span class="job-tag fw-semibold"><i class="fas fa-rupee-sign text-dark me-1"></i> 40,000 - 70,000 / mo</span>
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">Shift</span> Rotating</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center border-top pt-3">
+                        <small class="text-dark fw-medium"><i class="far fa-clock me-1"></i> Posted: 2026-04-10</small>
+                        <button class="btn btn-outline-dark px-4 fw-bold">Apply Now <i class="fas fa-arrow-right ms-2"></i></button>
+                    </div>
+                </div>
+
+                <!-- Job 4 -->
+                <div class="card job-card p-4 bg-white">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <div>
+                            <small class="text-dark d-block mb-1">Prime Healthcare Management Inc</small>
+                            <h4 class="text-brand-red mb-0 fw-bold">Radiologist</h4>
+                        </div>
+                        <span class="badge bg-dark px-3 py-2">Full Time</span>
+                    </div>
+                    <p class="text-dark mt-3 mb-4">Diagnose and treat injuries and diseases using medical imaging procedures such as X-rays, MRIs, and CT scans. Provide detailed reports to referring physicians.</p>
+                    <div class="d-flex flex-wrap mb-4">
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">Category</span> Diagnostic & Technical Roles</span>
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">ID</span> 2026-3004</span>
+                        <span class="job-tag fw-semibold"><i class="fas fa-rupee-sign text-dark me-1"></i> 1,50,000 - 3,00,000 / mo</span>
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">Shift</span> Days</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center border-top pt-3">
+                        <small class="text-dark fw-medium"><i class="far fa-clock me-1"></i> Posted: 2026-04-09</small>
+                        <button class="btn btn-outline-dark px-4 fw-bold">Apply Now <i class="fas fa-arrow-right ms-2"></i></button>
+                    </div>
+                </div>
+
+                <!-- Job 5 -->
+                <div class="card job-card p-4 bg-white">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <div>
+                            <small class="text-dark d-block mb-1">Prime Healthcare Management Inc</small>
+                            <h4 class="text-brand-red mb-0 fw-bold">Radiology Technician</h4>
+                        </div>
+                        <span class="badge bg-dark px-3 py-2">Part Time</span>
+                    </div>
+                    <p class="text-dark mt-3 mb-4">Perform diagnostic imaging examinations like X-rays on patients. Ensure patient safety and comfort during procedures while maintaining imaging equipment.</p>
+                    <div class="d-flex flex-wrap mb-4">
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">Category</span> Diagnostic & Technical Roles</span>
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">ID</span> 2026-3005</span>
+                        <span class="job-tag fw-semibold"><i class="fas fa-rupee-sign text-dark me-1"></i> 30,000 - 50,000 / mo</span>
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">Shift</span> Nights</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center border-top pt-3">
+                        <small class="text-dark fw-medium"><i class="far fa-clock me-1"></i> Posted: 2026-04-08</small>
+                        <button class="btn btn-outline-dark px-4 fw-bold">Apply Now <i class="fas fa-arrow-right ms-2"></i></button>
+                    </div>
+                </div>
+
+                <!-- Job 6 -->
+                <div class="card job-card p-4 bg-white">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <div>
+                            <small class="text-dark d-block mb-1">St. Mary's Hospital</small>
+                            <h4 class="text-brand-red mb-0 fw-bold">Anesthesiologist</h4>
+                        </div>
+                        <span class="badge bg-dark px-3 py-2">Full Time</span>
+                    </div>
+                    <p class="text-dark mt-3 mb-4">Administer anesthetics prior to, during, or after surgery or other medical procedures. Monitor patient vital signs and manage pain relief.</p>
+                    <div class="d-flex flex-wrap mb-4">
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">Category</span> Medical & Clinical Roles</span>
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">ID</span> 2026-3006</span>
+                        <span class="job-tag fw-semibold"><i class="fas fa-rupee-sign text-dark me-1"></i> 1,80,000 - 3,50,000 / mo</span>
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">Shift</span> Variable</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center border-top pt-3">
+                        <small class="text-dark fw-medium"><i class="far fa-clock me-1"></i> Posted: 2026-04-07</small>
+                        <button class="btn btn-outline-dark px-4 fw-bold">Apply Now <i class="fas fa-arrow-right ms-2"></i></button>
+                    </div>
+                </div>
+
+                <!-- Job 7 -->
+                <div class="card job-card p-4 bg-white">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <div>
+                            <small class="text-dark d-block mb-1">Prime Healthcare Management Inc</small>
+                            <h4 class="text-brand-red mb-0 fw-bold">Oncology Nurse</h4>
+                        </div>
+                        <span class="badge bg-dark px-3 py-2">Full Time</span>
+                    </div>
+                    <p class="text-dark mt-3 mb-4">Care for critically or chronically ill cancer patients. Administer chemotherapy, monitor patient progress, and provide emotional support to patients and families.</p>
+                    <div class="d-flex flex-wrap mb-4">
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">Category</span> Medical & Clinical Roles</span>
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">ID</span> 2026-3007</span>
+                        <span class="job-tag fw-semibold"><i class="fas fa-rupee-sign text-dark me-1"></i> 50,000 - 80,000 / mo</span>
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">Shift</span> Days</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center border-top pt-3">
+                        <small class="text-dark fw-medium"><i class="far fa-clock me-1"></i> Posted: 2026-04-06</small>
+                        <button class="btn btn-outline-dark px-4 fw-bold">Apply Now <i class="fas fa-arrow-right ms-2"></i></button>
+                    </div>
+                </div>
+
+                <!-- Job 8 -->
+                <div class="card job-card p-4 bg-white">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <div>
+                            <small class="text-dark d-block mb-1">Prime Healthcare Management Inc</small>
+                            <h4 class="text-brand-red mb-0 fw-bold">Physiotherapist</h4>
+                        </div>
+                        <span class="badge bg-dark px-3 py-2">Full Time</span>
+                    </div>
+                    <p class="text-dark mt-3 mb-4">Help patients manage pain and improve or restore mobility through physical rehabilitation. Develop individualized treatment plans and monitor progress.</p>
+                    <div class="d-flex flex-wrap mb-4">
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">Category</span> Allied Health Professionals</span>
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">ID</span> 2026-3008</span>
+                        <span class="job-tag fw-semibold"><i class="fas fa-rupee-sign text-dark me-1"></i> 40,000 - 75,000 / mo</span>
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">Shift</span> Days</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center border-top pt-3">
+                        <small class="text-dark fw-medium"><i class="far fa-clock me-1"></i> Posted: 2026-04-05</small>
+                        <button class="btn btn-outline-dark px-4 fw-bold">Apply Now <i class="fas fa-arrow-right ms-2"></i></button>
+                    </div>
+                </div>
+
+                <!-- Job 9 -->
+                <div class="card job-card p-4 bg-white">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <div>
+                            <small class="text-dark d-block mb-1">Prime Healthcare Management Inc</small>
+                            <h4 class="text-brand-red mb-0 fw-bold">Billing & Insurance Staff</h4>
+                        </div>
+                        <span class="badge bg-dark px-3 py-2">Full Time</span>
+                    </div>
+                    <p class="text-dark mt-3 mb-4">Process patient health insurance claims, manage billing, and ensure accurate coding of medical procedures. Resolve billing discrepancies and assist patients with inquiries.</p>
+                    <div class="d-flex flex-wrap mb-4">
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">Category</span> Administrative & Management Roles</span>
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">ID</span> 2026-3009</span>
+                        <span class="job-tag fw-semibold"><i class="fas fa-rupee-sign text-dark me-1"></i> 25,000 - 45,000 / mo</span>
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">Shift</span> Days</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center border-top pt-3">
+                        <small class="text-dark fw-medium"><i class="far fa-clock me-1"></i> Posted: 2026-04-04</small>
+                        <button class="btn btn-outline-dark px-4 fw-bold">Apply Now <i class="fas fa-arrow-right ms-2"></i></button>
+                    </div>
+                </div>
+
+                <!-- Job 10 -->
+                <div class="card job-card p-4 bg-white">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <div>
+                            <small class="text-dark d-block mb-1">Prime Healthcare Management Inc</small>
+                            <h4 class="text-brand-red mb-0 fw-bold">Security Personnel</h4>
+                        </div>
+                        <span class="badge bg-dark px-3 py-2">Full Time</span>
+                    </div>
+                    <p class="text-dark mt-3 mb-4">Maintain a safe and secure environment for patients, visitors, and staff by patrolling and monitoring premises. Respond to emergencies and enforce hospital policies.</p>
+                    <div class="d-flex flex-wrap mb-4">
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">Category</span> Emergency & Support Services</span>
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">ID</span> 2026-3010</span>
+                        <span class="job-tag fw-semibold"><i class="fas fa-rupee-sign text-dark me-1"></i> 18,000 - 25,000 / mo</span>
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">Shift</span> Nights</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center border-top pt-3">
+                        <small class="text-dark fw-medium"><i class="far fa-clock me-1"></i> Posted: 2026-04-03</small>
+                        <button class="btn btn-outline-dark px-4 fw-bold">Apply Now <i class="fas fa-arrow-right ms-2"></i></button>
+                    </div>
+                </div>
+
+                <!-- Job 11 -->
+                <div class="card job-card p-4 bg-white">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <div>
+                            <small class="text-dark d-block mb-1">Prime Healthcare Management Inc</small>
+                            <h4 class="text-brand-red mb-0 fw-bold">Ambulance Driver</h4>
+                        </div>
+                        <span class="badge bg-dark px-3 py-2">Full Time</span>
+                    </div>
+                    <p class="text-dark mt-3 mb-4">Safely transport sick, injured, or convalescent persons to and from hospitals or other medical facilities. Assist paramedics with patient loading and unloading.</p>
+                    <div class="d-flex flex-wrap mb-4">
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">Category</span> Emergency & Support Services</span>
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">ID</span> 2026-3011</span>
+                        <span class="job-tag fw-semibold"><i class="fas fa-rupee-sign text-dark me-1"></i> 20,000 - 30,000 / mo</span>
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">Shift</span> Rotating</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center border-top pt-3">
+                        <small class="text-dark fw-medium"><i class="far fa-clock me-1"></i> Posted: 2026-04-02</small>
+                        <button class="btn btn-outline-dark px-4 fw-bold">Apply Now <i class="fas fa-arrow-right ms-2"></i></button>
+                    </div>
+                </div>
+
+                <!-- Job 12 -->
+                <div class="card job-card p-4 bg-white">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <div>
+                            <small class="text-dark d-block mb-1">Prime Healthcare Management Inc</small>
+                            <h4 class="text-brand-red mb-0 fw-bold">Electrician</h4>
+                        </div>
+                        <span class="badge bg-dark px-3 py-2">Full Time</span>
+                    </div>
+                    <p class="text-dark mt-3 mb-4">Install, maintain, and repair electrical wiring, equipment, and fixtures in the hospital facility. Ensure all electrical systems meet safety codes and standards.</p>
+                    <div class="d-flex flex-wrap mb-4">
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">Category</span> Maintenance & Technical Support</span>
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">ID</span> 2026-3012</span>
+                        <span class="job-tag fw-semibold"><i class="fas fa-rupee-sign text-dark me-1"></i> 22,000 - 35,000 / mo</span>
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">Shift</span> Days</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center border-top pt-3">
+                        <small class="text-dark fw-medium"><i class="far fa-clock me-1"></i> Posted: 2026-04-01</small>
+                        <button class="btn btn-outline-dark px-4 fw-bold">Apply Now <i class="fas fa-arrow-right ms-2"></i></button>
+                    </div>
+                </div>
+
+                <!-- Job 13 -->
+                <div class="card job-card p-4 bg-white">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <div>
+                            <small class="text-dark d-block mb-1">Prime Healthcare Management Inc</small>
+                            <h4 class="text-brand-red mb-0 fw-bold">Plumber</h4>
+                        </div>
+                        <span class="badge bg-dark px-3 py-2">Full Time</span>
+                    </div>
+                    <p class="text-dark mt-3 mb-4">Install, repair, and maintain plumbing systems and fixtures in the hospital to ensure proper water supply and drainage. Respond to emergency plumbing issues.</p>
+                    <div class="d-flex flex-wrap mb-4">
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">Category</span> Maintenance & Technical Support</span>
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">ID</span> 2026-3013</span>
+                        <span class="job-tag fw-semibold"><i class="fas fa-rupee-sign text-dark me-1"></i> 20,000 - 30,000 / mo</span>
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">Shift</span> Days</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center border-top pt-3">
+                        <small class="text-dark fw-medium"><i class="far fa-clock me-1"></i> Posted: 2026-03-30</small>
+                        <button class="btn btn-outline-dark px-4 fw-bold">Apply Now <i class="fas fa-arrow-right ms-2"></i></button>
+                    </div>
+                </div>
+
+                <!-- Job 14 -->
+                <div class="card job-card p-4 bg-white">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <div>
+                            <small class="text-dark d-block mb-1">St. Mary's Hospital</small>
+                            <h4 class="text-brand-red mb-0 fw-bold">Biomedical Engineer</h4>
+                        </div>
+                        <span class="badge bg-dark px-3 py-2">Full Time</span>
+                    </div>
+                    <p class="text-dark mt-3 mb-4">Design, maintain, and repair medical equipment and devices used in patient care and diagnosis. Train staff on proper equipment usage and safety.</p>
+                    <div class="d-flex flex-wrap mb-4">
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">Category</span> Maintenance & Technical Support</span>
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">ID</span> 2026-3014</span>
+                        <span class="job-tag fw-semibold"><i class="fas fa-rupee-sign text-dark me-1"></i> 60,000 - 1,00,000 / mo</span>
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">Shift</span> Days</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center border-top pt-3">
+                        <small class="text-dark fw-medium"><i class="far fa-clock me-1"></i> Posted: 2026-03-28</small>
+                        <button class="btn btn-outline-dark px-4 fw-bold">Apply Now <i class="fas fa-arrow-right ms-2"></i></button>
+                    </div>
+                </div>
+
+                <!-- Job 15 -->
+                <div class="card job-card p-4 bg-white">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <div>
+                            <small class="text-dark d-block mb-1">Prime Healthcare Management Inc</small>
+                            <h4 class="text-brand-red mb-0 fw-bold">Hospital Housekeeping Supervisor</h4>
+                        </div>
+                        <span class="badge bg-dark px-3 py-2">Full Time</span>
+                    </div>
+                    <p class="text-dark mt-3 mb-4">Oversee the cleaning staff to ensure all areas of the hospital meet strict sanitation and hygiene standards. Manage schedules, inventory, and training.</p>
+                    <div class="d-flex flex-wrap mb-4">
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">Category</span> Maintenance & Technical Support</span>
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">ID</span> 2026-3015</span>
+                        <span class="job-tag fw-semibold"><i class="fas fa-rupee-sign text-dark me-1"></i> 25,000 - 40,000 / mo</span>
+                        <span class="job-tag fw-semibold"><span class="text-dark fw-normal me-1">Shift</span> Rotating</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center border-top pt-3">
+                        <small class="text-dark fw-medium"><i class="far fa-clock me-1"></i> Posted: 2026-03-25</small>
+                        <button class="btn btn-outline-dark px-4 fw-bold">Apply Now <i class="fas fa-arrow-right ms-2"></i></button>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- Load More Button -->
+            <div class="text-center mt-5" id="loadMoreContainer" style="display: none;">
+                <button id="loadMoreBtn" class="btn btn-outline-dark fw-bold px-5 py-2">Load More Jobs</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section (Now Careers at Cambridge hospital) -->
+    <section id="categories" class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bolder text-dark mb-3" style="letter-spacing: -1px;">Careers at <span class="text-brand-red">Cambridge Hospital</span></h2>
+                <div class="bg-brand-red mx-auto rounded" style="height: 4px; width: 60px;"></div>
+                <p class="lead text-muted mt-3 mx-auto" style="max-width: 600px;">Explore diverse career paths and find where you can make the biggest impact in healthcare.</p>
+            </div>
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card category-card h-100">
+                        <img src="doctor.b.png" class="card-img-top" alt="Medical & Clinical Roles" referrerPolicy="no-referrer">
+                        <div class="card-body text-center p-4">
+                            <h5 class="card-title fw-bold text-dark">Medical & Clinical Roles</h5>
+                            <p class="card-text text-dark small mt-3">Join our team of dedicated physicians, nurses, and clinical staff providing top-tier patient care.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card category-card h-100">
+                        <img src="radiol.b.png" class="card-img-top" alt="Diagnostic & Technical Roles" referrerPolicy="no-referrer">
+                        <div class="card-body text-center p-4">
+                            <h5 class="card-title fw-bold text-dark">Diagnostic & Technical Roles</h5>
+                            <p class="card-text text-dark small mt-3">Utilize cutting-edge technology in radiology, pathology, and laboratory sciences to aid in accurate diagnoses.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card category-card h-100">
+                        <img src="Physio.b.png" class="card-img-top" alt="Allied Health Professionals" referrerPolicy="no-referrer">
+                        <div class="card-body text-center p-4">
+                            <h5 class="card-title fw-bold text-dark">Allied Health Professionals</h5>
+                            <p class="card-text text-dark small mt-3">Empower patients through physical therapy, occupational therapy, pharmacy, and specialized care services.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card category-card h-100">
+                        <img src="recep.b.png" class="card-img-top" alt="Administrative & Management Roles" referrerPolicy="no-referrer">
+                        <div class="card-body text-center p-4">
+                            <h5 class="card-title fw-bold text-dark">Administrative & Management Roles</h5>
+                            <p class="card-text text-dark small mt-3">Drive hospital operations, finance, human resources, and healthcare administration to ensure seamless care delivery.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card category-card h-100">
+                        <img src="elect.b.png" class="card-img-top" alt="Emergency & Support Services" referrerPolicy="no-referrer">
+                        <div class="card-body text-center p-4">
+                            <h5 class="card-title fw-bold text-dark">Emergency & Support Services</h5>
+                            <p class="card-text text-dark small mt-3">Be the first line of response in our fast-paced emergency departments and critical support teams.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card category-card h-100">
+                        <img src="cleaner.b.png" class="card-img-top" alt="Maintenance & Technical Support" referrerPolicy="no-referrer">
+                        <div class="card-body text-center p-4">
+                            <h5 class="card-title fw-bold text-dark">Maintenance & Technical Support</h5>
+                            <p class="card-text text-dark small mt-3">Keep our facilities safe, operational, and technologically advanced with our engineering and IT teams.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section (Interactive Carousel) -->
+    <section id="benefits" class="py-5 bg-white text-center border-top">
+        <div class="container py-4">
+            <h2 class="mb-5 fw-bold text-dark">Benefits</h2>
+            
+            <!-- Icons Row -->
+            <div class="d-flex justify-content-center flex-wrap gap-3 gap-md-4 mb-5" id="benefit-icons">
+                <!-- Injected dynamically by script.js -->
+            </div>
+
+            <!-- Carousel-like Text Area -->
+            <div class="d-flex justify-content-center align-items-center mt-4">
+                <a href="#" class="carousel-control-btn" id="prev-benefit"><i class="fas fa-chevron-left"></i></a>
+                
+                <div class="mx-3 mx-md-5 px-md-4" style="max-width: 700px; min-height: 140px;">
+                    <h4 id="benefit-title" class="fw-bold text-brand-red mb-3">Loading...</h4>
+                    <p id="benefit-desc" class="lead text-dark mb-0">Please wait while benefits are loaded.</p>
+                </div>
+                
+                <a href="#" class="carousel-control-btn" id="next-benefit"><i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Details Modal -->
+    <div class="modal fade" id="jobModal" tabindex="-1" aria-labelledby="jobModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header bg-brand-red text-white">
+                    <h5 class="modal-title fw-bold" id="jobModalLabel">Job Title</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-4">
+                        <h6 class="fw-bold text-dark mb-1" id="modalCompany">Company Name</h6>
+                        <div id="modalTags" class="d-flex flex-wrap gap-2 mb-3 mt-2"></div>
+                        <h6 class="fw-bold text-dark border-bottom pb-2">Job Description</h6>
+                        <p id="modalDescription" class="text-dark">Full description goes here...</p>
+                    </div>
+                    
+                    <div class="bg-light p-4 rounded border" id="applicationFormContainer">
+                        <h6 class="fw-bold text-dark mb-3">Apply for this position</h6>
+                        
+                        <!-- Success Message (Hidden by default) -->
+                        <div id="applicationSuccess" class="alert alert-success d-none" role="alert">
+                            <i class="fas fa-check-circle me-2"></i> <strong>Application Submitted!</strong><br>
+                            Thank you for applying. We have received your application and will be in touch soon.
+                        </div>
+
+                        <form id="applicationForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">First Name *</label>
+                                    <input type="text" name="firstName" class="form-control" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Last Name *</label>
+                                    <input type="text" name="lastName" class="form-control" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Email Address *</label>
+                                    <input type="email" name="email" class="form-control" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Phone Number *</label>
+                                    <input type="tel" name="phone" class="form-control" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label fw-semibold">Resume/CV *</label>
+                                    <input type="file" name="resume" class="form-control" accept=".pdf,.doc,.docx" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label fw-semibold">Cover Letter (Optional)</label>
+                                    <textarea name="coverLetter" class="form-control" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" form="applicationForm" id="submitApplicationBtn" class="btn btn-brand-red fw-bold px-4">Submit Application</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+  <footer class="hospital-footer py-5">
+    <div class="container footer-main-wrapper shadow-sm border rounded-5 p-4 p-lg-5 bg-white">
+        <div class="row g-4 overflow-hidden">
+            
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <div class="footer-logo mb-4">
+                    <i class="fas fa-plus-square text-danger fs-3 me-2"></i>
+                    <div class="brand-text d-inline-block align-middle">
+                        <span class="d-block fw-bold text-dark lh-1">CAMBRIDGE</span>
+                        <span class="d-block fw-bold text-dark lh-1">HOSPITAL</span>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                <h6 class="fw-bold mb-4">Our Services</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#!" class="footer-link">About Us</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Our Services</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Careers</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Pharmacy</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Pediatrics & Imaging</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                <h6 class="fw-bold mb-4">Patients & Visitors</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#!" class="footer-link">Visitor Guidelines</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Insurance Information</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Patients Visitors</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Poster Information</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                <div class="map-container rounded shadow-sm border overflow-hidden">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.31399252169!2d67.0624645!3d24.8872645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33ef3b1716301%3A0x673907c082531a7d!2sCambridge%20Hospital!5e0!3m2!1sen!2s!4v1711800000000!5m2!1sen!2s" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 ps-lg-4">
+                <ul class="list-unstyled contact-info mb-4">
+                    <li class="mb-3 d-flex align-items-center">
+                        <i class="fas fa-phone-alt me-3 text-danger"></i>
+                        <span class="small-text">+1 234 567 890</span>
+                    </li>
+                    <li class="mb-3 d-flex align-items-center">
+                        <i class="fas fa-envelope me-3 text-danger"></i>
+                        <span class="small-text">info@cambridgehospital.org</span>
+                    </li>
+                    <li class="mb-3 d-flex align-items-start">
+                        <i class="fas fa-map-marker-alt me-3 mt-1 text-danger"></i>
+                        <span class="small-text">123 Hospital Lane, Cityville</span>
+                    </li>
+                </ul>
+                <div class="social-icons d-flex gap-2">
+                    <a href="https://www.facebook.com" target="_blank" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com" target="_blank" class="social-btn"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5 opacity-10">
+
+        <div class="text-center">
+            <p class="mb-0 text-muted small">
+                © 2024 Cambridge Hospital. All Rights Reserved. 
+                <a href="#!" class="ms-3 text-muted text-decoration-none">Terms of Service</a>
+                <a href="#!" class="ms-3 text-muted text-decoration-none">Privacy Policy</a>
+            </p>
+        </div>
+    </div>
+</footer>
+    <!-- Bootstrap 5 JS and Popper.js CDNs -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    
+    <!-- Custom Script -->
+    <script src="vacancies.js"></script>
+</body>
+</html>
