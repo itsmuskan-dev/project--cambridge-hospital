@@ -1,0 +1,334 @@
+/* Custom Styles overriding Bootstrap defaults where necessary */
+/* Color Palette: Red, Gray, Black. Bootstrap's native classes are used mainly, but custom touches rely on these rules. */
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar Design */
+.custom-nav {
+    border: 0.0625rem solid #f0f0f0;
+}
+
+.brand-text span {
+    font-size: 0.875rem;
+    letter-spacing: 0.0313rem;
+}
+
+.nav-link {
+    color: #444 !important;
+    font-size: 0.95rem;
+}
+.nav-link:hover {
+    color: #b33939 !important; /* Hospital theme red */
+    transform: translateY(-2px);
+}
+/* Department Toggle Styling */
+.dept-btn {
+    background-color: #fdf2f2;
+    color: #b33939 !important;
+    font-weight: 600 !important;
+}
+
+.dept-btn .dot {
+    font-size: 1.25rem;
+    vertical-align: middle;
+}
+
+.dropdown-item {
+    font-size: 0.9rem;
+    padding: 0.625rem 0.9375rem;
+    color: #555;
+    transition: 0.3s;
+}
+
+.active-dept {
+    background-color: #fdf2f2 !important;
+    color: #b33939 !important;
+    font-weight: 600;
+}
+
+/* Urgent Care Button */
+.btn-urgent {
+    background-color: #b33939;
+    color: white;
+    font-size: 0.85rem;
+    padding: 0.625rem 1.5625rem;
+    transition: 0.3s;
+}
+
+.btn-urgent:hover {
+    background-color: #880000;
+    color: white;
+}
+
+/* Notification Panel */
+.notif-badge {
+    position: absolute;
+    top: -0.125rem;
+    right: -0.125rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    background-color: #b33939;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.notif-panel {
+    position: absolute;
+    right: 0;
+    top: 2.8125rem;
+    width: 20rem;
+    background: white;
+    border-radius: 0.9375rem;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.notif-list {
+    max-height: 15.625rem;
+    overflow-y: auto;
+}
+
+.unread {
+    background-color: #fff9f9;
+}
+
+.smaller {
+    font-size: 0.8rem;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #eee;
+}
+
+
+/* Section Title Styling */
+.section-title {
+    color: #1a1a1a;
+    border-bottom: 0.1875rem solid #dc3545; /* Bootstrap Danger Red */
+}
+
+/* Share Story Underline Accent */
+.title-underline {
+    height: 0.1875rem;
+    width: 60px;
+    display: block;
+}
+
+/* Card Enhancements (Hover Effects) */
+.story-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid #e9ecef;
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+    border-color: #dc3545 !important;
+}
+
+.story-card .card-img-top {
+    height: 240px;
+    object-fit: cover;
+}
+
+/* Ensure buttons follow the red theme */
+.btn-outline-danger {
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+/* banner Section with Background Image */
+.banner-section {
+    background-image: url('banner.ss.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    min-height: 25rem;
+    display: flex;
+    align-items: center;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.z-1 {
+    z-index: 1;
+}
+
+/* Modal Text Styling matching the reference image */
+.modal-story-text p {
+    line-height: 1.8;
+    font-size: 1.05rem;
+    margin-bottom: 1.25rem;
+    color: #4a4a4a !important; /* Slightly darker grey for readability */
+}
+
+/* Extra large modal size */
+@media (min-width: 75rem) {
+    .modal-xxl {
+        max-width: 71.25rem;
+    }
+}
+
+@media (min-width: 87.5rem) {
+    .modal-xxl {
+        max-width: 90vw; /* Wide format for very large screens */
+    }
+}
+
+/* Carousel Image Constrains */
+.modal-carousel-img {
+    object-fit: cover;
+    height: 37.5rem; /* 600px in rem */
+    width: 100%;
+}
+/* Custom Global Styles */
+.hospital-footer {
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.footer-main-wrapper {
+    border-radius: 2rem !important;
+    background: #ffffff;
+    max-width: 100%;
+}
+
+.footer-link {
+    color: #555;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.footer-link:hover {
+    color: #b33939;
+    transform: translateX(0.3rem);
+}
+
+/* Map Container Fix */
+.map-container {
+    width: 100%;
+    height: 10rem; /* Fixed height for map in footer */
+    background: #eee;
+}
+
+/* Contact Text wrapping fix */
+.small-text {
+    font-size: 0.85rem;
+    word-break: break-word; /* Text bahar nahi jayega */
+    color: #333;
+}
+
+/* Social Buttons */
+.social-btn {
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: #b33939;
+    color: #ffffff !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-btn:hover {
+    background-color: #880000;
+    transform: translateY(-0.2rem);
+}
+
+/* Brand Logo Text */
+.brand-text span {
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+}
+
+/* Scroll Jump Fix for # links */
+a[href="#!"] {
+    cursor: pointer;
+}
+
+/* Responsive adjustment */
+@media (max-width: 992px) {
+    .footer-main-wrapper {
+        margin: 1rem;
+        padding: 2rem !important;
+    }
+}
+
+
+/* navbar */
+
+/* Purana style barkaraar rakhte huye naya button style */
+.info-btn {
+    background-color: #f8f9fa; /* Light grey for subtle look */
+    color: #444 !important;
+    border-radius: 50px;
+    font-weight: 500 !important;
+    transition: 0.3s ease;
+}
+
+.info-btn:hover {
+    background-color: #eee;
+}
+
+/* Department button style (as per your theme) */
+.dept-btn {
+    background-color: #fdf2f2;
+    color: #b33939 !important;
+    font-weight: 600 !important;
+    border-radius: 50px;
+}
+
+.dept-btn .dot {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+/* Common Dropdown Styling */
+.custom-dropdown .dropdown-menu {
+    min-width: 220px;
+}
+
+.dropdown-item:hover {
+    background-color: #fdf2f2;
+    color: #b33939;
+}
+
+/* Scannable spacing for nav links */
+.navbar-nav .nav-link {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+}

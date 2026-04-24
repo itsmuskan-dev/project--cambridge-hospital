@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital Success Stories</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23b33939'/%3E%3Cpath d='M30 50 h40 M50 30 v40' stroke='white' stroke-width='12' stroke-linecap='round'/%3E%3C/svg%3E">
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="sstories.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+  <body>
+    <body class="bg-light">
+      <header class="main-header py-4">
+        <div class="container-fluid px-lg-5">
+            <nav class="navbar navbar-expand-xl navbar-light bg-white rounded-pill shadow-sm custom-nav px-4 py-2">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <div class="hospital-logo me-2">
+                        <i class="fas fa-plus-square text-danger fs-2"></i>
+                    </div>
+                    <div class="brand-text">
+                        <span class="d-block fw-bold text-dark lh-1">CAMBRIDGE</span>
+                        <span class="d-block fw-bold text-dark lh-1">HOSPITAL</span>
+                    </div>
+                </a>
+    
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#cambridgeNav" aria-controls="cambridgeNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                 <div class="collapse navbar-collapse" id="cambridgeNav">
+                    <ul class="navbar-nav mx-auto gap-2 align-items-center">
+                        <li class="nav-item"><a class="nav-link fw-medium" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="about.html">about us</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="sstories.html">success stories</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="feedback.html">Feedback</a></li>
+                        
+                        <li class="nav-item dropdown custom-dropdown">
+                            <a class="nav-link dropdown-toggle info-btn px-3 ms-lg-2" href="#" role="button" data-bs-toggle="dropdown">
+                                Explore more
+                            </a>
+                           <ul class="dropdown-menu shadow border-0 mt-3 rounded-4 p-2">
+                               <li><a class="dropdown-item" href="center.html"><i class="fas fa-house-medical me-2"></i> Center</a></li>
+                                <li><a class="dropdown-item" href="academic.html"><i class="fas fa-graduation-cap me-2"></i> Academic</a></li>
+                                <li><a class="dropdown-item" href="form..html"><i class="fas fa-file-alt me-2"></i> Foam</a></li>
+                                <li><a class="dropdown-item" href="QUERYY.HTML"><i class="fas fa-question-circle me-2"></i> Query</a></li>
+                                <li><a class="dropdown-item" href="facilities.html"><i class="fas fa-building me-2"></i> Facilities</a></li>
+                                <li><a class="dropdown-item" href="vacancies.html"><i class="fas fa-briefcase me-2"></i> Vacancies</a></li>
+                            </ul>
+                        </li>
+    
+                        <li class="nav-item dropdown custom-dropdown">
+                            <a class="nav-link dropdown-toggle dept-btn px-3 ms-lg-1" href="#" role="button" data-bs-toggle="dropdown">
+                                <span class="dot me-1">•</span> Departments
+                            </a>
+                            <ul class="dropdown-menu shadow border-0 mt-3 rounded-4 p-2">
+                                <li><a class="dropdown-item" href="emergancy-department.html"><i class="fas fa-exclamation-circle me-2"></i> Emergency Department</a></li>
+                                <li><a class="dropdown-item" href="opd-department.html"><i class="fas fa-calendar-alt me-2"></i> OPD (Outpatient Dept)</a></li>
+                                <li><a class="dropdown-item" href="ipd-department.html"><i class="fas fa-bed me-2"></i> IPD (Inpatient Dept)</a></li>
+                                <li><a class="dropdown-item" href="lab-department.html"><i class="fas fa-microscope me-2"></i> Laboratory Department</a></li>
+                                <li><a class="dropdown-item" href="radio.html"><i class="fas fa-x-ray me-2"></i> Radiology & Imaging</a></li>
+                                <li><a class="dropdown-item" href="pharmacy.html"><i class="fas fa-pills me-2"></i> Pharmacy</a></li>
+                                <li><a class="dropdown-item" href="neurology.html"><i class="fas fa-brain me-2"></i> Neurology Department</a></li>
+                                <li><a class="dropdown-item" href="GYNECOLOGY.HTML"><i class="fas fa-venus me-2"></i> Gynecology & Obstetrics</a></li>
+                                
+
+                            </ul>
+                        </li>
+                    </ul>
+    
+                    <div class="d-flex align-items-center gap-3 justify-content-center mt-3 mt-xl-0">
+                        <button class="btn btn-urgent rounded-pill px-4 fw-bold">URGENT CARE</button>
+                        
+                        <div class="notification-container position-relative">
+                            <button class="btn border-0 p-0" id="notifToggle">
+                                <i class="fas fa-bell fs-5 text-muted"></i>
+                                <span class="notif-badge"></span>
+                            </button>
+                            <div id="notifPanel" class="notif-panel shadow-lg d-none">
+                                <div class="panel-header d-flex justify-content-between p-3 border-bottom">
+                                    <h6 class="mb-0 fw-bold">Notifications</h6>
+                                    <button class="btn btn-sm text-danger p-0 fw-bold" id="markRead">Clear All</button>
+                                </div>
+                                <div class="notif-list custom-scrollbar" id="notifList">
+                                    <div class="notif-item p-3 border-bottom unread">
+                                        <p class="mb-0 small fw-bold text-dark">Lab Report Ready</p>
+                                        <span class="text-muted smaller">Your blood test results are now available.</span>
+                                    </div>
+                                </div>
+                                <div class="panel-footer p-2 text-center">
+                                    <button class="btn btn-sm text-danger fw-bold" id="viewAll">View All Notifications</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section 1: Our Patients Success Stories -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="fw-bold section-title d-inline-block pb-2">Our Patients Success Stories</h2>
+          </div>
+        </div>
+        
+        <div class="row g-4">
+          <!-- Story 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-sm border-0 story-card bg-light">
+              <img src="heart ss.png" class="card-img-top" alt="Cardiovascular Emergency" referrerPolicy="no-referrer">
+              <div class="card-body">
+                <h5 class="card-title fw-bold">John's Journey Through a Heart Crisis</h5>
+                <p class="card-text text-secondary"><strong>John M.</strong> arrived with a severe heart attack. Our emergency cardiology team performed a life-saving intervention, returning him to his family and an active life.</p>
+                <a href="#" class="btn btn-outline-danger mt-auto">Read Story</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Story 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-sm border-0 story-card bg-light">
+              <img src="trauma ss.png" class="card-img-top" alt="Severe Trauma/Shock" referrerPolicy="no-referrer">
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Maria's Unbelievable Recovery from Trauma</h5>
+                <p class="card-text text-secondary">After suffering severe shock in a major collision, <strong>Maria L.</strong> was stabilized by our expert trauma response team. She is now making an incredible recovery.</p>
+                <a href="#" class="btn btn-outline-danger mt-auto">Read Story</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Story 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-sm border-0 story-card bg-light">
+              <img src="leukemia ss.png" class="card-img-top" alt="Cancer" referrerPolicy="no-referrer">
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Michael's Fight Against Leukemia</h5>
+                <p class="card-text text-secondary">Facing aggressive leukemia, <strong>Michael B.</strong> underwent rigorous chemotherapy and a successful bone marrow transplant. Today, he celebrates full remission.</p>
+                <a href="#" class="btn btn-outline-danger mt-auto">Read Story</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Story 4 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-sm border-0 story-card bg-light">
+              <img src="mother ss.png" class="card-img-top" alt="Maternity" referrerPolicy="no-referrer">
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Emily's Miracle Twins</h5>
+                <p class="card-text text-secondary"><strong>Emily R.</strong> navigated a high-risk pregnancy with multiple complications. Our maternal-fetal medicine specialists safely delivered her beautiful twins.</p>
+                <a href="#" class="btn btn-outline-danger mt-auto">Read Story</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Story 5 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-sm border-0 story-card bg-light">
+              <img src="toddler ss.png" class="card-img-top" alt="Pediatrics" referrerPolicy="no-referrer">
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Baby Leo's Brave Start</h5>
+                <p class="card-text text-secondary">Born with a complex issue, baby <strong>Leo</strong> underwent critical early surgeries. Thanks to our pediatric surgical team, he is now thriving at home.</p>
+                <a href="#" class="btn btn-outline-danger mt-auto">Read Story</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Story 6 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-sm border-0 story-card bg-light">
+              <img src="rehab ss.png" class="card-img-top" alt="Critical Injuries" referrerPolicy="no-referrer">
+              <div class="card-body">
+                <h5 class="card-title fw-bold">David's Rehabilitation Triumph</h5>
+                <p class="card-text text-secondary">Following a sudden workplace accident, <strong>David C.</strong> sustained multiple fractures. Our advanced trauma rehabilitation center helped him learn to walk again.</p>
+                <a href="#" class="btn btn-outline-danger mt-auto">Read Story</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Story 7 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-sm border-0 story-card bg-light">
+              <img src="parkinson ss.png" class="card-img-top" alt="Parkinson" referrerPolicy="no-referrer">
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Robert's Return to Independence</h5>
+                <p class="card-text text-secondary"><strong>Robert H.</strong> struggled with profound tremors until our team performed Deep Brain Stimulation surgery, restoring his independence and quality of life.</p>
+                <a href="#" class="btn btn-outline-danger mt-auto">Read Story</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Story 8 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-sm border-0 story-card bg-light">
+              <img src="metabolic ss.png" class="card-img-top" alt="Nutritional/Metabolic Support" referrerPolicy="no-referrer">
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Alice's Metabolic Turnaround</h5>
+                <p class="card-text text-secondary">Battling a severe metabolic disorder, <strong>Alice W.</strong> received tailored nutritional and metabolic therapy, entirely reversing her organ decline.</p>
+                <a href="#" class="btn btn-outline-danger mt-auto">Read Story</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Story 9 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-sm border-0 story-card bg-light">
+              <img src="respiratory ss.png" class="card-img-top" alt="Respiratory Failure" referrerPolicy="no-referrer">
+              <div class="card-body">
+                <h5 class="card-title fw-bold">James's Lifeline from Respiratory Distress</h5>
+                <p class="card-text text-secondary"><strong>James K.</strong> was admitted with acute respiratory distress. We provided cutting-edge ECMO support to save his life until his lungs healed.</p>
+                <a href="#" class="btn btn-outline-danger mt-auto">Read Story</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Share Your Patient Stories -->
+    <section class="py-5">
+      <div class="container py-4">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0 pe-lg-5">
+            <h2 class="fw-bold mb-4 text-dark">Share your patient story</h2>
+            <div class="title-underline bg-danger mb-4"></div>
+            <p class="fs-5 mb-4 text-secondary">Let the healing that began at our hospital continue here by sharing your special story.</p>
+            <p class="text-secondary mb-4">Your story will provide comfort and inspiration to other patients and their families. In turn, they'll tell their story and we'll all feel a lot better soon.</p>
+            <button id="shareStoryBtn" class="btn btn-danger btn-lg px-4 py-2" data-bs-toggle="modal" data-bs-target="#shareStoryModal">Share your story</button>
+          </div>
+          <div class="col-lg-6">
+            <img src="share ss.png" class="img-fluid rounded shadow-lg" alt="Child with a therapy dog" referrerPolicy="no-referrer">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Read Story Modal -->
+    <div class="modal fade" id="readStoryModal" tabindex="-1" aria-labelledby="readStoryModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xxl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content border-0 shadow">
+          <div class="modal-header border-0 pb-0 z-1 position-relative">
+            <h5 class="modal-title ms-4 mt-2 text-muted fst-italic">Patient Success Stories</h5>
+            <button type="button" class="btn-close position-absolute top-0 end-0 m-4" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body px-0 pb-0 pt-4">
+            <div id="storyModalCarousel" class="carousel carousel-dark slide" data-bs-ride="false" data-bs-wrap="true">
+              <div class="carousel-inner" id="modalCarouselInner">
+                <!-- Slides injected by JS -->
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#storyModalCarousel" data-bs-slide="prev" style="width: 60px;">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#storyModalCarousel" data-bs-slide="next" style="width: 60px;">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <div class="modal-footer border-0 d-flex justify-content-between px-5 pb-4">
+            <button class="btn btn-outline-secondary px-4 py-2" type="button" data-bs-target="#storyModalCarousel" data-bs-slide="prev">
+              &laquo; Previous Story
+            </button>
+            <button class="btn btn-danger px-4 py-2" type="button" data-bs-target="#storyModalCarousel" data-bs-slide="next">
+              Next Story &raquo;
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Share Your Story Modal -->
+    <div class="modal fade" id="shareStoryModal" tabindex="-1" aria-labelledby="shareStoryModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content border-0 shadow">
+          <div class="modal-header border-0 pb-0">
+            <h5 class="modal-title fw-bold fs-4 text-danger ms-4 mt-3" id="shareStoryModalLabel">Cambridge Hospital - Share Your Story</h5>
+            <button type="button" class="btn-close m-4" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body px-5 pb-5 pt-3">
+            <form id="shareStoryForm">
+              <div class="mb-4">
+                <label for="submitterName" class="form-label text-danger fw-bold">* 1. Your Name</label>
+                <input type="text" class="form-control border-secondary p-2 bg-light" id="submitterName" required>
+              </div>
+              <div class="mb-4">
+                <label for="submitterEmail" class="form-label text-danger fw-bold">* 2. Your Email</label>
+                <input type="email" class="form-control border-secondary p-2 bg-light" id="submitterEmail" required>
+              </div>
+              <div class="mb-4">
+                <label for="submitterPhone" class="form-label text-danger fw-bold">3. Your Phone Number</label>
+                <input type="tel" class="form-control border-secondary p-2 bg-light" id="submitterPhone">
+              </div>
+              <div class="mb-4 border-bottom pb-4">
+                <label for="patientName" class="form-label text-danger fw-bold">* 4. Patient's Name</label>
+                <input type="text" class="form-control border-secondary p-2 bg-light" id="patientName" required>
+              </div>
+              <div class="mb-4">
+                <label for="storyBegin" class="form-label text-danger fw-bold">5. How did your story begin--what brought you to Cambridge Hospital?</label>
+                <textarea class="form-control border-secondary p-2 bg-light" id="storyBegin" rows="3" maxlength="1000"></textarea>
+                <div class="form-text text-end">0/1000</div>
+              </div>
+              <div class="mb-4">
+                <label for="experienceBetter" class="form-label text-danger fw-bold">6. How did Cambridge Hospital make your experience better?</label>
+                <textarea class="form-control border-secondary p-2 bg-light" id="experienceBetter" rows="3" maxlength="1000"></textarea>
+                <div class="form-text text-end">0/1000</div>
+              </div>
+              <div class="mb-4 border-bottom pb-4">
+                <label for="staffMention" class="form-label text-danger fw-bold">7. Is there a Cambridge Hospital staff person you'd like to mention, and if so, why?</label>
+                <textarea class="form-control border-secondary p-2 bg-light" id="staffMention" rows="3" maxlength="1000"></textarea>
+                <div class="form-text text-end">0/1000</div>
+              </div>
+              <div class="mb-4">
+                <label for="anythingElse" class="form-label text-danger fw-bold">8. Is there anything else you'd like to share about your Cambridge Hospital experience?</label>
+                <textarea class="form-control border-secondary p-2 bg-light" id="anythingElse" rows="3" maxlength="1000"></textarea>
+                <div class="form-text text-end">0/1000</div>
+              </div>
+              <div class="mb-5">
+                <label class="form-label text-danger fw-bold">* 9. Will you be sending a photo or video to accompany your story? If so, in a separate email, attach the file and send to: stories@cambridgehospital.com. If you need assistance, contact us at the same email and we'll be happy to help.</label>
+                <div class="mt-2">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="mediaSend" id="mediaYes" value="Yes" required>
+                    <label class="form-check-label text-danger" for="mediaYes">Yes</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="mediaSend" id="mediaNo" value="No">
+                    <label class="form-check-label text-danger" for="mediaNo">No</label>
+                  </div>
+                </div>
+              </div>
+              <div class="text-start">
+                <button type="submit" class="btn btn-danger px-5 py-2 fw-bold">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+<footer class="hospital-footer py-5">
+    <div class="container footer-main-wrapper shadow-sm border rounded-5 p-4 p-lg-5 bg-white">
+        <div class="row g-4 overflow-hidden">
+            
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <div class="footer-logo mb-4">
+                    <i class="fas fa-plus-square text-danger fs-3 me-2"></i>
+                    <div class="brand-text d-inline-block align-middle">
+                        <span class="d-block fw-bold text-dark lh-1">CAMBRIDGE</span>
+                        <span class="d-block fw-bold text-dark lh-1">HOSPITAL</span>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                <h6 class="fw-bold mb-4">Our Services</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#!" class="footer-link">About Us</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Our Services</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Careers</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Pharmacy</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Pediatrics & Imaging</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                <h6 class="fw-bold mb-4">Patients & Visitors</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#!" class="footer-link">Visitor Guidelines</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Insurance Information</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Patients Visitors</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Poster Information</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                <div class="map-container rounded shadow-sm border overflow-hidden">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.31399252169!2d67.0624645!3d24.8872645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33ef3b1716301%3A0x673907c082531a7d!2sCambridge%20Hospital!5e0!3m2!1sen!2s!4v1711800000000!5m2!1sen!2s" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 ps-lg-4">
+                <ul class="list-unstyled contact-info mb-4">
+                    <li class="mb-3 d-flex align-items-center">
+                        <i class="fas fa-phone-alt me-3 text-danger"></i>
+                        <span class="small-text">+1 234 567 890</span>
+                    </li>
+                    <li class="mb-3 d-flex align-items-center">
+                        <i class="fas fa-envelope me-3 text-danger"></i>
+                        <span class="small-text">info@cambridgehospital.org</span>
+                    </li>
+                    <li class="mb-3 d-flex align-items-start">
+                        <i class="fas fa-map-marker-alt me-3 mt-1 text-danger"></i>
+                        <span class="small-text">123 Hospital Lane, Cityville</span>
+                    </li>
+                </ul>
+                <div class="social-icons d-flex gap-2">
+                    <a href="https://www.facebook.com" target="_blank" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com" target="_blank" class="social-btn"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5 opacity-10">
+
+        <div class="text-center">
+            <p class="mb-0 text-muted small">
+                © 2024 Cambridge Hospital. All Rights Reserved. 
+                <a href="#!" class="ms-3 text-muted text-decoration-none">Terms of Service</a>
+                <a href="#!" class="ms-3 text-muted text-decoration-none">Privacy Policy</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Popper.js and Bootstrap 5 JS CDNs -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    
+    <!-- Custom Script -->
+    <script src="sstories.js"></script>
+  </body>
+</html>
+
