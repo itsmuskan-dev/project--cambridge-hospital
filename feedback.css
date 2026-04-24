@@ -1,0 +1,384 @@
+:root {
+    --hospital-red: #aa1e1e;
+    --hospital-red-hover: #8d2222;
+} 
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.custom-body-bg {
+    background-color: #faf8f8 !important;
+}
+
+.banner-bg {
+    background-image: linear-gradient(135deg, rgba(10, 9, 9, 0.94) 0%, rgba(37, 36, 36, 0.88) 40%, rgba(19, 17, 17, 0.85) 100%), url('feedback\ banner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 26.25rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 0.375rem solid var(--hospital-red);
+    position: relative;
+    opacity: 1.2;
+}
+
+.banner-text-shadow {
+    text-shadow: 0 0.25rem 1rem rgba(0,0,0,0.6);
+}
+
+.banner-subtitle-red {
+    color: #ff4d4d; 
+    text-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.8);
+}
+
+.banner-divider {
+    width: 3.75rem;
+    height: 0.25rem;
+    background-color: #ff4d4d;
+    border-radius: 0.125rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.3);
+}
+
+.banner-lead-text {
+    font-weight: 300;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+    color: #f8f9fa;
+    line-height: 1.6;
+}
+
+.bg-hospital-red {
+    background-color: var(--hospital-red) !important;
+}
+
+
+.bg-hospital-red {
+    background-color: var(--hospital-red) !important;
+}
+
+.text-hospital-red {
+    color: var(--hospital-red) !important;
+}
+
+.btn-hospital-red {
+    background-color: var(--hospital-red);
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-hospital-red:hover, .btn-hospital-red:focus {
+    background-color: var(--hospital-red-hover);
+    color: white;
+    transform: translateY(-0.125rem);
+    box-shadow: 0 0.25rem 0.75rem rgba(185, 28, 28, 0.25);
+}
+
+.feedback-card {
+    border: 0.0625rem solid rgba(0,0,0,0.05);
+    border-radius: 1rem;
+    box-shadow: 0 0.625rem 2.5rem rgba(0,0,0,0.08);
+}
+
+.form-control, .form-select {
+    border-color: #dee2e6;
+    padding: 0.75rem 1rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--hospital-red);
+    box-shadow: 0 0 0 0.25rem rgba(185, 28, 28, 0.15);
+    background-color: #fff !important;
+}
+
+.form-control:hover, .form-select:hover {
+    background-color: #fff !important;
+}
+
+/* Likert Scale Styles */
+.likert-table {
+    border-collapse: collapse;
+    border: 0.0625rem solid #cdd4df;
+}
+.likert-header {
+    background-color: #eef2f7 !important;
+    color: #1a3b5c;
+    font-weight: 500;
+    font-size: 0.9rem;
+    border: 0.0625rem solid #cdd4df;
+}
+.likert-row-header {
+    background-color: #eef2f7 !important;
+    color: #1a3b5c;
+    font-size: 0.95rem;
+    border: 0.0625rem solid #cdd4df;
+}
+.likert-table td {
+    border: 0.0625rem solid #cdd4df;
+    padding: 0.75rem 0.5rem;
+}
+.likert-table .form-check-input {
+    width: 1.25em;
+    height: 1.25em;
+    margin-top: 0;
+    cursor: pointer;
+    border-color: #adb5bd;
+}
+.likert-table .form-check-input:checked {
+    background-color: var(--hospital-red);
+    border-color: var(--hospital-red);
+}
+.is-invalid-likert {
+    border: 0.0625rem solid #dc3545;
+    border-radius: 0.25rem;
+    background-color: #fff8f8;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: #343a40;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--hospital-red);
+    color: white;
+    transform: translateY(-0.125rem);
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar Design */
+.custom-nav {
+    border: 1px solid #f0f0f0;
+}
+
+.brand-text span {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.nav-link {
+    color: #444 !important;
+    font-size: 0.95rem;
+}
+.nav-link:hover {
+    color: #b33939 !important; /* Hospital theme red */
+    transform: translateY(-2px);
+}
+
+/* Department Toggle Styling */
+.dept-btn {
+    background-color: #fdf2f2;
+    color: #b33939 !important;
+    font-weight: 600 !important;
+}
+
+.dept-btn .dot {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.dropdown-item {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+    color: #555;
+    transition: 0.3s;
+}
+
+.active-dept {
+    background-color: #fdf2f2 !important;
+    color: #b33939 !important;
+    font-weight: 600;
+}
+
+/* Urgent Care Button */
+.btn-urgent {
+    background-color: #b33939;
+    color: white;
+    font-size: 0.85rem;
+    padding: 10px 25px;
+    transition: 0.3s;
+}
+
+.btn-urgent:hover {
+    background-color: #880000;
+    color: white;
+}
+
+/* Notification Panel */
+.notif-badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 10px;
+    height: 10px;
+    background-color: #b33939;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.notif-panel {
+    position: absolute;
+    right: 0;
+    top: 45px;
+    width: 320px;
+    background: white;
+    border-radius: 15px;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.notif-list {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.unread {
+    background-color: #fff9f9;
+}
+
+.smaller {
+    font-size: 0.8rem;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #eee;
+}
+/* Custom Global Styles */
+.hospital-footer {
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.footer-main-wrapper {
+    border-radius: 2rem !important;
+    background: #ffffff;
+    max-width: 100%;
+}
+
+.footer-link {
+    color: #555;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.footer-link:hover {
+    color: #b33939;
+    transform: translateX(0.3rem);
+}
+
+/* Map Container Fix */
+.map-container {
+    width: 100%;
+    height: 10rem; /* Fixed height for map in footer */
+    background: #eee;
+}
+
+/* Contact Text wrapping fix */
+.small-text {
+    font-size: 0.85rem;
+    word-break: break-word; /* Text bahar nahi jayega */
+    color: #333;
+}
+
+/* Social Buttons */
+.social-btn {
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: #b33939;
+    color: #ffffff !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-btn:hover {
+    background-color: #880000;
+    transform: translateY(-0.2rem);
+}
+
+/* Brand Logo Text */
+.brand-text span {
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+}
+
+/* Scroll Jump Fix for # links */
+a[href="#!"] {
+    cursor: pointer;
+}
+
+/* Responsive adjustment */
+@media (max-width: 992px) {
+    .footer-main-wrapper {
+        margin: 1rem;
+        padding: 2rem !important;
+    }
+}
+
+/* navbar */
+
+/* Purana style barkaraar rakhte huye naya button style */
+.info-btn {
+    background-color: #f8f9fa; /* Light grey for subtle look */
+    color: #444 !important;
+    border-radius: 50px;
+    font-weight: 500 !important;
+    transition: 0.3s ease;
+}
+
+.info-btn:hover {
+    background-color: #eee;
+}
+
+/* Department button style (as per your theme) */
+.dept-btn {
+    background-color: #fdf2f2;
+    color: #b33939 !important;
+    font-weight: 600 !important;
+    border-radius: 50px;
+}
+
+.dept-btn .dot {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+/* Common Dropdown Styling */
+.custom-dropdown .dropdown-menu {
+    min-width: 220px;
+}
+
+.dropdown-item:hover {
+    background-color: #fdf2f2;
+    color: #b33939;
+}
+
+/* Scannable spacing for nav links */
+.navbar-nav .nav-link {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+}

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Facilities - Cambridge Hospital</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="facilities.css">
+</head>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="emergance-department.css">
+</head>
+<body class="bg-light">
+
+    <header class="main-header py-4">
+        <div class="container-fluid px-lg-5">
+            <nav class="navbar navbar-expand-xl navbar-light bg-white rounded-pill shadow-sm custom-nav px-4 py-2">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <div class="hospital-logo me-2">
+                        <i class="fas fa-plus-square text-danger fs-2"></i>
+                    </div>
+                    <div class="brand-text">
+                        <span class="d-block fw-bold text-dark lh-1">CAMBRIDGE</span>
+                        <span class="d-block fw-bold text-dark lh-1">HOSPITAL</span>
+                    </div>
+                </a>
+    
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#cambridgeNav" aria-controls="cambridgeNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                 <div class="collapse navbar-collapse" id="cambridgeNav">
+                    <ul class="navbar-nav mx-auto gap-2 align-items-center">
+                        <li class="nav-item"><a class="nav-link fw-medium" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="about.html">about us</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="sstories.html">success stories</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="feedback.html">Feedback</a></li>
+                        
+                        <li class="nav-item dropdown custom-dropdown">
+                            <a class="nav-link dropdown-toggle info-btn px-3 ms-lg-2" href="#" role="button" data-bs-toggle="dropdown">
+                                Explore more
+                            </a>
+                           <ul class="dropdown-menu shadow border-0 mt-3 rounded-4 p-2">
+                               <li><a class="dropdown-item" href="center.html"><i class="fas fa-house-medical me-2"></i> Center</a></li>
+                                <li><a class="dropdown-item" href="academic.html"><i class="fas fa-graduation-cap me-2"></i> Academic</a></li>
+                                <li><a class="dropdown-item" href="form..html"><i class="fas fa-file-alt me-2"></i> Foam</a></li>
+                                <li><a class="dropdown-item" href="QUERYY.HTML"><i class="fas fa-question-circle me-2"></i> Query</a></li>
+                                <li><a class="dropdown-item" href="facilities.html"><i class="fas fa-building me-2"></i> Facilities</a></li>
+                                <li><a class="dropdown-item" href="vacancies.html"><i class="fas fa-briefcase me-2"></i> Vacancies</a></li>
+                            </ul>
+                        </li>
+    
+                        <li class="nav-item dropdown custom-dropdown">
+                            <a class="nav-link dropdown-toggle dept-btn px-3 ms-lg-1" href="#" role="button" data-bs-toggle="dropdown">
+                                <span class="dot me-1">•</span> Departments
+                            </a>
+                            <ul class="dropdown-menu shadow border-0 mt-3 rounded-4 p-2">
+                                <li><a class="dropdown-item" href="emergancy-department.html"><i class="fas fa-exclamation-circle me-2"></i> Emergency Department</a></li>
+                                <li><a class="dropdown-item" href="opd-department.html"><i class="fas fa-calendar-alt me-2"></i> OPD (Outpatient Dept)</a></li>
+                                <li><a class="dropdown-item" href="ipd-department.html"><i class="fas fa-bed me-2"></i> IPD (Inpatient Dept)</a></li>
+                                <li><a class="dropdown-item" href="lab-department.html"><i class="fas fa-microscope me-2"></i> Laboratory Department</a></li>
+                                <li><a class="dropdown-item" href="radio.html"><i class="fas fa-x-ray me-2"></i> Radiology & Imaging</a></li>
+                                <li><a class="dropdown-item" href="pharmacy.html"><i class="fas fa-pills me-2"></i> Pharmacy</a></li>
+                                <li><a class="dropdown-item" href="neurology.html"><i class="fas fa-brain me-2"></i> Neurology Department</a></li>
+                                <li><a class="dropdown-item" href="GYNECOLOGY.HTML"><i class="fas fa-venus me-2"></i> Gynecology & Obstetrics</a></li>
+                                
+
+                            </ul>
+                        </li>
+                    </ul>
+    
+                    <div class="d-flex align-items-center gap-3 justify-content-center mt-3 mt-xl-0">
+                        <button class="btn btn-urgent rounded-pill px-4 fw-bold">URGENT CARE</button>
+                        
+                        <div class="notification-container position-relative">
+                            <button class="btn border-0 p-0" id="notifToggle">
+                                <i class="fas fa-bell fs-5 text-muted"></i>
+                                <span class="notif-badge"></span>
+                            </button>
+                            <div id="notifPanel" class="notif-panel shadow-lg d-none">
+                                <div class="panel-header d-flex justify-content-between p-3 border-bottom">
+                                    <h6 class="mb-0 fw-bold">Notifications</h6>
+                                    <button class="btn btn-sm text-danger p-0 fw-bold" id="markRead">Clear All</button>
+                                </div>
+                                <div class="notif-list custom-scrollbar" id="notifList">
+                                    <div class="notif-item p-3 border-bottom unread">
+                                        <p class="mb-0 small fw-bold text-dark">Lab Report Ready</p>
+                                        <span class="text-muted smaller">Your blood test results are now available.</span>
+                                    </div>
+                                </div>
+                                <div class="panel-footer p-2 text-center">
+                                    <button class="btn btn-sm text-danger fw-bold" id="viewAll">View All Notifications</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Facilities Grid -->
+    <section id="facilities" class="container py-5 mt-5">
+        <div class="text-center mb-5">
+            <h2 class="display-4 fw-bold text-dark mb-15">Comprehensive Healthcare Facilities</h2>
+            <div class="mx-auto bg-danger mb-10" style="height: 3px; width: 450px;"></div>
+            <p class="text-muted lead mx-auto mb-5" style="max-width: 700px;">Explore our wide range of medical and patient support facilities designed to ensure comfort, safety, and rapid recovery.</p>
+            
+            <!-- Regex Search Filter
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-6">
+                    <div class="input-group shadow-sm rounded-pill overflow-hidden border">
+                        <span class="input-group-text bg-white border-0 ps-4"><i class="bi bi-search text-muted"></i></span>
+                        <input type="text" id="facilitySearch" class="form-control border-0 py-3 shadow-none" placeholder="Search facilities (e.g., ICU, Pharmacy)...">
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        
+        <div class="row g-4">
+            <!-- Facility 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card facility-card shadow-sm text-center rounded-4 border-0 overflow-hidden">
+                    <div class="card-hover-bg" style="background-image: url('patient\ room.f.png');"></div>
+                    <div class="card-body p-4 position-relative z-2 card-content">
+                        <div class="icon-box mx-auto"><i class="bi bi-house-heart"></i></div>
+                        <h5 class="fw-bold mb-3 card-title text-dark">Patient Rooms</h5>
+                        <p class="text-muted small mb-0 card-text">Comfortable, well-equipped private and semi-private interiors designed for optimal patient recovery and family comfort.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Facility 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card facility-card shadow-sm text-center rounded-4 border-0 overflow-hidden">
+                    <div class="card-hover-bg" style="background-image: url('icu.f.png');"></div>
+                    <div class="card-body p-4 position-relative z-2 card-content">
+                        <div class="icon-box mx-auto"><i class="bi bi-heart-pulse"></i></div>
+                        <h5 class="fw-bold mb-3 card-title text-dark">ICU</h5>
+                        <p class="text-muted small mb-0 card-text">Intensive Care Units highlighting advanced monitoring systems, life support, and 24/7 critical care technology.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facility 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card facility-card shadow-sm text-center rounded-4 border-0 overflow-hidden">
+                    <div class="card-hover-bg" style="background-image: url('medical\ services.f.png');"></div>
+                    <div class="card-body p-4 position-relative z-2 card-content">
+                        <div class="icon-box mx-auto"><i class="bi bi-bandaid"></i></div>
+                        <h5 class="fw-bold mb-3 card-title text-dark">Medical Facilities</h5>
+                        <p class="text-muted small mb-0 card-text">Showcasing modern diagnostic equipment, specialized treatment centers, and a highly trained expert medical staff.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facility 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card facility-card shadow-sm text-center rounded-4 border-0 overflow-hidden">
+                    <div class="card-hover-bg" style="background-image: url('other\ services.f.png');"></div>
+                    <div class="card-body p-4 position-relative z-2 card-content">
+                        <div class="icon-box mx-auto"><i class="bi bi-cup-hot"></i></div>
+                        <h5 class="fw-bold mb-3 card-title text-dark">Other Facilities</h5>
+                        <p class="text-muted small mb-0 card-text">Ample parking, hygienic cafeteria, spacious waiting areas, and a peaceful praying area for visitors and families.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facility 5 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card facility-card shadow-sm text-center rounded-4 border-0 overflow-hidden">
+                    <div class="card-hover-bg" style="background-image: url('emergecy.f.png');"></div>
+                    <div class="card-body p-4 position-relative z-2 card-content">
+                        <div class="icon-box mx-auto"><i class="bi bi-truck-front"></i></div>
+                        <h5 class="fw-bold mb-3 card-title text-dark">Emergency Dept</h5>
+                        <p class="text-muted small mb-0 card-text">24/7 rapid response trauma center equipped to handle all medical emergencies with zero waiting time.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facility 6 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card facility-card shadow-sm text-center rounded-4 border-0 overflow-hidden">
+                    <div class="card-hover-bg" style="background-image: url('laboratory.f.png');"></div>
+                    <div class="card-body p-4 position-relative z-2 card-content">
+                        <div class="icon-box mx-auto"><i class="bi bi-virus"></i></div>
+                        <h5 class="fw-bold mb-3 card-title text-dark">Laboratory Services</h5>
+                        <p class="text-muted small mb-0 card-text">High-tech pathology and microbiology labs ensuring accurate diagnostics and quick turnaround times.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facility 7 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card facility-card shadow-sm text-center rounded-4 border-0 overflow-hidden">
+                    <div class="card-hover-bg" style="background-image: url('pharmacy.f.png');"></div>
+                    <div class="card-body p-4 position-relative z-2 card-content">
+                        <div class="icon-box mx-auto"><i class="bi bi-capsule"></i></div>
+                        <h5 class="fw-bold mb-3 card-title text-dark">24/7 Pharmacy</h5>
+                        <p class="text-muted small mb-0 card-text">Fully stocked in-house pharmacy providing authentic medicines and surgical supplies round the clock.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facility 8 -->
+            <div class="col-md-8 col-lg-4">
+                <div class="card facility-card shadow-sm text-center rounded-4 border-0 overflow-hidden">
+                    <div class="card-hover-bg" style="background-image: url('opd.f.png');"></div>
+                    <div class="card-body p-4 position-relative z-2 card-content">
+                        <div class="icon-box mx-auto"><i class="bi bi-scissors"></i></div>
+                        <h5 class="fw-bold mb-3 card-title text-dark">Operation Theaters</h5>
+                        <p class="text-muted small mb-0 card-text">State-of-the-art, infection-free surgical suites equipped with the latest robotic and microscopic technology.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Facility 9 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card facility-card shadow-sm text-center rounded-4 border-0 overflow-hidden">
+                    <div class="card-hover-bg" style="background-image: url('radiology.f.png');"></div>
+                    <div class="card-body p-4 position-relative z-2 card-content">
+                        <div class="icon-box mx-auto"><i class="bi bi-file-medical"></i></div>
+                        <h5 class="fw-bold mb-3 card-title text-dark">Radiology Center</h5>
+                        <p class="text-muted small mb-0 card-text">Comprehensive imaging services including MRI, CT scans, X-rays, and ultrasounds with rapid results.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carousel Section -->
+    <section class="bg-white py-5 border-top border-bottom">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-dark mb-3">Featured Facilities Gallery</h2>
+                <div class="mx-auto bg-danger mb-4" style="height: 3px; width: 60px;"></div>
+            </div>
+            
+            <div id="facilityCarousel" class="carousel slide shadow-lg rounded-4 overflow-hidden" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#facilityCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#facilityCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#facilityCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#facilityCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#facilityCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#facilityCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                    <button type="button" data-bs-target="#facilityCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                    <button type="button" data-bs-target="#facilityCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                    <button type="button" data-bs-target="#facilityCarousel" data-bs-slide-to="8" aria-label="Slide 9"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="4000">
+                        <img src="suits.g.png">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4 class="fw-bold">Advanced Surgical Suites</h4>
+                            <p>Equipped with the latest technology for precision and safety.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="rooms.g.png">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4 class="fw-bold">Premium Patient Rooms</h4>
+                            <p>Designed for comfort, privacy, and a healing environment.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="diagnostic.g.png" class="d-block w-100" alt="High-tech Diagnostics">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4 class="fw-bold">High-Tech Diagnostics</h4>
+                            <p>Accurate and rapid testing with modern imaging equipment.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="laboratory.g.png" class="d-block w-100" alt="Advanced Laboratory">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4 class="fw-bold">Advanced Laboratory</h4>
+                            <p>State-of-the-art pathology and microbiology testing facilities.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="pharmacy.g.png" class="d-block w-100" alt="24/7 Pharmacy">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4 class="fw-bold">24/7 Pharmacy</h4>
+                            <p>Always available medication services for our patients.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="other services.g.png" class="d-block w-100" alt="Rehabilitation Center">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4 class="fw-bold">Other facilities</h4>
+                            <p>facilities include ambulance services, 24/7 emergency care, patient counseling, and comfortable waiting areas for visitors.</p>
+                        </div>
+                    </div>
+                     <div class="carousel-item" data-bs-interval="4000">
+                        <img src="maternity.g.png" class="d-block w-100" alt="Maternity Ward">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4 class="fw-bold">Maternity & Women's Health</h4>
+                            <p>Dedicated birthing suites and comprehensive care for mothers and newborns.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="cardiology.g.png" class="d-block w-100" alt="Cardiology Department">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4 class="fw-bold">Advanced Cardiology</h4>
+                            <p>State-of-the-art heart care and cardiovascular surgery center.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="therapy.g.png" class="d-block w-100" alt="Pediatric Wing">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4 class="fw-bold">Rehabilitation Center</h4>
+                            <p>Comprehensive physical therapy and recovery programs.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#facilityCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#facilityCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="container py-5 my-4">
+        <div class="row d-flex align-items-center g-5">
+            <div class="col-lg-6">
+                <img src="wmdwfp.png" class="img-fluid rounded-4 shadow-lg" alt="Why Choose Us">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="fw-bold mb-3">Why Choose Cambridge Hospital?</h2>
+                <div class="bg-danger mb-4" style="height: 3px; width: 60px;"></div>
+                <p class="text-muted mb-4 lead">We are committed to providing exceptional healthcare services with a focus on patient safety, comfort, and positive clinical outcomes.</p>
+                
+                <ul class="list-unstyled mt-4">
+                    <li class="mb-4 d-flex align-items-start">
+                        <div class="feature-icon me-3 flex-shrink-0">
+                            <i class="bi bi-person-heart text-danger fs-5"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1">Expert Medical Team</h5>
+                            <p class="text-muted mb-0">Highly qualified doctors, surgeons, and compassionate nursing staff dedicated to your well-being.</p>
+                        </div>
+                    </li>
+                    <li class="mb-4 d-flex align-items-start">
+                        <div class="feature-icon me-3 flex-shrink-0">
+                            <i class="bi bi-shield-check text-danger fs-5"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1">Highest Safety Standards</h5>
+                            <p class="text-muted mb-0">Strict adherence to international hygiene and patient safety protocols.</p>
+                        </div>
+                    </li>
+                    <li class="mb-0 d-flex align-items-start">
+                        <div class="feature-icon me-3 flex-shrink-0">
+                            <i class="bi bi-clock-history text-danger fs-5"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1">24/7 Availability</h5>
+                            <p class="text-muted mb-0">Round-the-clock emergency, pharmacy, and laboratory services for immediate care.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<footer class="hospital-footer py-5">
+    <div class="container footer-main-wrapper shadow-sm border rounded-5 p-4 p-lg-5 bg-white">
+        <div class="row g-4 overflow-hidden">
+            
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <div class="footer-logo mb-4">
+                    <i class="fas fa-plus-square text-danger fs-3 me-2"></i>
+                    <div class="brand-text d-inline-block align-middle">
+                        <span class="d-block fw-bold text-dark lh-1">CAMBRIDGE</span>
+                        <span class="d-block fw-bold text-dark lh-1">HOSPITAL</span>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                <h6 class="fw-bold mb-4">Our Services</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#!" class="footer-link">About Us</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Our Services</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Careers</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Pharmacy</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Pediatrics & Imaging</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                <h6 class="fw-bold mb-4">Patients & Visitors</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#!" class="footer-link">Visitor Guidelines</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Insurance Information</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Patients Visitors</a></li>
+                    <li class="mb-2"><a href="#!" class="footer-link">Poster Information</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                <div class="map-container rounded shadow-sm border overflow-hidden">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.31399252169!2d67.0624645!3d24.8872645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33ef3b1716301%3A0x673907c082531a7d!2sCambridge%20Hospital!5e0!3m2!1sen!2s!4v1711800000000!5m2!1sen!2s" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 ps-lg-4">
+                <ul class="list-unstyled contact-info mb-4">
+                    <li class="mb-3 d-flex align-items-center">
+                        <i class="fas fa-phone-alt me-3 text-danger"></i>
+                        <span class="small-text">+1 234 567 890</span>
+                    </li>
+                    <li class="mb-3 d-flex align-items-center">
+                        <i class="fas fa-envelope me-3 text-danger"></i>
+                        <span class="small-text">info@cambridgehospital.org</span>
+                    </li>
+                    <li class="mb-3 d-flex align-items-start">
+                        <i class="fas fa-map-marker-alt me-3 mt-1 text-danger"></i>
+                        <span class="small-text">123 Hospital Lane, Cityville</span>
+                    </li>
+                </ul>
+                <div class="social-icons d-flex gap-2">
+                    <a href="https://www.facebook.com" target="_blank" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com" target="_blank" class="social-btn"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5 opacity-10">
+
+        <div class="text-center">
+            <p class="mb-0 text-muted small">
+                © 2024 Cambridge Hospital. All Rights Reserved. 
+                <a href="#!" class="ms-3 text-muted text-decoration-none">Terms of Service</a>
+                <a href="#!" class="ms-3 text-muted text-decoration-none">Privacy Policy</a>
+            </p>
+        </div>
+    </div>
+</footer>
+</footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script type="module" src="facilities.js"></script>
+</body>
+</html>
