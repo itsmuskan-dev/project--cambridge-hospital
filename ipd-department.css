@@ -1,0 +1,536 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar Design */
+.custom-nav {
+    border: 1px solid #f0f0f0;
+}
+
+.brand-text span {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+.nav-link:hover {
+    color: #b33939 !important; /* Hospital theme red */
+    transform: translateY(-2px);
+}
+
+.nav-link {
+    color: #444 !important;
+    font-size: 0.95rem;
+}
+
+/* Department Toggle Styling */
+.dept-btn {
+    background-color: #fdf2f2;
+    color: #b33939 !important;
+    font-weight: 600 !important;
+}
+
+.dept-btn .dot {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.dropdown-item {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+    color: #555;
+    transition: 0.3s;
+}
+
+.active-dept {
+    background-color: #fdf2f2 !important;
+    color: #b33939 !important;
+    font-weight: 600;
+}
+
+/* Urgent Care Button */
+.btn-urgent {
+    background-color: #b33939;
+    color: white;
+    font-size: 0.85rem;
+    padding: 10px 25px;
+    transition: 0.3s;
+}
+
+.btn-urgent:hover {
+    background-color: #880000;
+    color: white;
+}
+
+/* Notification Panel */
+.notif-badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 10px;
+    height: 10px;
+    background-color: #b33939;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.notif-panel {
+    position: absolute;
+    right: 0;
+    top: 45px;
+    width: 320px;
+    background: white;
+    border-radius: 15px;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.notif-list {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.unread {
+    background-color: #fff9f9;
+}
+
+.smaller {
+    font-size: 0.8rem;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #eee;
+}
+/* IPD Section Root Styles */
+.ipd-hero-section {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+}
+
+.ipd-visual-container {
+    position: relative;
+    width: 100%;
+    height: 35rem; /* Flexible height in rem */
+    overflow: hidden;
+}
+
+.ipd-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Red Overlay Effect */
+.ipd-gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(136, 0, 0, 0.4) 0%, rgba(136, 0, 0, 0.7) 100%);
+    z-index: 2;
+}
+
+/* Badges styling */
+.status-badge {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(0.5rem);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 2.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border: 0.08rem solid rgba(255, 255, 255, 0.3);
+}
+
+.ipd-main-title {
+    font-size: 3.5rem;
+    color: white;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.ipd-sub-text {
+    font-size: 1.25rem;
+    color: white;
+    font-weight: 500;
+}
+
+/* Floating Card Position */
+.floating-card-wrapper {
+    position: relative;
+    margin-top: -8rem; /* Pulling card up */
+    z-index: 5;
+    padding-bottom: 4rem;
+}
+
+.ipd-info-box {
+    background: white;
+    border-radius: 2.5rem;
+    padding: 3rem;
+    max-width: 55rem;
+    margin: 0 auto;
+    border: 0.05rem solid #eee;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.ipd-info-box:hover {
+    transform: scale(1.02);
+}
+
+.info-box-title {
+    color: #b33939; /* Hospital Red */
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+}
+
+.info-box-para {
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* Mobile Responsive */
+@media (max-width: 48rem) {
+    .ipd-visual-container { height: 30rem; }
+    .ipd-main-title { font-size: 2.2rem; }
+    .floating-card-wrapper { margin-top: -5rem; }
+    .ipd-info-box { padding: 1.5rem; border-radius: 1.5rem; }
+}
+/* English: Styling for Core Services using REM for responsiveness */
+
+.core-services-section {
+    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.core-title {
+    font-size: 2.2rem;
+    color: #1a1a1a;
+    margin-bottom: 0;
+}
+
+.title-line {
+    width: 4rem;
+    height: 0.15rem;
+    background-color: #fdf2f2;
+}
+
+/* Card Design */
+.service-card {
+    background-color: #ffffff;
+    border: 0.05rem solid #f0f0f0;
+    border-radius: 2rem;
+    padding: 2.5rem;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: translateY(-0.3rem);
+    border-color: #ffe5e5;
+}
+
+/* Icon Styling */
+.icon-wrapper {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #fdf2f2; /* Light Peach/Red Background */
+    color: #b33939; /* Hospital Red */
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+.service-name {
+    font-size: 1.15rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.service-desc {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+/* Responsive Scaling */
+@media (max-width: 48rem) {
+    .core-title {
+        font-size: 1.8rem;
+    }
+    .service-card {
+        padding: 1.5rem;
+        border-radius: 1.5rem;
+    }
+}
+/* English: Styling for Dynamic Auto-Scrolling Room Cards */
+
+.patient-rooms-area {
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+}
+
+.room-slider-wrapper {
+    width: 100%;
+    height: 38rem; /* Flexible height in rem */
+    overflow: hidden;
+    background-color: #eee;
+}
+
+.room-slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Typography Scale in REM */
+.room-main-title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+.room-description {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.smaller { font-size: 0.8rem; }
+
+/* Arrows Styling */
+.btn-outline-danger {
+    color: #b33939;
+    border-color: #b33939;
+}
+
+.btn-danger {
+    background-color: #b33939;
+    border: none;
+}
+
+/* Navigation Hover Effects */
+.btn-outline-danger:hover {
+    background-color: #fdf2f2;
+    color: #b33939;
+}
+
+/* Text Fading effect */
+.animate-fade {
+    animation: textFadeIn 0.6s;
+}
+.room-slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    /* This makes the change smooth */
+    transition: opacity 0.5s ease-in-out; 
+    opacity: 1;
+}
+
+@keyframes textFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 48rem) {
+    .room-slider-wrapper {
+        height: 22rem;
+    }
+    .room-main-title {
+        font-size: 1.8rem;
+    }
+}
+:root {
+    --hospital-red: #b33939;
+}
+
+.portal-card {
+    max-width: 55rem;
+    min-height: 38rem; /* Container chota nahi hoga */
+    background-color: #f5f5f5 !important;
+    transition: all 0.4s ease;
+}
+
+/* Container for fields to prevent size change */
+.method-fields-container {
+    min-height: 15rem; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.method-btn {
+    flex: 1; padding: 1rem; border: 2px solid transparent;
+    background: white; border-radius: 0.8rem;
+    transition: 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+.method-btn.active { border-color: var(--hospital-red); color: var(--hospital-red); }
+
+.portal-icon-bg {
+    background-color: var(--hospital-red); width: 3.5rem; height: 3.5rem;
+    border-radius: 0.8rem; display: flex; align-items: center; justify-content: center;
+}
+
+.custom-input { border: none; border-radius: 0.6rem; padding: 0.8rem; background: white; }
+.btn-process { background: var(--hospital-red); color: white; padding: 1rem; border-radius: 0.8rem; font-weight: 700; border: none; }
+
+/* Custom Success Alert Styling */
+.success-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(5px);
+    display: flex; align-items: center; justify-content: center; z-index: 9999;
+}
+
+.success-box {
+    background: white; padding: 3rem; border-radius: 2rem;
+    text-align: center; max-width: 25rem; width: 90%;
+}
+
+.check-icon-bg {
+    width: 5rem; height: 5rem; background: #28a745; color: white;
+    font-size: 2.5rem; border-radius: 50%; display: flex;
+    align-items: center; justify-content: center; margin: 0 auto;
+    box-shadow: 0 10px 20px rgba(40, 167, 69, 0.3);
+}
+
+/* Animations */
+.animate-fade { animation: fadeIn 0.5s ease; }
+.animate-pop { animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes popIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+
+/* Custom Global Styles */
+.hospital-footer {
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.footer-main-wrapper {
+    border-radius: 2rem !important;
+    background: #ffffff;
+    max-width: 100%;
+}
+
+.footer-link {
+    color: #555;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.footer-link:hover {
+    color: #b33939;
+    transform: translateX(0.3rem);
+}
+
+/* Map Container Fix */
+.map-container {
+    width: 100%;
+    height: 10rem; /* Fixed height for map in footer */
+    background: #eee;
+}
+
+/* Contact Text wrapping fix */
+.small-text {
+    font-size: 0.85rem;
+    word-break: break-word; /* Text bahar nahi jayega */
+    color: #333;
+}
+
+/* Social Buttons */
+.social-btn {
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: #b33939;
+    color: #ffffff !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-btn:hover {
+    background-color: #880000;
+    transform: translateY(-0.2rem);
+}
+
+/* Brand Logo Text */
+.brand-text span {
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+}
+
+/* Scroll Jump Fix for # links */
+a[href="#!"] {
+    cursor: pointer;
+}
+
+/* Responsive adjustment */
+@media (max-width: 992px) {
+    .footer-main-wrapper {
+        margin: 1rem;
+        padding: 2rem !important;
+    }
+}
+
+/* navbar */
+
+/* Purana style barkaraar rakhte huye naya button style */
+.info-btn {
+    background-color: #f8f9fa; /* Light grey for subtle look */
+    color: #444 !important;
+    border-radius: 50px;
+    font-weight: 500 !important;
+    transition: 0.3s ease;
+}
+
+.info-btn:hover {
+    background-color: #eee;
+}
+
+/* Department button style (as per your theme) */
+.dept-btn {
+    background-color: #fdf2f2;
+    color: #b33939 !important;
+    font-weight: 600 !important;
+    border-radius: 50px;
+}
+
+.dept-btn .dot {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+/* Common Dropdown Styling */
+.custom-dropdown .dropdown-menu {
+    min-width: 220px;
+}
+
+.dropdown-item:hover {
+    background-color: #fdf2f2;
+    color: #b33939;
+}
+
+/* Scannable spacing for nav links */
+.navbar-nav .nav-link {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+}
