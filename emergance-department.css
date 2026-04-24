@@ -1,0 +1,723 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar Design */
+.custom-nav {
+    border: 1px solid #f0f0f0;
+}
+
+.brand-text span {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.nav-link {
+    color: #444 !important;
+    font-size: 0.95rem;
+}
+
+/* Department Toggle Styling */
+.dept-btn {
+    background-color: #fdf2f2;
+    color: #b33939 !important;
+    font-weight: 600 !important;
+}
+
+.dept-btn .dot {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.dropdown-item {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+    color: #555;
+    transition: 0.3s;
+}
+
+.active-dept {
+    background-color: #fdf2f2 !important;
+    color: #b33939 !important;
+    font-weight: 600;
+}
+
+/* Urgent Care Button */
+.btn-urgent {
+    background-color: #b33939;
+    color: white;
+    font-size: 0.85rem;
+    padding: 10px 25px;
+    transition: 0.3s;
+}
+
+.btn-urgent:hover {
+    background-color: #880000;
+    color: white;
+}
+
+/* Notification Panel */
+.notif-badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 10px;
+    height: 10px;
+    background-color: #b33939;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.nav-link:hover {
+    color: #b33939 !important; /* Hospital theme red */
+    transform: translateY(-2px);
+}
+
+.notif-panel {
+    position: absolute;
+    right: 0;
+    top: 45px;
+    width: 320px;
+    background: white;
+    border-radius: 15px;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.notif-list {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.unread {
+    background-color: #fff9f9;
+}
+
+.smaller {
+    font-size: 0.8rem;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #eee;
+}
+
+/* Custom Global Styles */
+.hospital-footer {
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.footer-main-wrapper {
+    border-radius: 2rem !important;
+    background: #ffffff;
+    max-width: 100%;
+}
+
+.footer-link {
+    color: #555;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.footer-link:hover {
+    color: #b33939;
+    transform: translateX(0.3rem);
+}
+
+/* Map Container Fix */
+.map-container {
+    width: 100%;
+    height: 10rem; /* Fixed height for map in footer */
+    background: #eee;
+}
+
+/* Contact Text wrapping fix */
+.small-text {
+    font-size: 0.85rem;
+    word-break: break-word; /* Text bahar nahi jayega */
+    color: #333;
+}
+
+/* Social Buttons */
+.social-btn {
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: #b33939;
+    color: #ffffff !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-btn:hover {
+    background-color: #880000;
+    transform: translateY(-0.2rem);
+}
+
+/* Brand Logo Text */
+.brand-text span {
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+}
+
+/* Scroll Jump Fix for # links */
+a[href="#!"] {
+    cursor: pointer;
+}
+
+/* Responsive adjustment */
+@media (max-width: 992px) {
+    .footer-main-wrapper {
+        margin: 1rem;
+        padding: 2rem !important;
+    }
+}
+
+
+
+/* navbar */
+
+/* Purana style barkaraar rakhte huye naya button style */
+.info-btn {
+    background-color: #f8f9fa; /* Light grey for subtle look */
+    color: #444 !important;
+    border-radius: 50px;
+    font-weight: 500 !important;
+    transition: 0.3s ease;
+}
+
+.info-btn:hover {
+    background-color: #eee;
+}
+
+/* Department button style (as per your theme) */
+.dept-btn {
+    background-color: #fdf2f2;
+    color: #b33939 !important;
+    font-weight: 600 !important;
+    border-radius: 50px;
+}
+
+.dept-btn .dot {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+/* Common Dropdown Styling */
+.custom-dropdown .dropdown-menu {
+    min-width: 220px;
+}
+
+.dropdown-item:hover {
+    background-color: #fdf2f2;
+    color: #b33939;
+}
+
+/* Scannable spacing for nav links */
+.navbar-nav .nav-link {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+}
+
+/* Container sizing in rem */
+.emergency-hero {
+    position: relative;
+    width: 100%;
+    height: 35rem; /* Approximately 560px */
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background Image styling */
+.hero-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Red Gradient Overlay */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Dark red to transparent gradient */
+    background: linear-gradient(90deg, rgba(179, 57, 57, 0.95) 0%, rgba(179, 57, 57, 0.6) 40%, rgba(0, 0, 0, 0) 100%);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    padding-left: 1rem;
+}
+
+/* Typography using rem */
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1.2rem;
+    max-width: 45rem;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 2.5rem;
+    color: #ffffff;
+}
+
+/* Single Outline Button Style */
+.btn-emergency-call {
+    display: inline-block;
+    background-color: transparent;
+    color: #ffffff;
+    padding: 0.8rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 0.15rem solid #ffffff;
+    border-radius: 0.6rem;
+    transition: all 0.3s ease;
+}
+
+.btn-emergency-call:hover {
+    background-color: #ffffff;
+    color: #b33939;
+    transform: translateY(-0.2rem);
+}
+
+/* Mobile Responsive */
+@media (max-width: 48rem) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    .emergency-hero {
+        height: 30rem;
+    }
+}
+.trauma-response-section {
+    background-color: #f8f9fa; /* Light grey background like the image */
+    padding: 5rem 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.content-wrapper {
+    max-width: 60rem; /* Section ki width control karne ke liye */
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Badge Styling */
+.badge-clinical {
+    display: inline-block;
+    background-color: #ffdbd6; /* Soft peach/pink background */
+    color: #b33939; /* Muted red text */
+    padding: 0.5rem 1.2rem;
+    border-radius: 2rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+/* Heading Styling */
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 2rem;
+    letter-spacing: -0.05rem;
+}
+
+/* Description Styling */
+.section-desc {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #666; /* Muted grey text */
+    text-align: justify;
+    font-weight: 400;
+}
+
+/* Responsive adjustments */
+@media (max-width: 48rem) {
+    .section-title {
+        font-size: 2rem;
+    }
+    .trauma-response-section {
+        padding: 3rem 0;
+    }
+}
+.emergency-services-section {
+    padding: 3rem 0;
+    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Card Styling - Compact Size */
+.service-card-item {
+    background-color: #f5f6f7; /* Soft light grey like image */
+    border-radius: 1rem;
+    padding: 1.8rem 2rem; /* Compact padding */
+    height: 100%;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Icon Box */
+.service-icon-box {
+    font-size: 1.6rem;
+    color: #b33939; /* Hospital Red */
+    margin-bottom: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+/* Titles */
+.service-item-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 0.6rem;
+    transition: color 0.3s ease;
+}
+
+/* Descriptions */
+.service-item-desc {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 0;
+    transition: color 0.3s ease;
+}
+
+/* --- HOVER EFFECT --- */
+.service-card-item:hover {
+    background-color: #880000; /* Dark Red background */
+    transform: translateY(-0.25rem);
+    box-shadow: 0 0.5rem 1.5rem rgba(136, 0, 0, 0.2);
+}
+
+.service-card-item:hover .service-icon-box,
+.service-card-item:hover .service-item-title,
+.service-card-item:hover .service-item-desc {
+    color: #ffffff !important; /* All text becomes white on hover */
+}
+
+/* Responsive adjustment */
+@media (max-width: 48rem) {
+    .service-card-item {
+        padding: 1.5rem;
+    }
+}
+
+.assistance-section {
+    background-color: #f3f4f6; /* Light grey background like image */
+    padding: 5rem 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.assistance-main-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 3rem;
+    padding-left: 1rem;
+}
+
+/* Card Styling */
+.assistance-card {
+    background-color: #ffffff;
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    height: 100%;
+    border: none;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.assistance-card:hover {
+    transform: translateY(-0.3rem);
+}
+
+/* Icon Circle Styling */
+.icon-circle-bg {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #e0f2fe; /* Soft blue circle like image */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.icon-circle-bg i {
+    font-size: 1.4rem;
+    color: #334155; /* Muted dark blue/grey icon */
+}
+
+/* Card Typography */
+.card-item-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.card-item-text {
+    font-size: 1rem;
+    color: #64748b; /* Muted grey text */
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Responsive adjustment */
+@media (max-width: 48rem) {
+    .assistance-main-title {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    .assistance-card {
+        padding: 2rem;
+    }
+}
+
+:root {
+    --hospital-red: #b33939;
+}
+
+.portal-card {
+    max-width: 55rem;
+    min-height: 38rem; /* Container chota nahi hoga */
+    background-color: #f5f5f5 !important;
+    transition: all 0.4s ease;
+}
+
+/* Container for fields to prevent size change */
+.method-fields-container {
+    min-height: 15rem; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.method-btn {
+    flex: 1; padding: 1rem; border: 2px solid transparent;
+    background: white; border-radius: 0.8rem;
+    transition: 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+.method-btn.active { border-color: var(--hospital-red); color: var(--hospital-red); }
+
+.portal-icon-bg {
+    background-color: var(--hospital-red); width: 3.5rem; height: 3.5rem;
+    border-radius: 0.8rem; display: flex; align-items: center; justify-content: center;
+}
+
+.custom-input { border: none; border-radius: 0.6rem; padding: 0.8rem; background: white; }
+.btn-process { background: var(--hospital-red); color: white; padding: 1rem; border-radius: 0.8rem; font-weight: 700; border: none; }
+
+/* Custom Success Alert Styling */
+.success-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(5px);
+    display: flex; align-items: center; justify-content: center; z-index: 9999;
+}
+
+.success-box {
+    background: white; padding: 3rem; border-radius: 2rem;
+    text-align: center; max-width: 25rem; width: 90%;
+}
+
+.check-icon-bg {
+    width: 5rem; height: 5rem; background: #28a745; color: white;
+    font-size: 2.5rem; border-radius: 50%; display: flex;
+    align-items: center; justify-content: center; margin: 0 auto;
+    box-shadow: 0 10px 20px rgba(40, 167, 69, 0.3);
+}
+
+/* Animations */
+.animate-fade { animation: fadeIn 0.5s ease; }
+.animate-pop { animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes popIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+  
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.billing-summary-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 50rem;
+    border-radius: 1.8rem;
+    padding: 2.8rem;
+   
+}
+
+.summary-header {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 2.5rem;
+}
+
+.summary-body span {
+    font-size: 0.95rem;
+}
+
+.divider {
+    border: 0;
+    border-top: 0.08rem solid #f0f0f0;
+    margin: 0;
+    opacity: 1;
+}
+
+/* Total Section */
+.total-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #b33939; /* Hospital Red */
+    letter-spacing: 0.04rem;
+}
+
+.total-price {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #1a1a1a;
+}
+
+.tax-text {
+    font-size: 0.75rem;
+    color: #a0a0a0;
+    margin-bottom: 0.6rem;
+}
+
+/* Info Box Design */
+.info-alert-box {
+    background-color: #f0f7ff; /* Soft Blue like image */
+    border-radius: 1rem;
+    padding: 1.2rem 1.5rem;
+}
+
+.info-icon {
+    color: #3b82f6;
+    font-size: 1.1rem;
+    margin-top: 0.2rem;
+}
+
+.info-text {
+    font-size: 0.85rem;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+/* Responsive Scaling */
+@media (max-width: 40rem) {
+    .billing-summary-card {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    .total-price {
+        font-size: 1.8rem;
+    }
+}
+         /* footer  */
+         /* Custom Global Styles */
+.hospital-footer {
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.footer-main-wrapper {
+    border-radius: 2rem !important;
+    background: #ffffff;
+    max-width: 100%;
+}
+
+.footer-link {
+    color: #555;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.footer-link:hover {
+    color: #b33939;
+    transform: translateX(0.3rem);
+}
+
+/* Map Container Fix */
+.map-container {
+    width: 100%;
+    height: 10rem; /* Fixed height for map in footer */
+    background: #eee;
+}
+
+/* Contact Text wrapping fix */
+.small-text {
+    font-size: 0.85rem;
+    word-break: break-word; /* Text bahar nahi jayega */
+    color: #333;
+}
+
+/* Social Buttons */
+.social-btn {
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: #b33939;
+    color: #ffffff !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-btn:hover {
+    background-color: #880000;
+    transform: translateY(-0.2rem);
+}
+
+/* Brand Logo Text */
+.brand-text span {
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+}
+
+/* Scroll Jump Fix for # links */
+a[href="#!"] {
+    cursor: pointer;
+}
+
+/* Responsive adjustment */
+@media (max-width: 992px) {
+    .footer-main-wrapper {
+        margin: 1rem;
+        padding: 2rem !important;
+    }
+}
